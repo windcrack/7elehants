@@ -1,0 +1,343 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+iframe,
+img {
+  max-width: 100%;
+}
+
+html {
+  font-size: 4px;
+}
+
+body {
+  font-size: initial;
+  background: #291A1A;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 1323px) {
+  html {
+    font-size: 5px;
+  }
+}
+
+@media screen and (max-width: 1176px) {
+  html {
+    font-size: 4px;
+  }
+}
+
+@media screen and (max-width: 883px) {
+  html {
+    font-size: 3px;
+  }
+}
+
+:root {
+  --mainWhite: #fff;
+  --btnYellowStill: #EBCB80;
+  --btnYellowHover: #EFC669;
+  --btnYellowActive: #E1B754;
+  --btnYellowDis: #EBCB80;
+  --btnFontStill: #333333;
+  --btnFontHover: #262626;
+  --btnFontDis: #3C3C3C;
+  --btnGrayStill: #595959;
+  --btnGrayHover: #737373;
+  --btnGrayActive: #4C4C4C;
+  --btnGrayFontStill: #EBCB80;
+  --btnGrayFontHover: #EFC669;
+  --btnGrayFontActive: #E1B754;
+  --btnGrayBorderStill: 2px solid #EBCB80;
+  --btnGrayBorderHover: 2px solid #EFC669;
+  --btnGrayBorderActive: 2px solid #E1B754;
+  --border: 2px solid red;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  background: url("../img/headerBg.png") center no-repeat;
+  background-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.headerBurger {
+  background-color: transparent;
+  border: none;
+  width: 6rem;
+  height: 6rem;
+  cursor: pointer;
+  margin-top: 6rem;
+  margin-right: 18rem;
+}
+
+.headerTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.headerTitle h1 {
+  color: var(--mainWhite);
+  margin: 43.5rem auto 6rem;
+  font-size: 16rem;
+}
+
+.headerTitle .descr {
+  color: var(--mainWhite);
+  font-size: 4rem;
+  margin: 0 auto 8rem;
+}
+
+.headerButtonBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+button {
+  width: 40rem;
+  height: 10rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.yellowBtn {
+  background-color: var(--btnYellowStill);
+  color: var(--btnFontStill);
+  margin-right: 6rem;
+  border: none;
+  margin-bottom: 36rem;
+}
+
+.yellowBtn:hover {
+  color: var(--btnFontHover);
+  background-color: var(--btnYellowHover);
+}
+
+.yellowBtn:active {
+  color: var(--btnFontHover);
+  background-color: var(--btnYellowActive);
+}
+
+.yellowBtn:disabled {
+  color: var(--btnFontDis);
+  background-color: var(--btnYellowStill);
+}
+
+.greyBtn {
+  background-color: var(--btnGrayStill);
+  color: var(--btnGrayFontStill);
+  border: var(--btnGrayBorderStill);
+}
+
+.greyBtn:hover {
+  color: var(--btnGrayFontHover);
+  background-color: var(--btnGrayHover);
+}
+
+.greyBtn:active {
+  color: var(--btnGrayFontActive);
+  background-color: var(--btnGrayActive);
+}
+
+.greyBtn:disabled {
+  color: var(--btnGrayFontStill);
+  background-color: var(--btnGrayStill);
+}
+
+.headerArrows {
+  width: 18rem;
+  height: 18rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto 8rem;
+}
+
+.headerArrows a {
+  color: var(--mainWhite);
+  font-size: 8rem;
+}
+
+.ctaBlock1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--mainWhite);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  line-height: 6rem;
+}
+
+.left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.ctaBlock1TextLeft {
+  width: 89.75rem;
+  margin: auto;
+}
+
+.ctaBlock1ImgLeft,
+.ctaBlock1ImgRight {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.ctaBlock1TextRight {
+  width: 90rem;
+  margin: auto;
+}
+
+.textTitle {
+  font-size: 8rem;
+  padding-bottom: 5rem;
+}
+
+.textSub {
+  font-size: 4.5rem;
+  padding-bottom: 5rem;
+}
+
+.textDesc {
+  margin-bottom: 6rem;
+}
+
+.romantick {
+  background: url("../img/romantickBg.png") no-repeat center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.romantick .yellowBtn {
+  margin: 0 auto 36rem;
+}
+
+.romantickTitle {
+  font-size: 11rem;
+  color: var(--mainWhite);
+  text-align: center;
+  padding-top: 44rem;
+  padding-bottom: 6rem;
+}
+
+.romantickSub {
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 24rem;
+  color: var(--mainWhite);
+  max-width: 130.25rem;
+  margin: 0 auto 22.75rem;
+  line-height: 6rem;
+}
+
+.stock {
+  color: var(--mainWhite);
+}
+
+.stockBlock {
+  padding-left: 36rem;
+  padding-bottom: 24rem;
+}
+
+.stockTitle {
+  font-size: 11rem;
+  line-height: 12rem;
+  margin-top: 18rem;
+}
+
+.stockSub {
+  font-size: 4rem;
+  line-height: 6rem;
+  opacity: 0.5;
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+}
+
+.contactMap {
+  width: 100%;
+  height: 112.5rem;
+  border: 0;
+  background-color: #291A1A;
+}
+
+.slick-dots {
+  bottom: 20rem !important;
+}
+
+#slick-slide-control00 {
+  color: var(--mainWhite) !important;
+}
+
+.slick-dotted {
+  margin-bottom: 0 !important;
+}
+/*# sourceMappingURL=style.css.map */

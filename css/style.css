@@ -380,6 +380,8 @@ button {
   border: none;
   border-bottom: 1px solid var(--inputColor);
   padding-bottom: 1.25rem;
+  font-size: 4.5rem;
+  line-height: 6.75rem;
 }
 
 .questFormBtn {

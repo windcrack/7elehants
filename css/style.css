@@ -52,6 +52,7 @@ body {
   --btnGrayFontStill: #EBCB80;
   --btnGrayFontHover: #EFC669;
   --btnGrayFontActive: #E1B754;
+  --inputColor: #7D7D7D;
   --btnGrayBorderStill: 2px solid #EBCB80;
   --btnGrayBorderHover: 2px solid #EFC669;
   --btnGrayBorderActive: 2px solid #E1B754;
@@ -322,11 +323,214 @@ button {
   margin-bottom: 8rem;
 }
 
+.contact {
+  background: url("../img/iPhoneApp.png") no-repeat bottom left 5%, var(--mainWhite);
+}
+
 .contactMap {
   width: 100%;
   height: 112.5rem;
   border: 0;
   background-color: #291A1A;
+}
+
+.quest {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 33% 37% 30%;
+      grid-template-columns: 33% 37% 30%;
+      grid-template-areas: "header header header" "sub sub sub" ". form adr";
+}
+
+.questTitle {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  text-align: center;
+  font-size: 12rem;
+  line-height: 16rem;
+  padding-top: 14rem;
+}
+
+.questSub {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: sub;
+  text-align: center;
+  font-size: 4rem;
+  line-height: 6rem;
+  padding-bottom: 15rem;
+}
+
+.questForm {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: form;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "name phone" "mess mess" "bnt bnt";
+  margin-right: 20.5rem;
+}
+
+.questForm input {
+  background-color: transparent;
+  color: var(--inputColor);
+  border: none;
+  border-bottom: 1px solid var(--inputColor);
+  padding-bottom: 1.25rem;
+}
+
+.questFormBtn {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: bnt;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  margin-bottom: 24rem;
+}
+
+.questFormBtn .yellowBtn {
+  margin: auto;
+}
+
+.name {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: name;
+  max-width: 42rem;
+  margin-bottom: 10rem;
+}
+
+.phone {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: phone;
+  max-width: 40.75rem;
+  margin-bottom: 10rem;
+}
+
+.mess {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: mess;
+  margin-bottom: 9rem;
+  margin-right: 11rem;
+}
+
+.questAdr {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: adr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.questAdrText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.questAdrText p {
+  padding: 0 12rem 6rem 6rem;
+}
+
+.questAdrSocial {
+  padding-top: 10rem;
+}
+
+.questAdrSocial a {
+  color: var(--btnYellowStill);
+}
+
+.questAdrSocial a:last-child {
+  margin-left: 6rem;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.subNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 6rem 18rem;
+}
+
+.subNavInfo,
+.subNavStock {
+  color: var(--mainWhite);
+  list-style-type: none;
+  margin-right: 24rem;
+  font-size: 3rem;
+  line-height: 6rem;
+}
+
+.subNavInfo li:nth-child(1),
+.subNavStock li:nth-child(1) {
+  opacity: 0.5;
+}
+
+.desc {
+  margin-right: 12rem;
+  margin-top: 6rem;
+}
+
+.desc a {
+  color: var(--mainWhite);
+  text-decoration: none;
+}
+
+.desc a p {
+  -webkit-column-count: 1;
+          column-count: 1;
+  -webkit-column-width: 66rem;
+          column-width: 66rem;
+  font-size: 4rem;
+  line-height: 6rem;
+  text-align: right;
+}
+
+.desc a .descText:nth-child(1) {
+  margin-bottom: 6rem;
+}
+
+.desc a .descText:nth-child(2) {
+  margin-bottom: 18rem;
+}
+
+.desc a .descText:nth-child(3) {
+  margin-bottom: 6rem;
+  opacity: 0.5;
+}
+
+.desc a:nth-child(1) {
+  opacity: 0.5;
+}
+
+.desc a:nth-child(3) {
+  opacity: 0.5;
 }
 
 .slick-dots {

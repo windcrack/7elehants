@@ -46,6 +46,7 @@ body {
 }
 
 :root {
+    --activeColor: #daad51;
     --mainWhite: #fff;
     --btnYellowStill: #EBCB80;
     --btnYellowHover: #EFC669;
@@ -67,7 +68,14 @@ body {
     --border: 2px solid red;
     font-family: 'Montserrat', sans-serif;
 }
+a {
+    text-decoration: none;
+    color: var(--btnGrayStill);
+}
 
+ul{
+    color: var(--btnGrayStill);
+}
 .header {
     background: url('../img/headerBg.png') center no-repeat;
     background-size: 100%;
@@ -463,6 +471,41 @@ footer {
     }
 
     
+}
+
+.activeMenu{
+    font-size: v(16);
+    line-height: v(24);
+    color: var(--activeColor);
+}
+
+.menuMain{
+    background-color: var(--mainWhite);
+    position: fixed;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: v(16) 0;
+        li{
+            margin-right: v(48);
+            &:last-child{
+                i{
+                    padding-right: v(8);
+                }
+            }
+        }
+    }
+}
+
+.logo{
+    padding-left: v(48);
 }
 
 // slick

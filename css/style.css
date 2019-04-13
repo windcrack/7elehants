@@ -38,6 +38,7 @@ body {
 }
 
 :root {
+  --activeColor: #daad51;
   --mainWhite: #fff;
   --btnYellowStill: #EBCB80;
   --btnYellowHover: #EFC669;
@@ -58,6 +59,15 @@ body {
   --btnGrayBorderActive: 2px solid #E1B754;
   --border: 2px solid red;
   font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--btnGrayStill);
+}
+
+ul {
+  color: var(--btnGrayStill);
 }
 
 .header {
@@ -533,6 +543,57 @@ footer {
 
 .desc a:nth-child(3) {
   opacity: 0.5;
+}
+
+.activeMenu {
+  font-size: 4rem;
+  line-height: 6rem;
+  color: var(--activeColor);
+}
+
+.menuMain {
+  background-color: var(--mainWhite);
+  position: fixed;
+  min-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menuMain ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4rem 0;
+}
+
+.menuMain ul li {
+  margin-right: 12rem;
+}
+
+.menuMain ul li:last-child i {
+  padding-right: 2rem;
+}
+
+.logo {
+  padding-left: 12rem;
 }
 
 .slick-dots {

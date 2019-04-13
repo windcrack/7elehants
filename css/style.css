@@ -555,9 +555,7 @@ footer {
   background-color: var(--mainWhite);
   position: fixed;
   min-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;

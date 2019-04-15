@@ -220,7 +220,8 @@ button {
     margin: auto v(32) auto v(72);
     column-count: 1;
     column-width: v(504);
-    button{
+
+    button {
         width: v(168);
     }
 }
@@ -230,15 +231,15 @@ button {
     align-self: flex-start;
     width: 50%;
     height: 100%;
-    
-    img{
+
+    img {
         min-width: 100%;
         min-height: 100%;
     }
 }
 
 .ctaBlock1TextRight {
-    // width: v(360);
+
     margin: auto v(72) auto v(32);
     column-count: 1;
     column-width: v(504);
@@ -271,6 +272,7 @@ button {
 
 .romantickTitle {
     font-size: v(44);
+    line-height: v(64);
     color: var(--mainWhite);
     text-align: center;
     padding-top: v(176);
@@ -643,6 +645,7 @@ footer {
     line-height: v(18);
     display: flex;
     align-items: center;
+
     .toggle {
         position: relative;
         display: block;
@@ -692,6 +695,30 @@ footer {
             }
         }
     }
+
+    #cbx:checked + .toggle {
+        &:before {
+            background: var(--activeColor);
+
+            span {
+                background: var(--btnFontHover);
+                transform: translateX(20px);
+                transition: all .2s cubic-bezier(.8, .4, .3, 1.25), background .15s ease;
+                box-shadow: 0 3px 8px rgba(var(--btnFontHover), .2);
+
+                &:before {
+                    transform: scale(1);
+                    opacity: 0;
+                    transition: all .4s ease;
+                }
+
+            }
+
+
+        }
+
+    }
+
 }
 
 
@@ -718,7 +745,8 @@ textarea {
         margin-right: v(16);
         margin-left: auto;
         background-color: transparent;
-        @media (max-width: 1366px){
+
+        @media (max-width: 1366px) {
             margin-left: v(16);
         }
     }

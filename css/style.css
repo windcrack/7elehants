@@ -320,6 +320,7 @@ button {
 
 .romantickTitle {
   font-size: 11rem;
+  line-height: 16rem;
   color: var(--mainWhite);
   text-align: center;
   padding-top: 44rem;
@@ -804,6 +805,28 @@ footer {
           transform: scale(0);
   opacity: 1;
   pointer-events: none;
+}
+
+.modalTable #cbx:checked + .toggle:before {
+  background: var(--activeColor);
+}
+
+.modalTable #cbx:checked + .toggle:before span {
+  background: var(--btnFontHover);
+  -webkit-transform: translateX(20px);
+          transform: translateX(20px);
+  -webkit-transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+  transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
+  -webkit-box-shadow: 0 3px 8px rgba(var(--btnFontHover), 0.2);
+          box-shadow: 0 3px 8px rgba(var(--btnFontHover), 0.2);
+}
+
+.modalTable #cbx:checked + .toggle:before span:before {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 0;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
 }
 
 textarea {

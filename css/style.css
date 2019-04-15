@@ -271,7 +271,7 @@ button {
   -ms-flex-item-align: start;
       align-self: flex-start;
   width: 50%;
-  max-height: 100%;
+  height: 100%;
 }
 
 .ctaBlock1ImgLeft img,

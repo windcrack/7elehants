@@ -14,7 +14,7 @@ html {
 
 body {
   font-size: initial;
-  background: #291A1A;
+  background: var(--mainColor);
   width: 100%;
   height: 100%;
 }
@@ -40,24 +40,28 @@ body {
 :root {
   --activeColor: #daad51;
   --mainWhite: #fff;
-  --btnYellowStill: #EBCB80;
-  --btnYellowHover: #EFC669;
-  --btnYellowActive: #E1B754;
+  --btnYellowStill: #D4AD51;
+  --btnYellowHover: #F0C052;
+  --btnYellowActive: #D4AD51;
   --btnYellowDis: #EBCB80;
   --btnFontStill: #333333;
   --btnFontHover: #262626;
   --btnFontDis: #3C3C3C;
-  --btnGrayStill: #595959;
+  --btnGrayStill: #0A1422;
   --btnGrayHover: #737373;
-  --btnGrayActive: #4C4C4C;
-  --btnGrayFontStill: #EBCB80;
-  --btnGrayFontHover: #EFC669;
-  --btnGrayFontActive: #E1B754;
+  --btnGrayActive: #0F1D32;
+  --btnGrayDis: #595959;
+  --btnGrayFontStill: #D4AD51;
+  --btnGrayFontHover: #F0C052;
+  --btnGrayFontActive: #D4AD51;
+  --btnGrayFontDis: #EBCB80;
   --inputColor: #7D7D7D;
   --btnGrayBorderStill: 2px solid #EBCB80;
   --btnGrayBorderHover: 2px solid #EFC669;
   --btnGrayBorderActive: 2px solid #E1B754;
   --border: 2px solid red;
+  --btnShadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+  --mainColor: #0A1422;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -116,11 +120,13 @@ header {
   color: var(--mainWhite);
   margin: 43.5rem auto 6rem;
   font-size: 16rem;
+  line-height: 16rem;
 }
 
 .headerTitle .descr {
   color: var(--mainWhite);
   font-size: 4rem;
+  line-height: 6rem;
   margin: 0 auto 8rem;
 }
 
@@ -155,6 +161,8 @@ button {
 .yellowBtn:hover {
   color: var(--btnFontHover);
   background-color: var(--btnYellowHover);
+  -webkit-box-shadow: var(--btnShadow);
+          box-shadow: var(--btnShadow);
 }
 
 .yellowBtn:active {
@@ -247,19 +255,37 @@ button {
 }
 
 .ctaBlock1TextLeft {
-  width: 89.75rem;
-  margin: auto;
+  margin: auto 8rem auto 18rem;
+  -webkit-column-count: 1;
+          column-count: 1;
+  -webkit-column-width: 126rem;
+          column-width: 126rem;
+}
+
+.ctaBlock1TextLeft button {
+  width: 42rem;
 }
 
 .ctaBlock1ImgLeft,
 .ctaBlock1ImgRight {
   -ms-flex-item-align: start;
       align-self: flex-start;
+  width: 50%;
+  max-height: 100%;
+}
+
+.ctaBlock1ImgLeft img,
+.ctaBlock1ImgRight img {
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .ctaBlock1TextRight {
-  width: 90rem;
-  margin: auto;
+  margin: auto 18rem auto 8rem;
+  -webkit-column-count: 1;
+          column-count: 1;
+  -webkit-column-width: 126rem;
+          column-width: 126rem;
 }
 
 .textTitle {
@@ -592,6 +618,226 @@ footer {
 
 .logo {
   padding-left: 12rem;
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.modalBody {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 78rem;
+  color: #fff;
+  background-color: var(--mainColor);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modalBody .yellowBtn {
+  margin: 6rem auto 8rem;
+}
+
+.modalBody a {
+  color: var(--btnYellowStill);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-align: center;
+  font-size: 5rem;
+  font-style: normal;
+  font-weight: bold;
+}
+
+.modalBodyClose {
+  color: var(--btnYellowStill);
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding-bottom: 4rem;
+  margin: 2rem;
+  cursor: pointer;
+}
+
+.modalTitle {
+  font-size: 9rem;
+  line-height: 12rem;
+  text-align: center;
+}
+
+.modalBlockInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modalBlockInput input {
+  font-size: 3rem;
+  line-height: 4.5rem;
+  padding: 2rem 4rem;
+  background-color: #fff;
+  color: rgba(10, 20, 34, 0.25);
+  border: 1px solid var(--btnYellowStill);
+  border-radius: 4px;
+  font-size: 4rem;
+  line-height: 6rem;
+}
+
+.modalBlockInput input[type="date"] {
+  padding: 2rem 19.5rem;
+  background: url("../img/calend.svg") no-repeat center right 10%, #fff;
+}
+
+.modalBlockInput .modalInfo {
+  margin: 6rem auto;
+}
+
+.modalBlockBtnNumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2.5rem;
+  margin-bottom: 6rem;
+}
+
+.modalBlockBtnNumb button {
+  width: 6rem;
+  height: 8rem;
+  background-color: transparent;
+  border: none;
+  font-size: 4rem;
+  line-height: 6rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modalBlockBtnNumb input[type="number"] {
+  width: 6rem;
+  height: 8rem;
+  background-color: transparent;
+  border: none;
+  -moz-appearance: textfield;
+  color: var(--mainColor);
+}
+
+.modalTable {
+  font-size: 3rem;
+  line-height: 4.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalTable .toggle {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.modalTable .toggle:before {
+  content: "";
+  position: relative;
+  top: 3px;
+  left: 3px;
+  width: 34px;
+  height: 14px;
+  display: block;
+  background: var(--btnYellowActive);
+  border-radius: 8px;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+}
+
+.modalTable .toggle span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  display: block;
+  background: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 3px 8px rgba(var(--btnYellowActive), 0.5);
+          box-shadow: 0 3px 8px rgba(var(--btnYellowActive), 0.5);
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.modalTable .toggle span:before {
+  content: "";
+  position: absolute;
+  display: block;
+  margin: -18px;
+  width: 56px;
+  height: 56px;
+  background: rgba(var(--btnFontDis), 0.5);
+  border-radius: 50%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  opacity: 1;
+  pointer-events: none;
+}
+
+textarea {
+  background-color: #fff;
+  color: rgba(10, 20, 34, 0.25);
+  border: 1px solid var(--btnYellowStill);
+  border-radius: 4px;
+  font-size: 4rem;
+  line-height: 6rem;
+  resize: none;
+  margin: 6rem auto !important;
+}
+
+.modalRules {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: var(--btnYellowStill);
+  margin: 6rem auto;
+}
+
+.modalRules input[type="checkbox"] {
+  color: var(--btnYellowStill);
+  margin-right: 4rem;
+  margin-left: auto;
+  background-color: transparent;
+}
+
+@media (max-width: 1366px) {
+  .modalRules input[type="checkbox"] {
+    margin-left: 4rem;
+  }
 }
 
 .slick-dots {

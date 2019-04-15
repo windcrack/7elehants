@@ -14,7 +14,7 @@ html {
 
 body {
     font-size: initial;
-    background: #291A1A;
+    background: var(--mainColor);
     width: 100%;
     height: 100%;
 }
@@ -48,34 +48,40 @@ body {
 :root {
     --activeColor: #daad51;
     --mainWhite: #fff;
-    --btnYellowStill: #EBCB80;
-    --btnYellowHover: #EFC669;
-    --btnYellowActive: #E1B754;
+    --btnYellowStill: #D4AD51;
+    --btnYellowHover: #F0C052;
+    --btnYellowActive: #D4AD51;
     --btnYellowDis: #EBCB80;
     --btnFontStill: #333333;
     --btnFontHover: #262626;
     --btnFontDis: #3C3C3C;
-    --btnGrayStill: #595959;
+    --btnGrayStill: #0A1422;
     --btnGrayHover: #737373;
-    --btnGrayActive: #4C4C4C;
-    --btnGrayFontStill: #EBCB80;
-    --btnGrayFontHover: #EFC669;
-    --btnGrayFontActive: #E1B754;
+    --btnGrayActive: #0F1D32;
+    --btnGrayDis: #595959;
+    --btnGrayFontStill: #D4AD51;
+    --btnGrayFontHover: #F0C052;
+    --btnGrayFontActive: #D4AD51;
+    --btnGrayFontDis: #EBCB80;
     --inputColor: #7D7D7D;
     --btnGrayBorderStill: 2px solid #EBCB80;
     --btnGrayBorderHover: 2px solid #EFC669;
     --btnGrayBorderActive: 2px solid #E1B754;
     --border: 2px solid red;
+    --btnShadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    --mainColor: #0A1422;
     font-family: 'Montserrat', sans-serif;
 }
+
 a {
     text-decoration: none;
     color: var(--btnGrayStill);
 }
 
-ul{
+ul {
     color: var(--btnGrayStill);
 }
+
 .header {
     background: url('../img/headerBg.png') center no-repeat;
     background-size: 100%;
@@ -106,11 +112,13 @@ header {
         color: var(--mainWhite);
         margin: v(174) auto v(24);
         font-size: v(64);
+        line-height: v(64);
     }
 
     .descr {
         color: var(--mainWhite);
         font-size: v(16);
+        line-height: v(24);
         margin: 0 auto v(32);
     }
 }
@@ -137,6 +145,7 @@ button {
     &:hover {
         color: var(--btnFontHover);
         background-color: var(--btnYellowHover);
+        box-shadow: var(--btnShadow);
     }
 
     &:active {
@@ -199,7 +208,9 @@ button {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    // border: var(--border);
+    .grayBtn{
+        
+    }
 }
 
 .right {
@@ -209,20 +220,31 @@ button {
 }
 
 .ctaBlock1TextLeft {
-    // margin: v(112) auto v(104) auto;
-    width: v(359);
-    margin: auto;
-
+    margin: auto v(32) auto v(72);
+    column-count: 1;
+    column-width: v(504);
+    button{
+        width: v(168);
+    }
 }
 
 .ctaBlock1ImgLeft,
 .ctaBlock1ImgRight {
     align-self: flex-start;
+    width: 50%;
+    max-height: 100%;
+    
+    img{
+        min-width: 100%;
+        min-height: 100%;
+    }
 }
 
 .ctaBlock1TextRight {
-    width: v(360);
-    margin: auto;
+    // width: v(360);
+    margin: auto v(72) auto v(32);
+    column-count: 1;
+    column-width: v(504);
 }
 
 .textTitle {
@@ -445,41 +467,44 @@ footer {
             line-height: v(24);
             text-align: right;
         }
+
         .descText {
 
             &:nth-child(1) {
                 margin-bottom: v(24);
             }
-    
+
             &:nth-child(2) {
                 margin-bottom: v(72);
             }
-    
+
             &:nth-child(3) {
                 margin-bottom: v(24);
                 opacity: 0.5;
             }
-        
+
         }
-        &:nth-child(1){
+
+        &:nth-child(1) {
             opacity: 0.5;
         }
-        &:nth-child(3){
+
+        &:nth-child(3) {
             opacity: 0.5;
         }
-        
+
     }
 
-    
+
 }
 
-.activeMenu{
+.activeMenu {
     font-size: v(16);
     line-height: v(24);
     color: var(--activeColor);
 }
 
-.menuMain{
+.menuMain {
     background-color: var(--mainWhite);
     position: fixed;
     min-width: 100%;
@@ -487,16 +512,19 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    ul{
+
+    ul {
         list-style-type: none;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: v(16) 0;
-        li{
+
+        li {
             margin-right: v(48);
-            &:last-child{
-                i{
+
+            &:last-child {
+                i {
                     padding-right: v(8);
                 }
             }
@@ -504,8 +532,199 @@ footer {
     }
 }
 
-.logo{
+.logo {
     padding-left: v(48);
+}
+
+// Modal
+
+.modal {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.modalBody {
+    display: flex;
+    flex-direction: column;
+    max-width: v(312);
+    color: #fff;
+    background-color: var(--mainColor);
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    .yellowBtn {
+        margin: v(24) auto v(32);
+    }
+
+    a {
+        color: var(--btnYellowStill);
+        text-decoration-line: underline;
+        text-align: center;
+        font-size: v(20);
+        font-style: normal;
+        font-weight: bold;
+    }
+
+    // position: fixed;
+}
+
+.modalBodyClose {
+    color: var(--btnYellowStill);
+    align-self: flex-end;
+    padding-bottom: v(16);
+    margin: v(8);
+    cursor: pointer;
+}
+
+.modalTitle {
+    font-size: v(36);
+    line-height: v(48);
+    text-align: center;
+}
+
+.modalBlockInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    input {
+        font-size: v(12);
+        line-height: v(18);
+        padding: v(8) v(16);
+        background-color: #fff;
+        color: rgba(10, 20, 34, 0.25);
+        border: 1px solid var(--btnYellowStill);
+        border-radius: 4px;
+        font-size: v(16);
+        line-height: v(24);
+    }
+
+    input[type="date"] {
+        padding: v(8) v(78);
+        background: url('../img/calend.svg') no-repeat center right 10%, #fff;
+    }
+
+    .modalInfo {
+        margin: v(24) auto;
+    }
+
+}
+
+.modalBlockBtnNumb {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: v(10);
+
+    button {
+        width: v(24);
+        height: v(32);
+        background-color: transparent;
+        border: none;
+        font-size: v(16);
+        line-height: v(24);
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    input[type="number"] {
+        width: v(24);
+        height: v(32);
+        background-color: transparent;
+        border: none;
+        -moz-appearance: textfield;
+        color: var(--mainColor);
+    }
+
+    margin-bottom: v(24);
+}
+
+.modalTable {
+    font-size: v(12);
+    line-height: v(18);
+    display: flex;
+    align-items: center;
+    .toggle {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 20px;
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transform: translate3d(0, 0, 0);
+
+        &:before {
+            content: "";
+            position: relative;
+            top: 3px;
+            left: 3px;
+            width: 34px;
+            height: 14px;
+            display: block;
+            background: var(--btnYellowActive);
+            border-radius: 8px;
+            transition: background .2s ease;
+        }
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            display: block;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px rgba(var(--btnYellowActive), .5);
+            transition: all .2s ease;
+
+            &:before {
+                content: "";
+                position: absolute;
+                display: block;
+                margin: -18px;
+                width: 56px;
+                height: 56px;
+                background: rgba(var(--btnFontDis), .5);
+                border-radius: 50%;
+                transform: scale(0);
+                opacity: 1;
+                pointer-events: none;
+            }
+        }
+    }
+}
+
+
+textarea {
+    background-color: #fff;
+    color: rgba(10, 20, 34, 0.25);
+    border: 1px solid var(--btnYellowStill);
+    border-radius: 4px;
+    font-size: v(16);
+    line-height: v(24);
+    resize: none;
+    margin: v(24) auto !important;
+}
+
+.modalRules {
+    display: flex;
+    font-size: v(8);
+    line-height: v(12);
+    color: var(--btnYellowStill);
+    margin: v(24) auto;
+
+    input[type="checkbox"] {
+        color: var(--btnYellowStill);
+        margin-right: v(16);
+        margin-left: auto;
+        background-color: transparent;
+        @media (max-width: 1366px){
+            margin-left: v(16);
+        }
+    }
 }
 
 // slick

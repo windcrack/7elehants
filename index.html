@@ -27,7 +27,7 @@
             <li>Мероприятия</li>
             <li>Акции</li>
             <li>Контакты</li>
-            <li><button class="greyBtn">Резерв стола</button></li>
+            <li><button class="greyBtn rezerv">Резерв стола</button></li>
             <li><i class="far fa-mobile"></i><a href="tel:+79529931234">+7(952)993 1234</a></li>
         </ul>
     </nav>
@@ -42,7 +42,7 @@
                 <h1>Добро пожаловать</h1>
                 <p class="descr">7 слонов это место где рождается вкус...</p>
                 <div class="headerButtonBlock">
-                    <button class="yellowBtn">Заказ столов</button>
+                    <button class="yellowBtn rezerv">Резерв столов</button>
                     <button class="greyBtn">Доставка</button>
                 </div>
             </div>
@@ -67,7 +67,7 @@
                     </button>
                 </div>
                 <div class="ctaBlock1ImgLeft">
-                    <div><img src="img/slide1.png" alt="Тест 1" srcset=""></div>
+                    <div><img src="img/slide1.png" alt="Тест 1"></div>
                     <!-- <div><img src="img/slide1.png" alt="Тест 1" srcset=""></div>
                 <div><img src="img/slide1.png" alt="Тест 1" srcset=""></div>
                 <div><img src="img/slide1.png" alt="Тест 1" srcset=""></div>  -->
@@ -75,6 +75,7 @@
             </div>
             <div class="right">
                 <div class="ctaBlock1TextRight">
+                    <h2 class="textTitle">7 слонов</h2>
                     <p class="textDesc">Сегодня «7 слонов» - это 4 зала: 2 верхних зала и 2 нижних зала, которые ждут
                         Вас с нетерпением в гости. Мы всегда рады, когда Вы доверяете нам проведение своего торжества –
                         Дня рождения, юбилея, встречи выпускников или свадьбы.</p>
@@ -170,6 +171,45 @@
             </a>
         </div>
     </footer>
+    <!-- Модальные окна -->
+    <div class="modal">
+        <div class="modalBody">
+            <div class="modalBodyClose">
+                <i class="far fa-times"></i>
+                <span>Закрыть</span>
+            </div>
+            <h2 class="modalTitle">
+                Резерв столов
+            </h2>
+            <a href="#" class="modalSub">Компановка столов</a>
+            <div class="modalBlockInput">
+                <input type="text" class="modalInfo" placeholder="Имя">
+                <input type="text" class="modalInfo" placeholder="Телефон">
+                <input type="date" class="modalInfo" placeholder="Выберите дату и время">
+                <div class="modalBlockBtnNumb">
+                    <span>Гости:</span>
+                    <button><i class="far fa-plus"></i></button>
+                    <input type="number" value="2">
+                    <button><i class="far fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="modalTable">
+                <div class="changeTable">
+                    <input type="checkbox" id="cbx" style="display: none"/>
+                    <label for="cbx" class="toggle"><span></span></label> 
+                </div>
+                <p class="modalTableText">
+                    Украсить стол для романтического ужина (+200 р.)
+                </p>
+            </div>
+            <textarea name="" id="" cols="20" rows="10" placeholder="Пожелания"></textarea>
+            <div class="modalRules">
+                <input type="checkbox">
+                <p class="rulesText">Я прочитал(а) и соглашаюсь с правилами сайта правила и условия</p>
+            </div>
+            <button class="yellowBtn">Зарезервировать</button>
+        </div>
+    </div>
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <script src="slick/slick.min.js"></script>

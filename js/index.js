@@ -53,5 +53,5 @@ document.addEventListener('DOMContentLoaded', () => {
     openBlock(btnRezervRomatic, modal)
     closeBlock(header, mainMenu)
     closeBlock(btnClose, modal)
-    scrollMouse(blockVisibleMenu, mainMenu);
+    scrollMouse(blockVisibleMenu, mainMenu)
 })

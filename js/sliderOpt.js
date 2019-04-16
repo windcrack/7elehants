@@ -10,6 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
             swipeToSlide: true,
         })
     }
-    // sliderRun('.ctaBlock1ImgLeft')
+    sliderRun('.ctaBlock1ImgLeft')
     // sliderRun('.ctaBlock1ImgRight')
 })

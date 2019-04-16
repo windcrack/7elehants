@@ -638,7 +638,7 @@ footer {
   max-width: 78rem;
   color: #fff;
   background-color: var(--mainColor);
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
 }
@@ -738,7 +738,7 @@ footer {
   background-color: transparent;
   border: none;
   -moz-appearance: textfield;
-  color: var(--mainColor);
+  color: var(--mainWhite);
 }
 
 .modalTable {

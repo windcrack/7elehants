@@ -15,7 +15,9 @@
     <!-- Font Asome -->
     <link rel="stylesheet" href="fa/all.css">
     <!-- Шрифты -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&amp;subset=cyrillic,cyrillic-ext"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -29,7 +31,7 @@
             <li><a href="#">Акции</a></li>
             <li><a href="#">Контакты</a></li>
             <li><button class="greyBtn rezerv">Резерв стола</button></li>
-            <li><i class="far fa-mobile"></i><a href="tel:+79529931234">+7(952)993 1234</a></li>
+            <li><i class="far fa-mobile"></i><a href="tel:+79529931234" class="phone">+7(952)993 1234</a></li>
         </ul>
     </nav>
     <main>
@@ -40,8 +42,8 @@
                 </button>
             </header>
             <div class="headerTitle">
-                <h1>Добро пожаловать</h1>
-                <p class="descr">7 слонов это место где рождается вкус...</p>
+                <img src="img/sevenElephants.png" alt="Семь слонов">
+                <h2 class="descr">это место где рождается вкус...</h2>
                 <div class="headerButtonBlock">
                     <button class="yellowBtn rezervCenter">Резерв столов</button>
                     <button class="greyBtn">Доставка</button>
@@ -63,15 +65,15 @@
                     <p class="textDesc">Чтобы не привело Вас в «7 слонов»: торжество, обычный обед, дружеские посиделки
                         или деловая встреча, Вы всегда можете быть уверены в достойном приеме, качественном
                         обслуживании и изысканной кухне.</p>
-                    <button class="greyBtn">
+                    <button class="yellowBtn">
                         Посмотреть меню
                     </button>
                 </div>
                 <div class="ctaBlock1ImgLeft">
-                    <img src="img/slide1.png" alt="Тест 1">
-                    <!-- <img src="img/slide1.png" alt="Тест 1" srcset="">
-                    <img src="img/slide1.png" alt="Тест 1" srcset="">
-                    <img src="img/slide1.png" alt="Тест 1" srcset=""> -->
+                    <div><img src="img/slide1.png" alt="Тест 1"></div>
+                    <div><img src="img/slide1.png" alt="Тест 1"></div>
+                    <div><img src="img/slide1.png" alt="Тест 1"></div>
+                    <div><img src="img/slide1.png" alt="Тест 1"></div>
                 </div>
             </div>
             <div class="right">
@@ -80,15 +82,15 @@
                     <p class="textDesc">Сегодня «7 слонов» - это 4 зала: 2 верхних зала и 2 нижних зала, которые ждут
                         Вас с нетерпением в гости. Мы всегда рады, когда Вы доверяете нам проведение своего торжества –
                         Дня рождения, юбилея, встречи выпускников или свадьбы.</p>
-                    <button class="greyBtn">
+                    <button class="yellowBtn">
                         Мероприятия
                     </button>
                 </div>
                 <div class="ctaBlock1ImgRight">
-                    <img src="img/slide1.png" alt="Тест 1">
-                    <!-- <div><img src="img/slide1.png" alt="Тест 1" srcset=""></div>
-                        <div><img src="img/slide1.png" alt="Тест 1" srcset=""></div>
-                        <div><img src="img/slide1.png" alt="Тест 1" srcset=""></div>  -->
+                    <div><img src="img/slide1.png" alt="Тест 1"></div>
+                    <div><img src="img/slide1.png" alt="Тест 1" srcset=""></div>
+                    <div><img src="img/slide1.png" alt="Тест 1" srcset=""></div>
+                    <div><img src="img/slide1.png" alt="Тест 1" srcset=""></div>
                 </div>
             </div>
         </section>
@@ -100,72 +102,70 @@
         </section>
         <section class="stock">
             <div class="stockBlock">
-                <h2 class="stockTitle">Акции</h2>
-                <p class="stockSub">В кафе 7 слонов действует дисконтная программа и множество акций.</p>
-                <button class="greyBtn">Посмотреть</button>
+                <div class="stockBlockText">
+                    <h2 class="stockTitle">Акции</h2>
+                    <p class="stockSub">В кафе 7 слонов действует дисконтная программа и множество акций.</p>
+                    <button class="greyBtn">Открыть</button>
+                </div>
+                <div class="stockBlockImg">
+                    <img src="img/pizza.svg" alt="Ммм пицца">
+                </div>
             </div>
         </section>
         <section class="contact">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2300.767098888883!2d32.051920615299196!3d54.78406087375168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46cef7e344454f6b%3A0xcc65bd5b3b1dbb33!2zNyDQodC70L7QvdC-0LI!5e0!3m2!1sru!2sru!4v1555070354847!5m2!1sru!2sru"
-                class="contactMap" allowfullscreen></iframe>
             <div class="quest">
                 <h2 class="questTitle">Остались вопросы?</h2>
                 <p class="questSub">Напишите нам и мы все расскажем!</p>
-                <form action="" class="questForm">
+                <form action="POST" class="questForm">
                     <input type="text" class="name" placeholder="Имя*">
                     <input type="text" class="phone" placeholder="Тел.*">
                     <input type="text" class="mess" placeholder="Сообщение">
                     <div class="questFormBtn">
                         <button class="yellowBtn">Отправить</button>
                     </div>
+
                 </form>
-                <div class="questAdr">
-                    <div class="questAdrText">
-                        <i class="far fa-map-marker-alt"></i>
-                        <p>214000 Смоленск, ул. Большая Советская, д.19/2</p>
-                    </div>
-                    <div class="questAdrText">
-                        <i class="far fa-envelope-open"></i>
-                        <p>contact@hofmannui.net</p>
-                    </div>
-                    <div class="questAdrText">
-                        <i class="far fa-mobile-alt"></i>
-                        <p>+7 (4812) 38-77-99, 606-777</p>
-                    </div>
-                    <div class="questAdrSocial">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-vk"></i></a>
-                    </div>
-                </div>
+                <p class="questCompleteOK">Ваш вопрос отправлен, спасибо за обращение!</p>
+                <!-- <p class="questCompleteError">Ваш вопрос не отправлен, попробуйте еще раз!</p> -->
             </div>
         </section>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2300.767098888883!2d32.051920615299196!3d54.78406087375168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46cef7e344454f6b%3A0xcc65bd5b3b1dbb33!2zNyDQodC70L7QvdC-0LI!5e0!3m2!1sru!2sru!4v1555070354847!5m2!1sru!2sru"
+            class="contactMap" allowfullscreen></iframe>
     </main>
     <footer>
         <div class="subNav">
-            <ul class="subNavInfo">
-                <li><a href="#">Информация</a></li>
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Оплата</a></li>
-                <li><a href="#">Вакансии</a></li>
-                <li><a href="#">Оплата</a></li>
-            </ul>
-            <ul class="subNavStock">
-                <li><a href="">Акции</a></li>
-                <li><a href="">Дисконт</a></li>
-                <li><a href="">Welcome drink</a></li>
-                <li><a href="">Пицца 2+1</a></li>
-            </ul>
+            <div class="blockAddress">
+                <ul class="subNavInfo">
+                    <li><span><i class="far fa-map-marker-alt"></i></span>214000 Смоленск, ул. Большая Советская, д.19/2
+                    </li>
+                    <li><a href="#"><span><i class="far fa-envelope-open"></i></span>contact@hofmannui.net</a></li>
+                    <li><a href="#"><span><i class="far fa-mobile-alt"></i></span>+7 (4812) 38-77-99, 606-777</a></li>
+                    <li><a href="#"><span><i class="fab fa-vk"></i></span>Vkontakte</a></li>
+                    <li><a href="#"><span><i class="fab fa-instagram"></i></span>Instagram</a></li>
+                </ul>
+            </div>
+            <div class="blockInfo">
+                <ul class="subNavStock">
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Информация</a></li>
+                </ul>
+                <ul class="subNavStock">
+                    <li><a href="#" class="activeMenu">Резерв стола</a></li>
+                    <li><a href="#">Меню</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Мероприятия</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
         </div>
         <div class="desc">
             <a href="#">
                 <p class="descText">
-                    Все права защищены. Полное или частичное копирование
-                    материалов сайта запрещено.
+                    Все права защищены. Полное или частичное копирование материалов сайта запрещено.
                 </p>
-            </a>
-            <a href="#">
-                <p class="descText">Юридическая информация.</p>
             </a>
             <a href="#">
                 <p class="descText">Created by ManaMake 2019</p>
@@ -196,8 +196,7 @@
             </div>
             <div class="modalTable">
                 <div class="changeTable">
-                    <input type="checkbox" id="cbx" style="display: none"/>
-                    <label for="cbx" class="toggle"><span></span></label> 
+                    <div class="switch-btn"></div>
                 </div>
                 <p class="modalTableText">
                     Украсить стол для романтического ужина (+200 р.)

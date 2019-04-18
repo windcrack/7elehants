@@ -11,5 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
     sliderRun('.ctaBlock1ImgLeft')
-    // sliderRun('.ctaBlock1ImgRight')
+    sliderRun('.ctaBlock1ImgRight')
 })

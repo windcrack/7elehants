@@ -70,7 +70,26 @@ body {
     --border: 2px solid red;
     --btnShadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
     --mainColor: #0A1422;
-    font-family: 'Montserrat', sans-serif;
+    --sendOkColor: #1EC700;
+    --sendErrorColor: red;
+    // font-family: 'Montserrat', sans-serif;
+    --headerFontFamaly: 'Cormorant Garamond', serif;
+    --textFontFamaly: 'Tahoma', sans-serif,
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--headerFontFamaly);
+}
+
+p,
+a,
+li,
+span,
+button,
+input {
+    font-family: var(--textFontFamaly);
 }
 
 a {
@@ -86,7 +105,7 @@ ul {
     background: url('../img/headerBg.png') center no-repeat;
     background-size: 100%;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
 }
 
 header {
@@ -108,18 +127,20 @@ header {
     display: flex;
     flex-direction: column;
 
-    h1 {
+    img {
         color: var(--mainWhite);
         margin: v(174) auto v(24);
-        font-size: v(64);
-        line-height: v(64);
     }
 
     .descr {
         color: var(--mainWhite);
-        font-size: v(16);
-        line-height: v(24);
+        font-size: v(36);
+        line-height: v(48);
         margin: 0 auto v(32);
+        font-family: var(--headerFontFamaly);
+        column-count: 1;
+        column-width: v(552);
+        text-align: center;
     }
 }
 
@@ -246,12 +267,14 @@ button {
 }
 
 .textTitle {
-    font-size: v(32);
+    font-size: v(48);
+    line-height: v(64);
     padding-bottom: v(20);
 }
 
 .textSub {
-    font-size: v(18);
+    font-size: v(28);
+    line-height: v(40);
     padding-bottom: v(20);
 }
 
@@ -290,18 +313,36 @@ button {
 }
 
 .stock {
-    color: var(--mainWhite);
+
+    .greyBtn {
+        margin-bottom: v(190);
+    }
+
+    background: #fff;
 }
 
 .stockBlock {
     padding-left: v(144);
     padding-bottom: v(96);
+    display: flex;
+    background: url('../img/bgInWhite.png');
+}
+
+.stockBlockImg {
+
+    width: 100%;
+    height: v(592);
+
+    img {
+        margin-top: v(92);
+        margin-left: v(12);
+    }
 }
 
 .stockTitle {
     font-size: v(44);
     line-height: v(48);
-    margin-top: v(72);
+    margin-top: v(136);
 }
 
 .stockSub {
@@ -309,11 +350,14 @@ button {
     line-height: v(24);
     opacity: 0.5;
     margin-top: v(24);
-    margin-bottom: v(32);
+    width: v(360);
+    height: v(96);
+    margin-bottom: v(24);
 }
 
 .contact {
-    background: url('../img/iPhoneApp.png') no-repeat bottom left 5%, var(--mainWhite);
+    background: url('../img/quest.svg') center no-repeat;
+    background-size: cover;
 }
 
 .contactMap {
@@ -321,27 +365,23 @@ button {
     height: v(450);
     border: 0;
     background-color: #291A1A;
+    filter: invert(100%);
 }
 
 .quest {
-    display: grid;
-    grid-template-columns: 33% 37% 30%;
-    grid-template-areas:
-        "header header header"
-        "sub sub sub"
-        ". form adr";
+    display: flex;
+    flex-direction: column;
+    color: var(--mainWhite);
 }
 
 .questTitle {
-    grid-area: header;
     text-align: center;
     font-size: v(48);
     line-height: v(64);
-    padding-top: v(56);
+    padding-top: v(74);
 }
 
 .questSub {
-    grid-area: sub;
     text-align: center;
     font-size: v(16);
     line-height: v(24);
@@ -349,32 +389,34 @@ button {
 }
 
 .questForm {
-    grid-area: form;
-    display: grid;
-    grid-template-areas:
-        "name phone"
-        "mess mess"
-        "bnt bnt";
+    display: flex;
+    flex-direction: column;
+    width: v(336);
+    margin: auto;
 
     input {
         background-color: transparent;
-        color: var(--inputColor);
+        color: var(--mainWhite);
         border: none;
-        border-bottom: 1px solid var(--inputColor);
+        border-bottom: 1px solid var(--mainWhite);
         padding-bottom: v(5);
         font-size: v(18);
         line-height: v(27);
     }
 
-    margin-right: v(82);
+    input[type="text"] {
+        ::placeholder {
+            color: #000;
+            opacity: 1;
+            background: #fff;
+        }
+    }
 }
 
 .questFormBtn {
-    grid-area: bnt;
     display: flex;
     flex-direction: row;
     width: 100%;
-    margin-bottom: v(96);
 
     .yellowBtn {
         margin: auto;
@@ -382,25 +424,35 @@ button {
 }
 
 .name {
-    grid-area: name;
-    max-width: v(168);
     margin-bottom: v(40);
 }
 
 .phone {
-    grid-area: phone;
-    max-width: v(163);
     margin-bottom: v(40);
 }
 
 .mess {
-    grid-area: mess;
     margin-bottom: v(36);
-    margin-right: v(44);
+}
+
+.questCompleteOK,
+.questCompleteError {
+    text-align: center;
+    width: v(336);
+    font-size: v(12);
+    line-height: v(17);
+    margin: v(24) auto v(88);
+}
+
+.questCompleteOK {
+    color: var(--sendOkColor);
+}
+
+.questCompleteError {
+    color: var(--sendErrorColor);
 }
 
 .questAdr {
-    grid-area: adr;
     display: flex;
     flex-direction: column;
 }
@@ -428,41 +480,75 @@ button {
 footer {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+
+    a {
+        color: var(--mainWhite);
+    }
 }
 
 .subNav {
     display: flex;
+    justify-content: space-between;
     margin: v(24) v(72);
 }
-
+.blockAddress{
+    display: flex;
+    flex-direction: row;
+}
+.blockInfo{
+    display: flex;
+    justify-content: space-between;
+}
 .subNavInfo,
 .subNavStock {
     color: var(--mainWhite);
     list-style-type: none;
     margin-right: v(96);
-    font-size: v(12);
+    font-size: v(16);
     line-height: v(24);
 
     li {
-        &:nth-child(1) {
-            opacity: 0.5;
-        }
+        padding: v(12) 0;
+    }
+}
+
+.subNavInfo{
+    span{
+        width: v(24);
+        height: v(24);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    li:nth-child(1){
+        display: flex;
+    }
+
+    a{
+        display: flex;
+
+    }
+
+    i{
+        padding-right: v(24);
     }
 }
 
 .desc {
-
-    margin-right: v(48);
-    margin-top: v(24);
+    display: flex;
+    justify-content: space-between;
+    margin: v(24) v(48) v(24) v(72);
 
     a {
         color: var(--mainWhite);
         text-decoration: none;
 
         p {
-            column-count: 1;
-            column-width: v(264);
-            font-size: v(16);
+            // column-count: 1;
+            // column-width: v(552);
+            font-size: v(12);
             line-height: v(24);
             text-align: right;
         }
@@ -470,14 +556,12 @@ footer {
         .descText {
 
             &:nth-child(1) {
-                margin-bottom: v(24);
+                
             }
+
+            
 
             &:nth-child(2) {
-                margin-bottom: v(72);
-            }
-
-            &:nth-child(3) {
                 margin-bottom: v(24);
                 opacity: 0.5;
             }
@@ -488,7 +572,7 @@ footer {
             opacity: 0.5;
         }
 
-        &:nth-child(3) {
+        &:nth-child(2) {
             opacity: 0.5;
         }
 
@@ -511,6 +595,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    z-index: 2;
 
     ul {
         list-style-type: none;
@@ -541,6 +626,7 @@ footer {
     width: 100%;
     height: 100%;
     display: none;
+    
 }
 
 .modalBody {
@@ -552,6 +638,7 @@ footer {
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 3;
 
     .yellowBtn {
         margin: v(24) auto v(32);
@@ -642,81 +729,43 @@ footer {
     font-size: v(12);
     line-height: v(18);
     display: flex;
-    align-items: center;
+    align-items: center;  
+}
 
-    .toggle {
-        position: relative;
-        display: block;
-        width: 40px;
-        height: 20px;
-        cursor: pointer;
-        -webkit-tap-highlight-color: transparent;
-        transform: translate3d(0, 0, 0);
-
-        &:before {
-            content: "";
-            position: relative;
-            top: 3px;
-            left: 3px;
-            width: 34px;
-            height: 14px;
-            display: block;
-            background: var(--btnYellowActive);
-            border-radius: 8px;
-            transition: background .2s ease;
-        }
-
-        span {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 20px;
-            height: 20px;
-            display: block;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 3px 8px rgba(var(--btnYellowActive), .5);
-            transition: all .2s ease;
-
-            &:before {
-                content: "";
-                position: absolute;
-                display: block;
-                margin: -18px;
-                width: 56px;
-                height: 56px;
-                background: rgba(var(--btnFontDis), .5);
-                border-radius: 50%;
-                transform: scale(0);
-                opacity: 1;
-                pointer-events: none;
-            }
-        }
-    }
-
-    #cbx:checked + .toggle {
-        &:before {
-            background: var(--activeColor);
-
-            span {
-                background: var(--btnFontHover);
-                transform: translateX(20px);
-                transition: all .2s cubic-bezier(.8, .4, .3, 1.25), background .15s ease;
-                box-shadow: 0 3px 8px rgba(var(--btnFontHover), .2);
-
-                &:before {
-                    transform: scale(1);
-                    opacity: 0;
-                    transition: all .4s ease;
-                }
-
-            }
-
-
-        }
-
-    }
-
+.switch-btn {
+    display: inline-block;
+    width: v(30); /* ширина переключателя */
+    height: v(12); /* высота переключателя */
+    border-radius: v(12); /* радиус скругления */
+    background: var(--mainColor); /* цвет фона */
+    border: solid 2px var(--btnYellowActive);
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition-duration: 300ms; /* анимация */
+}
+.switch-btn::after {
+    content: "";
+    height: v(8); /* высота кнопки */
+    width: v(12); /* ширина кнопки */
+    border-radius: v(12); /* радиус кнопки */
+    background: var(--mainColor); /* цвет кнопки */
+    border: solid 2px var(--btnYellowActive); 
+    top: v(0); /* положение кнопки по вертикали относительно основы */
+    left: v(0); /* положение кнопки по горизонтали относительно основы */
+    transition-duration: 300ms; /* анимация */
+    position: absolute;
+    z-index: 1;
+}
+.switch-on {
+    background: var(--btnYellowActive);
+}
+.switch-on::after {
+    left: v(14);
+    background: var(--btnYellowActive);
 }
 
 
@@ -751,6 +800,9 @@ textarea {
 }
 
 // slick
+.slick-slide{
+    z-index: 1 !important;
+}
 .slick-dots {
     bottom: v(80) !important;
 }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -62,7 +63,26 @@ body {
   --border: 2px solid red;
   --btnShadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
   --mainColor: #0A1422;
-  font-family: 'Montserrat', sans-serif;
+  --sendOkColor: #1EC700;
+  --sendErrorColor: red;
+  --headerFontFamaly: 'Cormorant Garamond', serif;
+  --textFontFamaly: 'Tahoma', sans-serif,
+;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--headerFontFamaly);
+}
+
+p,
+a,
+li,
+span,
+button,
+input {
+  font-family: var(--textFontFamaly);
 }
 
 a {
@@ -116,18 +136,22 @@ header {
           flex-direction: column;
 }
 
-.headerTitle h1 {
+.headerTitle img {
   color: var(--mainWhite);
   margin: 43.5rem auto 6rem;
-  font-size: 16rem;
-  line-height: 16rem;
 }
 
 .headerTitle .descr {
   color: var(--mainWhite);
-  font-size: 4rem;
-  line-height: 6rem;
+  font-size: 9rem;
+  line-height: 12rem;
   margin: 0 auto 8rem;
+  font-family: var(--headerFontFamaly);
+  -webkit-column-count: 1;
+          column-count: 1;
+  -webkit-column-width: 138rem;
+          column-width: 138rem;
+  text-align: center;
 }
 
 .headerButtonBlock {
@@ -289,12 +313,14 @@ button {
 }
 
 .textTitle {
-  font-size: 8rem;
+  font-size: 12rem;
+  line-height: 16rem;
   padding-bottom: 5rem;
 }
 
 .textSub {
-  font-size: 4.5rem;
+  font-size: 7rem;
+  line-height: 10rem;
   padding-bottom: 5rem;
 }
 
@@ -338,18 +364,36 @@ button {
 }
 
 .stock {
-  color: var(--mainWhite);
+  background: #fff;
+}
+
+.stock .greyBtn {
+  margin-bottom: 47.5rem;
 }
 
 .stockBlock {
   padding-left: 36rem;
   padding-bottom: 24rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url("../img/bgInWhite.png");
+}
+
+.stockBlockImg {
+  width: 100%;
+  height: 148rem;
+}
+
+.stockBlockImg img {
+  margin-top: 23rem;
+  margin-left: 3rem;
 }
 
 .stockTitle {
   font-size: 11rem;
   line-height: 12rem;
-  margin-top: 18rem;
+  margin-top: 34rem;
 }
 
 .stockSub {
@@ -357,11 +401,14 @@ button {
   line-height: 6rem;
   opacity: 0.5;
   margin-top: 6rem;
-  margin-bottom: 8rem;
+  width: 90rem;
+  height: 24rem;
+  margin-bottom: 6rem;
 }
 
 .contact {
-  background: url("../img/iPhoneApp.png") no-repeat bottom left 5%, var(--mainWhite);
+  background: url("../img/quest.svg") center no-repeat;
+  background-size: cover;
 }
 
 .contactMap {
@@ -369,32 +416,29 @@ button {
   height: 112.5rem;
   border: 0;
   background-color: #291A1A;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
 }
 
 .quest {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 33% 37% 30%;
-      grid-template-columns: 33% 37% 30%;
-      grid-template-areas: "header header header" "sub sub sub" ". form adr";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: var(--mainWhite);
 }
 
 .questTitle {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: header;
   text-align: center;
   font-size: 12rem;
   line-height: 16rem;
-  padding-top: 14rem;
+  padding-top: 18.5rem;
 }
 
 .questSub {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: sub;
   text-align: center;
   font-size: 4rem;
   line-height: 6rem;
@@ -402,30 +446,52 @@ button {
 }
 
 .questForm {
-  -ms-grid-row: 3;
-  -ms-grid-column: 2;
-  grid-area: form;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "name phone" "mess mess" "bnt bnt";
-  margin-right: 20.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 84rem;
+  margin: auto;
 }
 
 .questForm input {
   background-color: transparent;
-  color: var(--inputColor);
+  color: var(--mainWhite);
   border: none;
-  border-bottom: 1px solid var(--inputColor);
+  border-bottom: 1px solid var(--mainWhite);
   padding-bottom: 1.25rem;
   font-size: 4.5rem;
   line-height: 6.75rem;
 }
 
+.questForm input[type="text"] ::-webkit-input-placeholder {
+  color: #000;
+  opacity: 1;
+  background: #fff;
+}
+
+.questForm input[type="text"] :-ms-input-placeholder {
+  color: #000;
+  opacity: 1;
+  background: #fff;
+}
+
+.questForm input[type="text"] ::-ms-input-placeholder {
+  color: #000;
+  opacity: 1;
+  background: #fff;
+}
+
+.questForm input[type="text"] ::placeholder {
+  color: #000;
+  opacity: 1;
+  background: #fff;
+}
+
 .questFormBtn {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: bnt;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -434,7 +500,6 @@ button {
       -ms-flex-direction: row;
           flex-direction: row;
   width: 100%;
-  margin-bottom: 24rem;
 }
 
 .questFormBtn .yellowBtn {
@@ -442,34 +507,35 @@ button {
 }
 
 .name {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: name;
-  max-width: 42rem;
   margin-bottom: 10rem;
 }
 
 .phone {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: phone;
-  max-width: 40.75rem;
   margin-bottom: 10rem;
 }
 
 .mess {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: mess;
   margin-bottom: 9rem;
-  margin-right: 11rem;
+}
+
+.questCompleteOK,
+.questCompleteError {
+  text-align: center;
+  width: 84rem;
+  font-size: 3rem;
+  line-height: 4.25rem;
+  margin: 6rem auto 22rem;
+}
+
+.questCompleteOK {
+  color: var(--sendOkColor);
+}
+
+.questCompleteError {
+  color: var(--sendErrorColor);
 }
 
 .questAdr {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: adr;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -508,13 +574,43 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer a {
+  color: var(--mainWhite);
 }
 
 .subNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 6rem 18rem;
+}
+
+.blockAddress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.blockInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .subNavInfo,
@@ -522,18 +618,53 @@ footer {
   color: var(--mainWhite);
   list-style-type: none;
   margin-right: 24rem;
-  font-size: 3rem;
+  font-size: 4rem;
   line-height: 6rem;
 }
 
-.subNavInfo li:nth-child(1),
-.subNavStock li:nth-child(1) {
-  opacity: 0.5;
+.subNavInfo li,
+.subNavStock li {
+  padding: 3rem 0;
+}
+
+.subNavInfo span {
+  width: 6rem;
+  height: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subNavInfo li:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subNavInfo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.subNavInfo i {
+  padding-right: 6rem;
 }
 
 .desc {
-  margin-right: 12rem;
-  margin-top: 6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 6rem 12rem 6rem 18rem;
 }
 
 .desc a {
@@ -542,24 +673,12 @@ footer {
 }
 
 .desc a p {
-  -webkit-column-count: 1;
-          column-count: 1;
-  -webkit-column-width: 66rem;
-          column-width: 66rem;
-  font-size: 4rem;
+  font-size: 3rem;
   line-height: 6rem;
   text-align: right;
 }
 
-.desc a .descText:nth-child(1) {
-  margin-bottom: 6rem;
-}
-
 .desc a .descText:nth-child(2) {
-  margin-bottom: 18rem;
-}
-
-.desc a .descText:nth-child(3) {
   margin-bottom: 6rem;
   opacity: 0.5;
 }
@@ -568,7 +687,7 @@ footer {
   opacity: 0.5;
 }
 
-.desc a:nth-child(3) {
+.desc a:nth-child(2) {
   opacity: 0.5;
 }
 
@@ -593,6 +712,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 2;
 }
 
 .menuMain ul {
@@ -641,6 +761,7 @@ footer {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 3;
 }
 
 .modalBody .yellowBtn {
@@ -752,81 +873,57 @@ footer {
           align-items: center;
 }
 
-.modalTable .toggle {
-  position: relative;
-  display: block;
-  width: 40px;
-  height: 20px;
+.switch-btn {
+  display: inline-block;
+  width: 7.5rem;
+  /* ширина переключателя */
+  height: 3rem;
+  /* высота переключателя */
+  border-radius: 3rem;
+  /* радиус скругления */
+  background: var(--mainColor);
+  /* цвет фона */
+  border: solid 2px var(--btnYellowActive);
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-}
-
-.modalTable .toggle:before {
-  content: "";
   position: relative;
-  top: 3px;
-  left: 3px;
-  width: 34px;
-  height: 14px;
-  display: block;
-  background: var(--btnYellowActive);
-  border-radius: 8px;
-  -webkit-transition: background .2s ease;
-  transition: background .2s ease;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  /* анимация */
 }
 
-.modalTable .toggle span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  display: block;
-  background: white;
-  border-radius: 10px;
-  -webkit-box-shadow: 0 3px 8px rgba(var(--btnYellowActive), 0.5);
-          box-shadow: 0 3px 8px rgba(var(--btnYellowActive), 0.5);
-  -webkit-transition: all .2s ease;
-  transition: all .2s ease;
-}
-
-.modalTable .toggle span:before {
+.switch-btn::after {
   content: "";
+  height: 2rem;
+  /* высота кнопки */
+  width: 3rem;
+  /* ширина кнопки */
+  border-radius: 3rem;
+  /* радиус кнопки */
+  background: var(--mainColor);
+  /* цвет кнопки */
+  border: solid 2px var(--btnYellowActive);
+  top: 0rem;
+  /* положение кнопки по вертикали относительно основы */
+  left: 0rem;
+  /* положение кнопки по горизонтали относительно основы */
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  /* анимация */
   position: absolute;
-  display: block;
-  margin: -18px;
-  width: 56px;
-  height: 56px;
-  background: rgba(var(--btnFontDis), 0.5);
-  border-radius: 50%;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  opacity: 1;
-  pointer-events: none;
+  z-index: 1;
 }
 
-.modalTable #cbx:checked + .toggle:before {
-  background: var(--activeColor);
+.switch-on {
+  background: var(--btnYellowActive);
 }
 
-.modalTable #cbx:checked + .toggle:before span {
-  background: var(--btnFontHover);
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
-  -webkit-transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
-  transition: all 0.2s cubic-bezier(0.8, 0.4, 0.3, 1.25), background 0.15s ease;
-  -webkit-box-shadow: 0 3px 8px rgba(var(--btnFontHover), 0.2);
-          box-shadow: 0 3px 8px rgba(var(--btnFontHover), 0.2);
-}
-
-.modalTable #cbx:checked + .toggle:before span:before {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 0;
-  -webkit-transition: all .4s ease;
-  transition: all .4s ease;
+.switch-on::after {
+  left: 3.5rem;
+  background: var(--btnYellowActive);
 }
 
 textarea {
@@ -861,6 +958,10 @@ textarea {
   .modalRules input[type="checkbox"] {
     margin-left: 4rem;
   }
+}
+
+.slick-slide {
+  z-index: 1 !important;
 }
 
 .slick-dots {

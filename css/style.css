@@ -49,7 +49,7 @@ body {
   --btnFontHover: #262626;
   --btnFontDis: #3C3C3C;
   --btnGrayStill: #0A1422;
-  --btnGrayHover: #737373;
+  --btnGrayHover: #474F59;
   --btnGrayActive: #0F1D32;
   --btnGrayDis: #595959;
   --btnGrayFontStill: #D4AD51;
@@ -250,6 +250,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   line-height: 6rem;
+  background: url("../img/bgInWhite.png");
 }
 
 .left {
@@ -340,8 +341,9 @@ button {
           flex-direction: column;
 }
 
-.romantick .yellowBtn {
+.romantick .greyBtn {
   margin: 0 auto 36rem;
+  width: 54rem;
 }
 
 .romantickTitle {
@@ -698,7 +700,7 @@ footer a {
 }
 
 .menuMain {
-  background-color: var(--mainWhite);
+  background-color: var(--mainColor);
   position: fixed;
   min-width: 100%;
   display: none;
@@ -731,6 +733,10 @@ footer a {
 
 .menuMain ul li {
   margin-right: 12rem;
+}
+
+.menuMain ul li a {
+  color: var(--mainWhite);
 }
 
 .menuMain ul li:last-child i {
@@ -827,6 +833,38 @@ footer a {
   margin: 6rem auto;
 }
 
+.modalIfOk {
+  margin: 55rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modalIfOk .yellowBtn {
+  margin: 0 auto;
+}
+
+.modalOk {
+  font-size: 15rem;
+  line-height: 6rem;
+  text-align: center;
+}
+
+.modalOkTitle {
+  font-size: 5rem;
+  text-align: center;
+}
+
+.modalOkSub {
+  font-size: 4rem;
+  line-height: 6rem;
+  text-align: center;
+}
+
 .modalBlockBtnNumb {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -860,6 +898,10 @@ footer a {
   border: none;
   -moz-appearance: textfield;
   color: var(--mainWhite);
+}
+
+.borderDef {
+  border: solid 2px var(--btnYellowActive);
 }
 
 .modalTable {
@@ -897,7 +939,7 @@ footer a {
 
 .switch-btn::after {
   content: "";
-  height: 2rem;
+  height: 3rem;
   /* высота кнопки */
   width: 3rem;
   /* ширина кнопки */
@@ -906,9 +948,9 @@ footer a {
   background: var(--mainColor);
   /* цвет кнопки */
   border: solid 2px var(--btnYellowActive);
-  top: 0rem;
+  top: -0.5rem;
   /* положение кнопки по вертикали относительно основы */
-  left: 0rem;
+  left: -0.5rem;
   /* положение кнопки по горизонтали относительно основы */
   -webkit-transition-duration: 300ms;
           transition-duration: 300ms;

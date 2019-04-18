@@ -46,9 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     }
-    function switchButton (class, newClass){
-        
-    }
     $('.switch-btn').click(function(){
         $(this).toggleClass('switch-on');
     })

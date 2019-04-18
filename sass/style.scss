@@ -56,7 +56,7 @@ body {
     --btnFontHover: #262626;
     --btnFontDis: #3C3C3C;
     --btnGrayStill: #0A1422;
-    --btnGrayHover: #737373;
+    --btnGrayHover: #474F59;
     --btnGrayActive: #0F1D32;
     --btnGrayDis: #595959;
     --btnGrayFontStill: #D4AD51;
@@ -223,6 +223,7 @@ button {
     color: var(--mainWhite);
     flex-direction: column;
     line-height: v(24);
+    background: url('../img/bgInWhite.png');
 }
 
 .left {
@@ -241,7 +242,6 @@ button {
     margin: auto v(32) auto v(72);
     column-count: 1;
     column-width: v(504);
-
     button {
         width: v(168);
     }
@@ -288,8 +288,9 @@ button {
     display: flex;
     flex-direction: column;
 
-    .yellowBtn {
+    .greyBtn {
         margin: 0 auto v(144);
+        width: v(216);
     }
 }
 
@@ -588,7 +589,7 @@ footer {
 }
 
 .menuMain {
-    background-color: var(--mainWhite);
+    background-color: var(--mainColor);
     position: fixed;
     min-width: 100%;
     display: none;
@@ -606,7 +607,9 @@ footer {
 
         li {
             margin-right: v(48);
-
+            a{
+                color: var(--mainWhite);
+            }
             &:last-child {
                 i {
                     padding-right: v(8);
@@ -696,6 +699,30 @@ footer {
 
 }
 
+.modalIfOk{
+    margin: v(220) auto;
+    display: flex;
+    flex-direction: column;
+    .yellowBtn{
+        margin: 0 auto; 
+    }
+}
+
+.modalOk{
+    font-size: v(60);
+    line-height: v(24);
+    text-align: center;
+}
+
+.modalOkTitle{
+    font-size: v(20);
+    text-align: center;
+}
+.modalOkSub{
+    font-size: v(16);
+    line-height: v(24);
+    text-align: center;
+}
 .modalBlockBtnNumb {
     display: flex;
     flex-direction: row;
@@ -725,6 +752,10 @@ footer {
     margin-bottom: v(24);
 }
 
+.borderDef{
+    border: solid 2px var(--btnYellowActive);
+}
+
 .modalTable {
     font-size: v(12);
     line-height: v(18);
@@ -749,13 +780,13 @@ footer {
 }
 .switch-btn::after {
     content: "";
-    height: v(8); /* высота кнопки */
+    height: v(12); /* высота кнопки */
     width: v(12); /* ширина кнопки */
     border-radius: v(12); /* радиус кнопки */
     background: var(--mainColor); /* цвет кнопки */
     border: solid 2px var(--btnYellowActive); 
-    top: v(0); /* положение кнопки по вертикали относительно основы */
-    left: v(0); /* положение кнопки по горизонтали относительно основы */
+    top: v(-2); /* положение кнопки по вертикали относительно основы */
+    left: v(-2); /* положение кнопки по горизонтали относительно основы */
     transition-duration: 300ms; /* анимация */
     position: absolute;
     z-index: 1;

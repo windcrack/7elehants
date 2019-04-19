@@ -242,6 +242,7 @@ button {
     margin: auto v(32) auto v(72);
     column-count: 1;
     column-width: v(504);
+
     button {
         width: v(168);
     }
@@ -493,14 +494,17 @@ footer {
     justify-content: space-between;
     margin: v(24) v(72);
 }
-.blockAddress{
+
+.blockAddress {
     display: flex;
     flex-direction: row;
 }
-.blockInfo{
+
+.blockInfo {
     display: flex;
     justify-content: space-between;
 }
+
 .subNavInfo,
 .subNavStock {
     color: var(--mainWhite);
@@ -514,8 +518,8 @@ footer {
     }
 }
 
-.subNavInfo{
-    span{
+.subNavInfo {
+    span {
         width: v(24);
         height: v(24);
         display: flex;
@@ -523,16 +527,16 @@ footer {
         align-items: center;
     }
 
-    li:nth-child(1){
+    li:nth-child(1) {
         display: flex;
     }
 
-    a{
+    a {
         display: flex;
 
     }
 
-    i{
+    i {
         padding-right: v(24);
     }
 }
@@ -556,11 +560,9 @@ footer {
 
         .descText {
 
-            &:nth-child(1) {
-                
-            }
+            &:nth-child(1) {}
 
-            
+
 
             &:nth-child(2) {
                 margin-bottom: v(24);
@@ -598,18 +600,25 @@ footer {
     align-items: center;
     z-index: 2;
 
+    .greyBtn {
+        width: v(144);
+        height: v(48);
+    }
+
     ul {
         list-style-type: none;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: v(16) 0;
+        margin: v(24) 0;
 
         li {
             margin-right: v(48);
-            a{
+
+            a {
                 color: var(--mainWhite);
             }
+
             &:last-child {
                 i {
                     padding-right: v(8);
@@ -619,17 +628,101 @@ footer {
     }
 }
 
+.other {
+    display: flex;
+}
+
 .logo {
     padding-left: v(48);
 }
 
+// Deviliry
+
+.otherMain {
+    padding-top: v(96);
+    background: url('../img/bgInWhite.png') center;
+    border: var(--border);
+    display: flex;
+    flex-direction: column;
+}
+
+.otherMainTitle {
+    font-size: v(48);
+    line-height: v(64);
+    color: var(--mainWhite);
+    margin-left: v(48);
+    margin-top: v(24);
+}
+
+.deviMainBlock {
+    margin: v(48) auto v(0);
+    width: v(552);
+    display: flex;
+    flex-direction: column;
+
+    input[type="text"] {
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid var(--mainWhite);
+        font-size: v(16);
+        line-height: v(24);
+        margin-bottom: v(48);
+    }
+}
+
+textarea {
+    margin-bottom: v(48);
+}
+
+.deviTitle {
+    font-size: v(36);
+    line-height: v(48);
+    color: var(--mainWhite);
+    text-align: left;
+    margin-bottom: v(46);
+}
+
+.checkListBlock {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: var(--mainWhite);
+    font-size: v(12);
+    line-height: v(24);
+
+    p {
+        padding-bottom: v(24);
+    }
+}
+
+.chechList {
+    max-width: v(168);
+}
+
+.priceList {
+    max-width: v(72);
+}
+
+.selectPayments{
+    display: flex;
+    flex-direction: column;
+}
+
+.paymetsRadio{
+    color: var(--mainWhite);
+    display: flex;
+    margin-bottom: v(24);
+    input[type="radio"]{
+        margin-right: v(24);
+    }
+}
 // Modal
 
 .modal {
     width: 100%;
     height: 100%;
     display: none;
-    
+
 }
 
 .modalBody {
@@ -699,30 +792,33 @@ footer {
 
 }
 
-.modalIfOk{
+.modalIfOk {
     margin: v(220) auto;
     display: flex;
     flex-direction: column;
-    .yellowBtn{
-        margin: 0 auto; 
+
+    .yellowBtn {
+        margin: 0 auto;
     }
 }
 
-.modalOk{
+.modalOk {
     font-size: v(60);
     line-height: v(24);
     text-align: center;
 }
 
-.modalOkTitle{
+.modalOkTitle {
     font-size: v(20);
     text-align: center;
 }
-.modalOkSub{
+
+.modalOkSub {
     font-size: v(16);
     line-height: v(24);
     text-align: center;
 }
+
 .modalBlockBtnNumb {
     display: flex;
     flex-direction: row;
@@ -752,7 +848,7 @@ footer {
     margin-bottom: v(24);
 }
 
-.borderDef{
+.borderDef {
     border: solid 2px var(--btnYellowActive);
 }
 
@@ -760,15 +856,19 @@ footer {
     font-size: v(12);
     line-height: v(18);
     display: flex;
-    align-items: center;  
+    align-items: center;
 }
 
 .switch-btn {
     display: inline-block;
-    width: v(30); /* ширина переключателя */
-    height: v(12); /* высота переключателя */
-    border-radius: v(12); /* радиус скругления */
-    background: var(--mainColor); /* цвет фона */
+    width: v(30);
+    /* ширина переключателя */
+    height: v(12);
+    /* высота переключателя */
+    border-radius: v(12);
+    /* радиус скругления */
+    background: var(--mainColor);
+    /* цвет фона */
     border: solid 2px var(--btnYellowActive);
     z-index: 0;
     margin: 0;
@@ -776,24 +876,35 @@ footer {
     border: none;
     cursor: pointer;
     position: relative;
-    transition-duration: 300ms; /* анимация */
+    transition-duration: 300ms;
+    /* анимация */
 }
+
 .switch-btn::after {
     content: "";
-    height: v(12); /* высота кнопки */
-    width: v(12); /* ширина кнопки */
-    border-radius: v(12); /* радиус кнопки */
-    background: var(--mainColor); /* цвет кнопки */
-    border: solid 2px var(--btnYellowActive); 
-    top: v(-2); /* положение кнопки по вертикали относительно основы */
-    left: v(-2); /* положение кнопки по горизонтали относительно основы */
-    transition-duration: 300ms; /* анимация */
+    height: v(12);
+    /* высота кнопки */
+    width: v(12);
+    /* ширина кнопки */
+    border-radius: v(12);
+    /* радиус кнопки */
+    background: var(--mainColor);
+    /* цвет кнопки */
+    border: solid 2px var(--btnYellowActive);
+    top: v(-2);
+    /* положение кнопки по вертикали относительно основы */
+    left: v(-2);
+    /* положение кнопки по горизонтали относительно основы */
+    transition-duration: 300ms;
+    /* анимация */
     position: absolute;
     z-index: 1;
 }
+
 .switch-on {
     background: var(--btnYellowActive);
 }
+
 .switch-on::after {
     left: v(14);
     background: var(--btnYellowActive);
@@ -831,9 +942,10 @@ textarea {
 }
 
 // slick
-.slick-slide{
+.slick-slide {
     z-index: 1 !important;
 }
+
 .slick-dots {
     bottom: v(80) !important;
 }

@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Оформление заказа</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <nav class="menuMain">
+    <nav class="menuMain other">
         <a href="index.html" class="logo">
             <img src="img/logo.png" alt="Лого">
         </a>
@@ -20,8 +23,41 @@
             <li><i class="far fa-mobile"></i><a href="tel:+79529931234" class="phone">+7(952)993 1234</a></li>
         </ul>
     </nav>
-    <main class="other">
-        <h1></h1>
+    <main class="otherMain">
+        <h1 class="otherMainTitle">Оформление заказа</h1>
+        <section class="deviMainBlock">
+            <h2 class="deviTitle">Оплата и доставка</h2>
+            <input type="text" class="infoClient" name="name" placeholder="Имя*">
+            <input type="text" class="infoClient" name="phone" placeholder="Тел*">
+            <input type="text" class="infoClient" name="street" placeholder="Улица">
+            <input type="text" class="infoClient" name="numberHome" placeholder="Номер дома">
+            <input type="text" class="infoClient" name="home" placeholder="Квартира">
+            <h2 class="deviTitle">Детали</h2>
+            <textarea name="" id="" cols="54" rows="5" class="textDetails"></textarea>
+            <h2 class="deviTitle">Ваш заказ</h2>
+            <div class="checkListBlock">
+                <div class="checkList">
+                    <p class="title">Товар</p>
+                    <p class="article">Крылья гриль х 1</p>
+                    <p class="total">Итого</p>
+                </div>
+                <div class="priceList">
+                    <p class="title">Цена</p>
+                    <p class="article">235 р.</p>
+                    <p class="totalSumm">235 р.</p>
+                </div>
+            </div>
+            <div class="selectPayments">
+                <div class="paymetsRadio"><input type="radio"><p>Оплата при получении</p></div>
+                <div class="paymetsRadio"><input type="radio"><p>Робокасса</p></div>
+            </div>
+        </section>
     </main>
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <script src="js/sliderOpt.js"></script>
+    <script src="js/index.js"></script>
 </body>
+
 </html>

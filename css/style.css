@@ -717,6 +717,11 @@ footer a {
   z-index: 2;
 }
 
+.menuMain .greyBtn {
+  width: 36rem;
+  height: 12rem;
+}
+
 .menuMain ul {
   list-style-type: none;
   display: -webkit-box;
@@ -728,7 +733,7 @@ footer a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 4rem 0;
+  margin: 6rem 0;
 }
 
 .menuMain ul li {
@@ -743,8 +748,115 @@ footer a {
   padding-right: 2rem;
 }
 
+.other {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .logo {
   padding-left: 12rem;
+}
+
+.otherMain {
+  padding-top: 24rem;
+  background: url("../img/bgInWhite.png") center;
+  border: var(--border);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.otherMainTitle {
+  font-size: 12rem;
+  line-height: 16rem;
+  color: var(--mainWhite);
+  margin-left: 12rem;
+  margin-top: 6rem;
+}
+
+.deviMainBlock {
+  margin: 12rem auto 0rem;
+  width: 138rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.deviMainBlock input[type="text"] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid var(--mainWhite);
+  font-size: 4rem;
+  line-height: 6rem;
+  margin-bottom: 12rem;
+}
+
+textarea {
+  margin-bottom: 12rem;
+}
+
+.deviTitle {
+  font-size: 9rem;
+  line-height: 12rem;
+  color: var(--mainWhite);
+  text-align: left;
+  margin-bottom: 11.5rem;
+}
+
+.checkListBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-transform: uppercase;
+  color: var(--mainWhite);
+  font-size: 3rem;
+  line-height: 6rem;
+}
+
+.checkListBlock p {
+  padding-bottom: 6rem;
+}
+
+.chechList {
+  max-width: 42rem;
+}
+
+.priceList {
+  max-width: 18rem;
+}
+
+.selectPayments {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.paymetsRadio {
+  color: var(--mainWhite);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 6rem;
+}
+
+.paymetsRadio input[type="radio"] {
+  margin-right: 6rem;
 }
 
 .modal {

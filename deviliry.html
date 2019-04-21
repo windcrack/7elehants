@@ -5,8 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Оформление заказа</title>
+    <title>Доставка - 7 слонов</title>
+    <!-- Мои стили -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- Слайдер -->
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <!-- Font Asome -->
+    <link rel="stylesheet" href="fa/all.css">
+    <!-- Шрифты -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
 </head>
 
 <body>
@@ -33,7 +44,7 @@
             <input type="text" class="infoClient" name="numberHome" placeholder="Номер дома">
             <input type="text" class="infoClient" name="home" placeholder="Квартира">
             <h2 class="deviTitle">Детали</h2>
-            <textarea name="" id="" cols="54" rows="5" class="textDetails"></textarea>
+            <textarea name="" id="" cols="54" rows="5" class="textDetails" placeholder="Уточните информацию"></textarea>
             <h2 class="deviTitle">Ваш заказ</h2>
             <div class="checkListBlock">
                 <div class="checkList">
@@ -48,9 +59,10 @@
                 </div>
             </div>
             <div class="selectPayments">
-                <div class="paymetsRadio"><input type="radio"><p>Оплата при получении</p></div>
-                <div class="paymetsRadio"><input type="radio"><p>Робокасса</p></div>
+                <div class="paymetsRadio"><input type="radio" class="radio"><label for="radio">Оплата при получении</label></div>
+                <div class="paymetsRadio"><input type="radio" class="radio"><label for="radio">Робокасса</label></div>
             </div>
+            <div class="warning"><p>Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей политика конфиденциальности</p></div>
         </section>
     </main>
     <script src="js/jquery-1.11.0.min.js"></script>

@@ -149,10 +149,12 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    // margin: 0 auto;
+
 }
 
 button {
-    width: v(160);
+    width: v(192);
     height: v(40);
     border-radius: v(4);
     cursor: pointer;
@@ -319,6 +321,7 @@ button {
 
     .greyBtn {
         margin-bottom: v(190);
+        width: v(144);
     }
 
     background: #fff;
@@ -352,7 +355,7 @@ button {
     font-size: v(16);
     line-height: v(24);
     opacity: 0.5;
-    margin-top: v(24);
+    margin-top: v(48);
     width: v(360);
     height: v(96);
     margin-bottom: v(24);
@@ -552,8 +555,6 @@ footer {
         text-decoration: none;
 
         p {
-            // column-count: 1;
-            // column-width: v(552);
             font-size: v(12);
             line-height: v(24);
             text-align: right;
@@ -629,6 +630,58 @@ footer {
     }
 }
 
+.menuMainSub{
+    margin-top: v(96);
+    background-color: var(--btnYellowActive);
+    color: var(--btnGrayStill);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    min-width: 100%;
+    ul{
+        display: flex;
+        list-style-type: none;
+        margin: v(16) 0;
+        font-size: v(16);
+        line-height: v(24);
+        li{
+            padding-right: v(48);
+        }
+    }
+}
+
+.listSub{
+    display: flex;
+    justify-content:space-between;
+}
+
+.nameMenuSub{
+    color: var(--mainWhite);
+    font-size: v(16);
+    line-height: v(24);
+    height: v(16);
+}
+
+.categorySub{
+    margin: v(16) 0 v(16) v(48);
+}
+
+.menuMainSubCart{
+    margin: v(16) v(48) v(16) 0;
+    color: var(--mainWhite);
+    i{
+        padding-right: v(8);
+    }
+}
+
+.subArrow{
+    width: v(16);
+    height: v(16);
+    background-color: transparent;
+    border: none;
+}
+
 .other {
     display: flex;
 }
@@ -645,7 +698,10 @@ footer {
     display: flex;
     flex-direction: column;
 }
-
+.otherMainMenu{
+    padding-top: v(152);
+    background: url('../img/bgInWhite.png') center, var(--mainWhite);
+}
 .otherMainTitle {
     font-size: v(48);
     line-height: v(64);
@@ -659,10 +715,6 @@ footer {
     width: v(552);
     display: flex;
     flex-direction: column;
-    .yellowBtn{
-        width: v(192);
-        // margin-bottom: v(286);
-    }
 
     input[type="text"] {
         background-color: transparent;
@@ -719,13 +771,6 @@ textarea {
     display: flex;
     margin-bottom: v(24);
 
-    // input[type="radio"] {
-    //     margin-right: v(24);
-    //     background-color: transparent;
-    //     border: solid 2px var(--btnYellowActive);
-    //     border-radius: 100%;
-
-    // }
 }
 
 .radio {

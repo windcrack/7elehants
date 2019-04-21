@@ -168,7 +168,7 @@ header {
 }
 
 button {
-  width: 40rem;
+  width: 48rem;
   height: 10rem;
   border-radius: 1rem;
   cursor: pointer;
@@ -371,6 +371,7 @@ button {
 
 .stock .greyBtn {
   margin-bottom: 47.5rem;
+  width: 36rem;
 }
 
 .stockBlock {
@@ -402,7 +403,7 @@ button {
   font-size: 4rem;
   line-height: 6rem;
   opacity: 0.5;
-  margin-top: 6rem;
+  margin-top: 12rem;
   width: 90rem;
   height: 24rem;
   margin-bottom: 6rem;
@@ -748,6 +749,73 @@ footer a {
   padding-right: 2rem;
 }
 
+.menuMainSub {
+  margin-top: 24rem;
+  background-color: var(--btnYellowActive);
+  color: var(--btnGrayStill);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  min-width: 100%;
+}
+
+.menuMainSub ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 4rem 0;
+  font-size: 4rem;
+  line-height: 6rem;
+}
+
+.menuMainSub ul li {
+  padding-right: 12rem;
+}
+
+.listSub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.nameMenuSub {
+  color: var(--mainWhite);
+  font-size: 4rem;
+  line-height: 6rem;
+  height: 4rem;
+}
+
+.categorySub {
+  margin: 4rem 0 4rem 12rem;
+}
+
+.menuMainSubCart {
+  margin: 4rem 12rem 4rem 0;
+  color: var(--mainWhite);
+}
+
+.menuMainSubCart i {
+  padding-right: 2rem;
+}
+
+.subArrow {
+  width: 4rem;
+  height: 4rem;
+  background-color: transparent;
+  border: none;
+}
+
 .other {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -770,6 +838,11 @@ footer a {
           flex-direction: column;
 }
 
+.otherMainMenu {
+  padding-top: 38rem;
+  background: url("../img/bgInWhite.png") center, var(--mainWhite);
+}
+
 .otherMainTitle {
   font-size: 12rem;
   line-height: 16rem;
@@ -788,10 +861,6 @@ footer a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-.deviMainBlock .yellowBtn {
-  width: 48rem;
 }
 
 .deviMainBlock input[type="text"] {

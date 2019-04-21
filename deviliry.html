@@ -17,7 +17,7 @@
     <!-- Шрифты -->
     <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 </head>
 
 <body>
@@ -59,12 +59,104 @@
                 </div>
             </div>
             <div class="selectPayments">
-                <div class="paymetsRadio"><input type="radio" class="radio"><label for="radio">Оплата при получении</label></div>
+                <div class="paymetsRadio"><input type="radio" class="radio"><label for="radio">Оплата при
+                        получении</label></div>
                 <div class="paymetsRadio"><input type="radio" class="radio"><label for="radio">Робокасса</label></div>
             </div>
-            <div class="warning"><p>Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом и для других целей, описанных в нашей политика конфиденциальности</p></div>
+            <div class="warning">
+                <p>Ваши личные данные будут использоваться для обработки ваших заказов, упрощения вашей работы с сайтом
+                    и для других целей, описанных в нашей политика конфиденциальности</p>
+            </div>
+            <div class="caution">
+                <input type="checkbox"><label for="checkbox">Я прочитал(а) и соглашаюсь с правилами
+                    сайта <span>правила и условия*</span></label>
+            </div>
+            <button class="yellowBtn">Подтвердить заказ</button>
         </section>
     </main>
+    <footer>
+        <div class="subNav">
+            <div class="blockAddress">
+                <ul class="subNavInfo">
+                    <li><span><i class="far fa-map-marker-alt"></i></span>214000 Смоленск, ул. Большая Советская, д.19/2
+                    </li>
+                    <li><a href="#"><span><i class="far fa-envelope-open"></i></span>contact@hofmannui.net</a></li>
+                    <li><a href="#"><span><i class="far fa-mobile-alt"></i></span>+7 (4812) 38-77-99, 606-777</a></li>
+                    <li><a href="#"><span><i class="fab fa-vk"></i></span>Vkontakte</a></li>
+                    <li><a href="#"><span><i class="fab fa-instagram"></i></span>Instagram</a></li>
+                </ul>
+            </div>
+            <div class="blockInfo">
+                <ul class="subNavStock">
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Вакансии</a></li>
+                    <li><a href="#">Информация</a></li>
+                </ul>
+                <ul class="subNavStock">
+                    <li><a href="#" class="activeMenu">Резерв стола</a></li>
+                    <li><a href="#">Меню</a></li>
+                    <li><a href="#">Акции</a></li>
+                    <li><a href="#">Мероприятия</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="desc">
+            <a href="#">
+                <p class="descText">
+                    Все права защищены. Полное или частичное копирование материалов сайта запрещено.
+                </p>
+            </a>
+            <a href="#">
+                <p class="descText">Created by ManaMake 2019</p>
+            </a>
+        </div>
+    </footer>
+    <!-- Модальные окна -->
+    <div class="modal">
+        <div class="modalBody">
+            <div class="modalBodyClose">
+                <i class="far fa-times"></i>
+                <span>Закрыть</span>
+            </div>
+            <h2 class="modalTitle">
+                Резерв столов
+            </h2>
+            <a href="#" class="modalSub">Компановка столов</a>
+            <div class="modalBlockInput">
+                <input type="text" class="modalInfo" placeholder="Имя">
+                <input type="text" class="modalInfo" placeholder="Телефон">
+                <input type="date" class="modalInfo" placeholder="Выберите дату и время" value="Выберите дату и время">
+                <div class="modalBlockBtnNumb">
+                    <span>Гости:</span>
+                    <button><i class="far fa-plus"></i></button>
+                    <input type="number" value="2">
+                    <button><i class="far fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="modalTable">
+                <div class="changeTable">
+                    <div class="switch-btn borderDef" style="border: solid 2px #D4AD51"></div>
+                </div>
+                <p class="modalTableText">
+                    Украсить стол для романтического ужина (+200 р.)
+                </p>
+            </div>
+            <textarea name="" id="" cols="20" rows="10" placeholder="Пожелания"></textarea>
+            <div class="modalRules">
+                <input type="checkbox">
+                <p class="rulesText">Я прочитал(а) и соглашаюсь с правилами сайта правила и условия</p>
+            </div>
+            <button class="yellowBtn">Зарезервировать</button>
+            <!-- <div class="modalIfOk">
+                    <p class="modalOk"><i class="far fa-check-circle"></i></p>
+                    <h2 class="modalOkTitle">Ваша заявка принята</h2>
+                    <h3 class="modalOkSub">Администратор свяжется с вами в ближайщее время</h3>
+                    <button class="yellowBtn">ОК</button>
+                </div> -->
+        </div>
+    </div>
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/jquery-migrate-1.2.1.min.js"></script>
     <script src="slick/slick.min.js"></script>

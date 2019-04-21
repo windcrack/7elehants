@@ -88,6 +88,7 @@ a,
 li,
 span,
 button,
+label,
 input {
     font-family: var(--textFontFamaly);
 }
@@ -658,6 +659,10 @@ footer {
     width: v(552);
     display: flex;
     flex-direction: column;
+    .yellowBtn{
+        width: v(192);
+        // margin-bottom: v(286);
+    }
 
     input[type="text"] {
         background-color: transparent;
@@ -770,7 +775,7 @@ textarea {
     box-shadow: 0 0 0 3px rgba(255, 255, 0, .7);
 }
 
-.warning{
+.warning {
     border-top: solid 2px var(--btnYellowActive);
     column-count: 1;
     column-width: v(552);
@@ -778,6 +783,22 @@ textarea {
     font-size: v(12);
     line-height: v(17);
     margin-bottom: v(24);
+}
+
+.caution {
+    display: flex;
+    font-size: v(12);
+    line-height: v(24);
+    margin-bottom: v(24);
+    color: var(--mainWhite);
+
+    label {
+        padding-left: v(8);
+    }
+
+    span {
+        color: var(--btnYellowActive);
+    }
 }
 
 // Modal

@@ -80,6 +80,7 @@ a,
 li,
 span,
 button,
+label,
 input {
   font-family: var(--textFontFamaly);
 }
@@ -789,6 +790,10 @@ footer a {
           flex-direction: column;
 }
 
+.deviMainBlock .yellowBtn {
+  width: 48rem;
+}
+
 .deviMainBlock input[type="text"] {
   background-color: transparent;
   border: none;
@@ -913,6 +918,24 @@ textarea {
   font-size: 3rem;
   line-height: 4.25rem;
   margin-bottom: 6rem;
+}
+
+.caution {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 3rem;
+  line-height: 6rem;
+  margin-bottom: 6rem;
+  color: var(--mainWhite);
+}
+
+.caution label {
+  padding-left: 2rem;
+}
+
+.caution span {
+  color: var(--btnYellowActive);
 }
 
 .modal {

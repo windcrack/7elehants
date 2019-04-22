@@ -1408,6 +1408,10 @@ textarea {
   visibility: hidden;
 }
 
+.articleBlock:hover .articleDesc {
+  padding: 0 5rem;
+}
+
 .articleBlock:hover .articleFooter {
   padding: 0 5rem;
 }
@@ -1434,11 +1438,6 @@ textarea {
           column-width: 54rem;
   font-weight: normal;
   font-family: var(--textFontFamaly);
-}
-
-.articleDesc:hover {
-  -webkit-column-width: 53.75rem;
-          column-width: 53.75rem;
 }
 
 .articleFooter {

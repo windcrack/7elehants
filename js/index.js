@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnRezervCenter = document.querySelector('.rezervCenter'),
         btnRezervRomatic = document.querySelector('.rezervRomantic'),
         modal = document.querySelector('.modal'),
+        modalArt = document.querySelector('.modaArticle'),
         arrows = $('[href="#descritp"]'),
         btnClose = document.querySelector('.modalBodyClose'),
         blockVisibleMenu = document.querySelector('#descritp'),

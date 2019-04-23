@@ -735,6 +735,7 @@ footer a {
       -ms-flex-align: center;
           align-items: center;
   margin: 6rem 0;
+  color: var(--btnYellowActive);
 }
 
 .menuMain ul li {
@@ -742,7 +743,7 @@ footer a {
 }
 
 .menuMain ul li a {
-  color: var(--mainWhite);
+  color: var(--btnYellowActive);
 }
 
 .menuMain ul li:last-child i {
@@ -1263,40 +1264,41 @@ textarea {
   }
 }
 
-.modalArticleM {
+.modalBg {
+  height: 100vh;
+  width: 100vw;
   display: none;
-  -ms-grid-columns: 78rem;
-      grid-template-columns: 78rem;
-  -ms-grid-rows: 60rem 17.75rem 6rem 6rem 42rem 12rem;
-      grid-template-rows: 60rem 17.75rem 6rem 6rem 42rem 12rem;
-  grid-row-gap: 6rem;
-      grid-template-areas: "img" "title" "opt" "total" "descr" "button";
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modalArticleM {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 10%;
+  left: 38%;
+  width: 78rem;
   color: var(--mainWhite);
-}
-
-.modalArticleM:hover {
-  display: -ms-grid;
-  display: grid;
-}
-
-.modalArticleM img {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: img;
+  border: var(--border);
+  background-color: var(--mainColor);
+  z-index: 100;
 }
 
 .modalArticleM .yellowBtn {
-  -ms-grid-row: 6;
-  -ms-grid-column: 1;
   grid-area: button;
   width: 78rem;
   height: 12rem;
   border-radius: 0;
   margin-top: 6.25rem;
+  margin-bottom: 0;
 }
 
 .articleTitleM {
-  grid-area: titile;
   font-weight: normal;
   font-size: 5rem;
   padding: 6.25rem 6rem 6rem;
@@ -1306,9 +1308,6 @@ textarea {
 }
 
 .articleOptBlockM {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  grid-area: opt;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1316,20 +1315,25 @@ textarea {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0 6rem;
-  -webkit-column-width: 30rem;
-          column-width: 30rem;
   font-weight: bold;
   font-size: 5rem;
+  width: 66rem;
+}
+
+.articleOptBlockM span {
+  -webkit-column-width: 30rem;
+          column-width: 30rem;
 }
 
 .articleOptBlockM span:first-child {
   color: var(--btnYellowStill);
 }
 
+.articleOptBlockM span:last-child {
+  text-align: end;
+}
+
 .articleTotalM {
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
-  grid-area: total;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1363,9 +1367,6 @@ textarea {
 }
 
 .articleDescrM {
-  -ms-grid-row: 5;
-  -ms-grid-column: 1;
-  grid-area: descr;
   font-weight: normal;
   font-size: 4rem;
   line-height: 6rem;
@@ -1398,6 +1399,14 @@ textarea {
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 6rem;
+  grid-row-gap: 6rem;
+}
+
+@media (max-width: 800) {
+  .menuBlockArticle {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .articleBlock {

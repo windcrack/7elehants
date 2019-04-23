@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const btnMenu = document.querySelector('.headerBurger'),
         header = document.querySelector('.headerTitle'),
-        btnRezerv = document.querySelector('.rezerv'),
-        btnRezervCenter = document.querySelector('.rezervCenter'),
-        btnRezervRomatic = document.querySelector('.rezervRomantic'),
+        btnRezerv = document.querySelectorAll('.rezerv'),
         modal = document.querySelector('.modal'),
-        modalArt = document.querySelector('.modaArticle'),
+        articleBlock = document.querySelectorAll('.articleBlock'),
+        modalArt = document.querySelector('.modalBg'),
         arrows = $('[href="#descritp"]'),
         btnClose = document.querySelector('.modalBodyClose'),
         blockVisibleMenu = document.querySelector('#descritp'),
@@ -54,15 +53,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
+    function openBlockMassive (arr, openBlock) {
+        arr.forEach(element => {
+          element.addEventListener('click', () =>{
+              openBlock.style.display = 'block';
+          })  
+        })
+    }
+
     $('.switch-btn').click(function () {
         $(this).toggleClass('switch-on');
     })
     // if (item.querySelector('.detailed')!==null)
     scrollerAcrossArrow(arrows)
     openBlock(btnMenu, mainMenu)
-    openBlock(btnRezerv, modal)
-    openBlock(btnRezervCenter, modal)
-    openBlock(btnRezervRomatic, modal)
+    openBlockMassive(btnRezerv, modal)
+    openBlockMassive(articleBlock, modalArt)
     closeBlock(header, mainMenu)
     closeBlock(btnClose, modal)
     scrollMouse(blockVisibleMenu, mainMenu)

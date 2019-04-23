@@ -613,12 +613,12 @@ footer {
         justify-content: center;
         align-items: center;
         margin: v(24) 0;
-
+        color: var(--btnYellowActive);
         li {
             margin-right: v(48);
 
             a {
-                color: var(--mainWhite);
+                color: var(--btnYellowActive);
             }
 
             &:last-child {
@@ -1077,21 +1077,28 @@ textarea {
 }
 
 // Modal artcile block
+.modalBg {
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    position: fixed;
+    top:0;
+    left: 0;
+}
 
 .modalArticleM {
-    // display: grid;
-    display: none;
-    grid-template-columns: v(312);
-    grid-template-rows: v(240) v(71) v(24) v(24) v(168) v(48);
-    grid-row-gap: v(24);
-    grid-template-areas: "img""title""opt""total""descr""button";
+    display: flex;
+    // display: none;
+    position: fixed;
+    top: 10%;
+    left: 38%;
+    width: v(312);
     color: var(--mainWhite);
-    &:hover{
-        display: grid;
-    }
-    img {
-        grid-area: img;
-    }
+    border: var(--border);
+    background-color: var(--mainColor);
+    z-index: 100;
 
     .yellowBtn {
         grid-area: button;
@@ -1099,39 +1106,46 @@ textarea {
         height: v(48);
         border-radius: 0;
         margin-top: v(25);
+        margin-bottom: 0;
     }
 }
 
 .articleTitleM {
-    grid-area: titile;
     font-weight: normal;
     font-size: v(20);
     padding: v(25) v(24) v(24);
-    // column-width: v(264);
     width: v(267);
     height: v(71);
     line-height: normal;
 }
 
 .articleOptBlockM {
-    grid-area: opt;
     display: flex;
     justify-content: space-between;
     padding: 0 v(24);
-    column-width: v(120);
     font-weight: bold;
     font-size: v(20);
+    width: v(264);
 
-    span:first-child {
-        color: var(--btnYellowStill);
+    span {
+        column-width: v(120);
+
+        &:first-child {
+            color: var(--btnYellowStill);
+        }
+
+        &:last-child {
+            text-align: end;
+        }
     }
+
 }
 
 .articleTotalM {
-    grid-area: total;
     display: flex;
     align-items: center;
     padding: v(24);
+
     span {
         margin-right: v(16);
     }
@@ -1158,7 +1172,6 @@ textarea {
 }
 
 .articleDescrM {
-    grid-area: descr;
     font-weight: normal;
     font-size: v(16);
     line-height: v(24);
@@ -1172,6 +1185,7 @@ textarea {
     h1 {
         color: #000;
     }
+
     display: flex;
     flex-direction: column;
 }
@@ -1184,6 +1198,11 @@ textarea {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: v(24);
+    grid-row-gap: v(24);
+
+    @media (max-width: 800) {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .articleBlock {
@@ -1191,9 +1210,9 @@ textarea {
     background-size: cover;
     width: v(264);
     height: v(384);
-    // margin: 0 v(24) v(24) 0;
     border-radius: v(8);
     cursor: pointer;
+
     &:hover {
         border: 4px solid var(--btnYellowActive);
         background: linear-gradient(180deg, rgba(10, 20, 34, 0) 0%, rgba(10, 20, 34, 0.2) 56.25%, rgba(10, 20, 34, 0.8) 100%), url('../img/cartImg.jpg') center no-repeat;
@@ -1203,10 +1222,12 @@ textarea {
         .articleEye {
             visibility: visible
         }
-        .articleDesc{
+
+        .articleDesc {
             padding: 0 v(20) v(16);
             margin-top: v(180);
         }
+
         .articleFooter {
             padding: 0 v(20) v(24);
         }

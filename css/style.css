@@ -740,6 +740,10 @@ footer a {
   color: var(--mainWhite);
 }
 
+.menuMain ul li a:active {
+  color: var(--btnYellowActive);
+}
+
 .menuMain ul li a:hover {
   color: var(--activeColorHeader);
 }
@@ -752,12 +756,8 @@ footer a {
   color: var(--btnYellowActive);
 }
 
-.menuMain ul li .activeMenuMain a {
+.menuMain ul li .activeMenuMain {
   color: var(--btnYellowActive);
-}
-
-.activeMenuMain a {
-  color: #daad51;
 }
 
 .menuMainSub {
@@ -791,11 +791,11 @@ footer a {
   padding-right: 12rem;
 }
 
-.menuMainSub ul li .activeMenuMainSbu {
+.menuMainSub ul li a:hover {
   color: var(--mainWhite);
 }
 
-.menuMainSub ul li:hover {
+.menuMainSub ul li .activeMenuMainSbu {
   color: var(--mainWhite);
 }
 
@@ -1110,7 +1110,7 @@ textarea {
 }
 
 .modalBlockInput input[type="date"] {
-  padding: 2rem 19.5rem;
+  padding: 2rem 18rem;
   background: url("../img/calend.svg") no-repeat center right 10%, #fff;
 }
 
@@ -1525,6 +1525,11 @@ textarea {
 
 .slick-dots {
   bottom: 20rem !important;
+}
+
+.slick-dots li button::before {
+  color: var(--mainWhite) !important;
+  font-size: 3rem !important;
 }
 
 #slick-slide-control00 {

@@ -586,8 +586,6 @@ footer {
 
 }
 
-
-
 .menuMain {
     background-color: var(--mainColor);
     position: fixed;
@@ -617,6 +615,10 @@ footer {
             a {
                 color: var(--mainWhite);
 
+                &:active {
+                    color: var(--btnYellowActive);
+                }
+
                 &:hover {
                     color: var(--activeColorHeader);
                 }
@@ -631,20 +633,12 @@ footer {
             .phone {
                 color: var(--btnYellowActive);
             }
+
             .activeMenuMain {
-                a{
-                    color: var(--btnYellowActive);
-                }
+                color: var(--btnYellowActive);
             }
         }
     }
-}
-
-.activeMenuMain {
-    a {
-        color: #daad51;
-    }
-
 }
 
 .menuMainSub {
@@ -666,12 +660,18 @@ footer {
 
         li {
             padding-right: v(48);
-            .activeMenuMainSbu{
+
+
+            a {
+                &:hover {
+                    color: var(--mainWhite);
+                }
+            }
+
+            .activeMenuMainSbu {
                 color: var(--mainWhite);
             }
-            &:hover{
-                color: var(--mainWhite);
-            }
+
         }
     }
 }
@@ -949,7 +949,7 @@ textarea {
     }
 
     input[type="date"] {
-        padding: v(8) v(78);
+        padding: v(8) v(72);
         background: url('../img/calend.svg') no-repeat center right 10%, #fff;
     }
 
@@ -1314,6 +1314,15 @@ textarea {
 
 .slick-dots {
     bottom: v(80) !important;
+
+    li {
+        button {
+            &::before {
+                color: var(--mainWhite) !important;
+                font-size: v(12) !important;
+            }
+        }
+    }
 }
 
 #slick-slide-control00 {

@@ -1374,6 +1374,16 @@ textarea {
   padding: 0 6rem;
 }
 
+.otherMainMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .otherMainMenu h1 {
   color: #000;
 }
@@ -1381,7 +1391,13 @@ textarea {
 .menuBlockArticle {
   margin-top: 12rem;
   margin-left: 12rem;
-  margin: 12rem 12rem 8rem;
+  margin: 12rem auto 8rem;
+  max-width: 288rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 6rem;
 }
 
 .articleBlock {
@@ -1390,7 +1406,6 @@ textarea {
   background-size: cover;
   width: 66rem;
   height: 96rem;
-  margin: 0 6rem 6rem 0;
   border-radius: 2rem;
   cursor: pointer;
 }
@@ -1410,7 +1425,7 @@ textarea {
 
 .articleBlock:hover .articleDesc {
   padding: 0 5rem 4rem;
-  margin-top: 43rem;
+  margin-top: 45rem;
 }
 
 .articleBlock:hover .articleFooter {

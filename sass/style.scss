@@ -1172,12 +1172,18 @@ textarea {
     h1 {
         color: #000;
     }
+    display: flex;
+    flex-direction: column;
 }
 
 .menuBlockArticle {
     margin-top: v(48);
     margin-left: v(48);
-    margin: v(48) v(48) v(32);
+    margin: v(48) auto v(32);
+    max-width: v(1152);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: v(24);
 }
 
 .articleBlock {
@@ -1185,7 +1191,7 @@ textarea {
     background-size: cover;
     width: v(264);
     height: v(384);
-    margin: 0 v(24) v(24) 0;
+    // margin: 0 v(24) v(24) 0;
     border-radius: v(8);
     cursor: pointer;
     &:hover {
@@ -1193,15 +1199,13 @@ textarea {
         background: linear-gradient(180deg, rgba(10, 20, 34, 0) 0%, rgba(10, 20, 34, 0.2) 56.25%, rgba(10, 20, 34, 0.8) 100%), url('../img/cartImg.jpg') center no-repeat;
         border-radius: v(8);
         box-sizing: border-box;
-        // margin-bottom: v(17);
 
         .articleEye {
             visibility: visible
         }
         .articleDesc{
-            // column-width: v(215);
             padding: 0 v(20) v(16);
-            margin-top: v(172);
+            margin-top: v(180);
         }
         .articleFooter {
             padding: 0 v(20) v(24);
@@ -1215,7 +1219,6 @@ textarea {
     display: flex;
     flex-direction: row-reverse;
     visibility: hidden;
-    // width: v(24);
     height: v(24);
 }
 
@@ -1223,15 +1226,12 @@ textarea {
     display: flex;
     align-items: flex-end;
     color: var(--mainWhite);
-    // margin-top: v(216);
     padding: v(184) v(24) v(16);
     height: v(96);
     font-size: v(20);
-    // padding: 0 v(24);
     column-width: v(216);
     font-weight: normal;
     font-family: var(--textFontFamaly);
-    // border: var(--border);
 }
 
 .articleFooter {

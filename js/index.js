@@ -3,8 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
         header = document.querySelector('.headerTitle'),
         btnRezerv = document.querySelectorAll('.rezerv'),
         modal = document.querySelector('.modal'),
+        modalBody = document.querySelector('.modalBody'),
         articleBlock = document.querySelectorAll('.articleBlock'),
-        modalArt = document.querySelector('.modalBg'),
+        modalArt = document.querySelector('.modalArticleM'),
+        modalClose = document.querySelector('.modalBg'),
         arrows = $('[href="#descritp"]'),
         btnClose = document.querySelector('.modalBodyClose'),
         blockVisibleMenu = document.querySelector('#descritp'),
@@ -19,13 +21,30 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    function closeBlock(targeting, block) {
-        if (targeting !== null) {
-            targeting.addEventListener('click', () => {
-                block.style.display = 'none'
-            })
+    function closeBlock(target, block) {
+        if (target !== null) {
+            if (!target.classList.contains(block)) {
+                target.addEventListener('click', () => {
+                    block.style.display = 'none'
+                    document.querySelector('body').style.overflowY = 'visible'
+                })
+            }
+
         }
 
+    }
+
+    function modalCloseBg(modalBg, closeModal) {
+        if (modalBg !== null) {
+            modalBg.addEventListener('click', event => {
+                const e = document.querySelector(closeModal)
+                if (!e.contains(event.target)) {
+                    e.style.display = 'none'
+                    modalBg.style.display = 'none'
+                    document.querySelector('body').style.overflowY = 'visible'
+                }
+            })
+        }
     }
 
     function scrollerAcrossArrow(trigg) {
@@ -53,12 +72,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    function openBlockMassive (arr, openBlock) {
-        arr.forEach(element => {
-          element.addEventListener('click', () =>{
-              openBlock.style.display = 'block';
-          })  
-        })
+    function openBlockMassive(arr, openBlock, modalBg) {
+        if (arr !== null) {
+            arr.forEach(element => {
+                element.addEventListener('click', () => {
+                    openBlock.style.display = 'flex'
+                    modalBg.style.display = 'block'
+                    document.querySelector('body').style.overflowY = 'hidden'
+                })
+            })
+        }
+
     }
 
     $('.switch-btn').click(function () {
@@ -67,9 +91,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // if (item.querySelector('.detailed')!==null)
     scrollerAcrossArrow(arrows)
     openBlock(btnMenu, mainMenu)
-    openBlockMassive(btnRezerv, modal)
-    openBlockMassive(articleBlock, modalArt)
+    openBlockMassive(btnRezerv, modalBody, modal)
+    openBlockMassive(articleBlock, modalArt, modalClose)
     closeBlock(header, mainMenu)
     closeBlock(btnClose, modal)
+    modalCloseBg(modalClose, '.modalArticleM')
+    modalCloseBg(modal, '.modalBody')
     scrollMouse(blockVisibleMenu, mainMenu)
 })

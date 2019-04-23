@@ -39,7 +39,7 @@ body {
 }
 
 :root {
-  --activeColor: #daad51;
+  --activeColorHeader: #daad51;
   --mainWhite: #fff;
   --btnYellowStill: #D4AD51;
   --btnYellowHover: #F0C052;
@@ -694,12 +694,6 @@ footer a {
   opacity: 0.5;
 }
 
-.activeMenu {
-  font-size: 4rem;
-  line-height: 6rem;
-  color: var(--activeColor);
-}
-
 .menuMain {
   background-color: var(--mainColor);
   position: fixed;
@@ -743,11 +737,27 @@ footer a {
 }
 
 .menuMain ul li a {
-  color: var(--btnYellowActive);
+  color: var(--mainWhite);
+}
+
+.menuMain ul li a:hover {
+  color: var(--activeColorHeader);
 }
 
 .menuMain ul li:last-child i {
   padding-right: 2rem;
+}
+
+.menuMain ul li .phone {
+  color: var(--btnYellowActive);
+}
+
+.menuMain ul li .activeMenuMain a {
+  color: var(--btnYellowActive);
+}
+
+.activeMenuMain a {
+  color: #daad51;
 }
 
 .menuMainSub {
@@ -779,6 +789,14 @@ footer a {
 
 .menuMainSub ul li {
   padding-right: 12rem;
+}
+
+.menuMainSub ul li .activeMenuMainSbu {
+  color: var(--mainWhite);
+}
+
+.menuMainSub ul li:hover {
+  color: var(--mainWhite);
 }
 
 .listSub {
@@ -848,6 +866,7 @@ footer a {
 .otherMainTitle {
   font-size: 12rem;
   line-height: 16rem;
+  font-weight: normal;
   color: var(--mainWhite);
   margin-left: 12rem;
   margin-top: 6rem;
@@ -883,6 +902,7 @@ textarea {
 .deviTitle {
   font-size: 9rem;
   line-height: 12rem;
+  font-weight: normal;
   color: var(--mainWhite);
   text-align: left;
   margin-bottom: 11.5rem;
@@ -1010,15 +1030,18 @@ textarea {
 }
 
 .modal {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 4;
 }
 
 .modalBody {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1265,28 +1288,25 @@ textarea {
 }
 
 .modalBg {
-  height: 100vh;
-  width: 100vw;
-  display: none;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 100;
   position: fixed;
+  background: rgba(0, 0, 0, 0.5);
   top: 0;
   left: 0;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
 }
 
 .modalArticleM {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   position: fixed;
   top: 10%;
   left: 38%;
   width: 78rem;
   color: var(--mainWhite);
-  border: var(--border);
   background-color: var(--mainColor);
-  z-index: 100;
+  z-index: 200;
 }
 
 .modalArticleM .yellowBtn {

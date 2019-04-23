@@ -46,7 +46,7 @@ body {
 }
 
 :root {
-    --activeColor: #daad51;
+    --activeColorHeader: #daad51;
     --mainWhite: #fff;
     --btnYellowStill: #D4AD51;
     --btnYellowHover: #F0C052;
@@ -586,11 +586,7 @@ footer {
 
 }
 
-.activeMenu {
-    font-size: v(16);
-    line-height: v(24);
-    color: var(--activeColor);
-}
+
 
 .menuMain {
     background-color: var(--mainColor);
@@ -614,11 +610,16 @@ footer {
         align-items: center;
         margin: v(24) 0;
         color: var(--btnYellowActive);
+
         li {
             margin-right: v(48);
 
             a {
-                color: var(--btnYellowActive);
+                color: var(--mainWhite);
+
+                &:hover {
+                    color: var(--activeColorHeader);
+                }
             }
 
             &:last-child {
@@ -626,8 +627,24 @@ footer {
                     padding-right: v(8);
                 }
             }
+
+            .phone {
+                color: var(--btnYellowActive);
+            }
+            .activeMenuMain {
+                a{
+                    color: var(--btnYellowActive);
+                }
+            }
         }
     }
+}
+
+.activeMenuMain {
+    a {
+        color: #daad51;
+    }
+
 }
 
 .menuMainSub {
@@ -649,6 +666,12 @@ footer {
 
         li {
             padding-right: v(48);
+            .activeMenuMainSbu{
+                color: var(--mainWhite);
+            }
+            &:hover{
+                color: var(--mainWhite);
+            }
         }
     }
 }
@@ -711,6 +734,7 @@ footer {
 .otherMainTitle {
     font-size: v(48);
     line-height: v(64);
+    font-weight: normal;
     color: var(--mainWhite);
     margin-left: v(48);
     margin-top: v(24);
@@ -730,6 +754,7 @@ footer {
         line-height: v(24);
         margin-bottom: v(48);
     }
+
 }
 
 textarea {
@@ -741,6 +766,7 @@ textarea {
 .deviTitle {
     font-size: v(36);
     line-height: v(48);
+    font-weight: normal;
     color: var(--mainWhite);
     text-align: left;
     margin-bottom: v(46);
@@ -855,13 +881,19 @@ textarea {
 // Modal table reserve
 
 .modal {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
 }
 
 .modalBody {
-    display: flex;
+    // display: flex;
+    display: none;
     flex-direction: column;
     max-width: v(312);
     color: #fff;
@@ -1077,28 +1109,28 @@ textarea {
 }
 
 // Modal artcile block
+
 .modalBg {
-    height: 100vh;
-    width: 100vw;
-    display: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 100;
     position: fixed;
-    top:0;
+    background: rgba(0, 0, 0, 0.5);
+    top: 0;
     left: 0;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100;
 }
 
 .modalArticleM {
-    display: flex;
-    // display: none;
+    // display: flex;
+    display: none;
     position: fixed;
     top: 10%;
     left: 38%;
     width: v(312);
     color: var(--mainWhite);
-    border: var(--border);
     background-color: var(--mainColor);
-    z-index: 100;
+    z-index: 200;
 
     .yellowBtn {
         grid-area: button;

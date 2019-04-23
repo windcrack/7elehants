@@ -1387,6 +1387,7 @@ textarea {
 .articleBlock {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(10, 20, 34, 0)), color-stop(56.25%, rgba(10, 20, 34, 0.2)), to(rgba(10, 20, 34, 0.8))), url("../img/cartImg.jpg") center no-repeat;
   background: linear-gradient(180deg, rgba(10, 20, 34, 0) 0%, rgba(10, 20, 34, 0.2) 56.25%, rgba(10, 20, 34, 0.8) 100%), url("../img/cartImg.jpg") center no-repeat;
+  background-size: cover;
   width: 66rem;
   height: 96rem;
   margin: 0 6rem 6rem 0;
@@ -1401,23 +1402,23 @@ textarea {
   border-radius: 2rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-bottom: 4.25rem;
 }
 
 .articleBlock:hover .articleEye {
-  visibility: hidden;
+  visibility: visible;
 }
 
 .articleBlock:hover .articleDesc {
-  padding: 0 5rem;
+  padding: 0 5rem 4rem;
+  margin-top: 43rem;
 }
 
 .articleBlock:hover .articleFooter {
-  padding: 0 5rem;
+  padding: 0 5rem 6rem;
 }
 
 .articleEye {
-  padding: 2rem 2rem 0 0;
+  margin: 2rem 2rem 0 0;
   color: var(--mainWhite);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1426,14 +1427,21 @@ textarea {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  visibility: hidden;
+  height: 6rem;
 }
 
 .articleDesc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   color: var(--mainWhite);
-  margin-top: 54rem;
-  margin-bottom: 4rem;
+  padding: 46rem 6rem 4rem;
+  height: 24rem;
   font-size: 5rem;
-  padding: 0 6rem;
   -webkit-column-width: 54rem;
           column-width: 54rem;
   font-weight: normal;

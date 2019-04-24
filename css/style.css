@@ -782,7 +782,7 @@ footer a {
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
-  margin: 4rem 0;
+  margin: 3rem 0;
   font-size: 4rem;
   line-height: 6rem;
 }
@@ -816,11 +816,11 @@ footer a {
 }
 
 .categorySub {
-  margin: 4rem 0 4rem 12rem;
+  margin: 3rem 0 3rem 12rem;
 }
 
 .menuMainSubCart {
-  margin: 4rem 12rem 4rem 0;
+  margin: 3rem 12rem 3rem 0;
   color: var(--mainWhite);
 }
 
@@ -858,7 +858,7 @@ footer a {
 }
 
 .otherMainMenu {
-  padding-top: 38rem;
+  padding-top: 36rem;
   padding-bottom: 8rem;
   background: url("../img/bgInWhite.png") center, var(--mainWhite);
   display: -webkit-box;
@@ -881,8 +881,8 @@ footer a {
 }
 
 .mainTitleNoSub {
-  -webkit-transform: translateY(-14rem);
-          transform: translateY(-14rem);
+  -webkit-transform: translateY(-12rem);
+          transform: translateY(-12rem);
 }
 
 .deviMainBlock {

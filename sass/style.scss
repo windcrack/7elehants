@@ -654,7 +654,7 @@ footer {
     ul {
         display: flex;
         list-style-type: none;
-        margin: v(16) 0;
+        margin: v(12) 0;
         font-size: v(16);
         line-height: v(24);
 
@@ -689,11 +689,11 @@ footer {
 }
 
 .categorySub {
-    margin: v(16) 0 v(16) v(48);
+    margin: v(12) 0 v(12) v(48);
 }
 
 .menuMainSubCart {
-    margin: v(16) v(48) v(16) 0;
+    margin: v(12) v(48) v(12) 0;
     color: var(--mainWhite);
 
     i {
@@ -726,7 +726,7 @@ footer {
 }
 
 .otherMainMenu {
-    padding-top: v(152);
+    padding-top: v(144);
     padding-bottom: v(32);
     background: url('../img/bgInWhite.png') center, var(--mainWhite);
     display: flex;
@@ -744,7 +744,7 @@ footer {
 }
 
 .mainTitleNoSub{
-    transform: translateY(v(-56));
+    transform: translateY(v(-48));
 }
 
 .deviMainBlock {

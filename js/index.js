@@ -49,11 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function scrollerAcrossArrow(trigg) {
         trigg.on('click', function (e) {
-            let godesc = $(this);
+            let godesc = $(this)
             $('html, body').stop().animate({
                 scrollTop: $(godesc.attr('href')).offset().top
-            }, 1000);
-            e.preventDefault();
+            }, 1000)
+            e.preventDefault()
         })
     }
 
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     $('.switch-btn').click(function () {
-        $(this).toggleClass('switch-on');
+        $(this).toggleClass('switch-on')
     })
     // if (item.querySelector('.detailed')!==null)
     scrollerAcrossArrow(arrows)

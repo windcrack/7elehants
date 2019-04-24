@@ -710,6 +710,8 @@ footer a {
       -ms-flex-align: center;
           align-items: center;
   z-index: 2;
+  -webkit-animation: goLeftMenuBg 1s;
+          animation: goLeftMenuBg 1s;
 }
 
 .menuMain .greyBtn {
@@ -1066,6 +1068,8 @@ textarea {
   top: 0;
   right: 0;
   z-index: 3;
+  -webkit-animation: goTopModalRezerv 1s;
+          animation: goTopModalRezerv 1s;
 }
 
 .modalBody .yellowBtn {
@@ -1205,6 +1209,7 @@ textarea {
 .modalTable {
   font-size: 3rem;
   line-height: 4.5rem;
+  padding: 0 12rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1213,9 +1218,14 @@ textarea {
           align-items: center;
 }
 
+.modalTable .changeTable {
+  -webkit-transform: translateX(-1.25rem);
+          transform: translateX(-1.25rem);
+}
+
 .switch-btn {
   display: inline-block;
-  width: 7.5rem;
+  width: 4.5rem;
   /* ширина переключателя */
   height: 3rem;
   /* высота переключателя */
@@ -1262,7 +1272,7 @@ textarea {
 }
 
 .switch-on::after {
-  left: 3.5rem;
+  left: 1rem;
   background: var(--btnYellowActive);
 }
 
@@ -1589,6 +1599,58 @@ textarea {
 
 .stockTextDescr {
   margin-bottom: 4rem;
+}
+
+@-webkit-keyframes goLeftMenuBg {
+  0% {
+    margin-left: 100%;
+    background-color: transparent;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0%;
+    background-color: var(--mainColor);
+    opacity: 1;
+  }
+}
+
+@keyframes goLeftMenuBg {
+  0% {
+    margin-left: 100%;
+    background-color: transparent;
+    opacity: 0;
+  }
+  100% {
+    margin-left: 0%;
+    background-color: var(--mainColor);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes goTopModalRezerv {
+  0% {
+    height: 0;
+    opacity: 0;
+    margin-right: -78rem;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
+    margin-right: 0;
+  }
+}
+
+@keyframes goTopModalRezerv {
+  0% {
+    height: 0;
+    opacity: 0;
+    margin-right: -78rem;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
+    margin-right: 0;
+  }
 }
 
 .slick-slide {

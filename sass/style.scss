@@ -729,15 +729,22 @@ footer {
     padding-top: v(152);
     padding-bottom: v(32);
     background: url('../img/bgInWhite.png') center, var(--mainWhite);
+    display: flex;
+    flex-direction: column;
 }
 
-.otherMainTitle {
+.otherMainTitle,
+.mainTitleNoSub {
     font-size: v(48);
     line-height: v(64);
     font-weight: normal;
     color: var(--mainWhite);
     margin-left: v(48);
     margin-top: v(24);
+}
+
+.mainTitleNoSub{
+    transform: translateY(v(-56));
 }
 
 .deviMainBlock {
@@ -1305,6 +1312,44 @@ textarea {
 
 .articleGramm {
     column-width: v(56);
+}
+
+// Stock
+
+.stockBlockPage{
+    margin-top: v(28);
+    display: flex;
+    flex-direction: column;
+    max-width: v(1224);
+    margin: auto;
+}
+
+.stockLeftBlock{
+    display: flex;
+    flex-direction: row;
+}
+
+.stockRightBlock{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.stockBlockText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-count: 1;
+    width: v(504);
+    margin: auto v(36) auto v(72);
+}
+
+.stockBlockTitle{
+    text-align: left;
+    margin-bottom: v(24);
+}
+
+.stockTextDescr{
+    margin-bottom: v(16);
 }
 
 // slick

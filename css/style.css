@@ -253,6 +253,10 @@ button {
   background: url("../img/bgInWhite.png");
 }
 
+.ctaBlock1 .yellowBtn {
+  margin: 0;
+}
+
 .left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -285,6 +289,7 @@ button {
           column-count: 1;
   -webkit-column-width: 126rem;
           column-width: 126rem;
+  padding-top: 17rem;
 }
 
 .ctaBlock1TextLeft button {
@@ -714,6 +719,16 @@ footer a {
           animation: goLeftMenuBg 1s;
 }
 
+@media (max-width: 800px) {
+  .menuMain {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50rem 1fr 12.5rem;
+        grid-template-columns: 50rem 1fr 12.5rem;
+        grid-template-areas: "logo phone burger";
+  }
+}
+
 .menuMain .greyBtn {
   width: 36rem;
   height: 12rem;
@@ -732,6 +747,12 @@ footer a {
           align-items: center;
   margin: 6rem 0;
   color: var(--btnYellowActive);
+}
+
+@media (max-width: 800px) {
+  .menuMain ul {
+    display: none;
+  }
 }
 
 .menuMain ul li {
@@ -762,6 +783,37 @@ footer a {
   color: var(--btnYellowActive);
 }
 
+@media (max-width: 800px) {
+  .inDesct {
+    display: none;
+  }
+}
+
+.phoneInMob {
+  display: none;
+  color: var(--btnYellowActive);
+}
+
+@media (max-width: 800px) {
+  .phoneInMob {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.inMob {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .inMob {
+    display: block;
+    padding: 6rem;
+    grid-area: logo;
+  }
+}
+
 .menuMainSub {
   margin-top: 24rem;
   background-color: var(--btnYellowActive);
@@ -777,6 +829,8 @@ footer a {
           align-items: center;
   position: fixed;
   min-width: 100%;
+  -webkit-animation: goRigthMenu 2s;
+          animation: goRigthMenu 2s;
 }
 
 .menuMainSub ul {
@@ -1650,6 +1704,32 @@ textarea {
     height: 100%;
     opacity: 1;
     margin-right: 0;
+  }
+}
+
+@-webkit-keyframes goRigthMenu {
+  0% {
+    height: 0;
+    opacity: 0;
+    background-color: transparent;
+  }
+  100% {
+    height: 12rem;
+    opacity: 1;
+    background-color: var(--btnYellowActive);
+  }
+}
+
+@keyframes goRigthMenu {
+  0% {
+    height: 0;
+    opacity: 0;
+    background-color: transparent;
+  }
+  100% {
+    height: 12rem;
+    opacity: 1;
+    background-color: var(--btnYellowActive);
   }
 }
 

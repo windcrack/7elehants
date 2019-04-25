@@ -72,7 +72,6 @@ body {
     --mainColor: #0A1422;
     --sendOkColor: #1EC700;
     --sendErrorColor: red;
-    // font-family: 'Montserrat', sans-serif;
     --headerFontFamaly: 'Lora', serif;
     --textFontFamaly: 'Raleway', sans-serif;
 }
@@ -227,6 +226,9 @@ button {
     flex-direction: column;
     line-height: v(24);
     background: url('../img/bgInWhite.png');
+    .yellowBtn{
+        margin: 0;
+    }
 }
 
 .left {
@@ -245,6 +247,7 @@ button {
     margin: auto v(32) auto v(72);
     column-count: 1;
     column-width: v(504);
+    padding-top: v(68);
 
     button {
         width: v(168);
@@ -596,6 +599,11 @@ footer {
     align-items: center;
     z-index: 2;
     animation: goLeftMenuBg 1s;
+    @media (max-width: 800px){
+        display: grid;
+        grid-template-columns: v(200) 1fr v(50);
+        grid-template-areas: "logo phone burger";
+    }
 
     .greyBtn {
         width: v(144);
@@ -609,7 +617,9 @@ footer {
         align-items: center;
         margin: v(24) 0;
         color: var(--btnYellowActive);
-        
+        @media (max-width: 800px){
+            display: none;
+        }
 
         li {
             margin-right: v(48);
@@ -643,6 +653,26 @@ footer {
     }
 }
 
+.inDesct{
+    @media (max-width: 800px){
+        display: none;
+    }
+}
+.phoneInMob{
+    display: none;
+    color: var(--btnYellowActive);
+    @media (max-width: 800px){
+        display: flex;
+    }
+}
+.inMob{
+    display: none;
+    @media (max-width:800px){
+        display: block;
+        padding: v(24);
+        grid-area: logo;
+    }
+}
 
 .menuMainSub {
     margin-top: v(96);
@@ -653,6 +683,7 @@ footer {
     align-items: center;
     position: fixed;
     min-width: 100%;
+    animation: goRigthMenu 2s;
 
     ul {
         display: flex;
@@ -718,6 +749,8 @@ footer {
 .logo {
     padding-left: v(48);
 }
+
+
 
 // Deviliry
 
@@ -902,7 +935,6 @@ textarea {
 }
 
 .modalBody {
-    // display: flex;
     display: none;
     flex-direction: column;
     max-width: v(312);
@@ -1385,6 +1417,18 @@ textarea {
         height: 100%;
         opacity: 1;
         margin-right: 0;
+    }
+}
+@keyframes goRigthMenu {
+    0%{
+        height: 0;
+        opacity: 0;
+        background-color: transparent;
+    }
+    100%{
+        height: v(48);
+        opacity: 1;
+        background-color: var(--btnYellowActive);
     }
 }
 

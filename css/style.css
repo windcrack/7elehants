@@ -73,6 +73,7 @@ h1,
 h2,
 h3 {
   font-family: var(--headerFontFamaly);
+  font-weight: normal;
 }
 
 p,
@@ -1020,23 +1021,23 @@ textarea {
   margin-bottom: 6rem;
 }
 
-.radio {
+.radioBtn {
   position: absolute;
   z-index: -1;
   opacity: 0;
   margin: 10px 0 0 7px;
 }
 
-.radio + label {
+.radioBtn + label {
   position: relative;
   padding: 0 0 0 35px;
   cursor: pointer;
 }
 
-.radio + label:before {
+.radioBtn + label:before {
   content: '';
   position: absolute;
-  top: -3px;
+  top: -0.75rem;
   left: 0;
   width: 5.5rem;
   height: 5.5rem;
@@ -1045,7 +1046,7 @@ textarea {
   background-color: transparent;
 }
 
-.radio + label:after {
+.radioBtn + label:after {
   content: '';
   position: absolute;
   top: 1px;
@@ -1059,13 +1060,47 @@ textarea {
   transition: .2s;
 }
 
-.radio:checked + label:after {
+.radioBtn:checked + label:after {
   opacity: 1;
 }
 
-.radio:focus + label:before {
-  -webkit-box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.7);
-          box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.7);
+.checkbox-custom {
+  display: none;
+}
+
+.checkbox-custom-label {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  margin: 1.25rem;
+  cursor: pointer;
+}
+
+.checkbox-custom + .checkbox-custom-label:before {
+  content: '';
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid var(--btnYellowActive);
+  display: inline-block;
+  vertical-align: middle;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  margin-right: 2.5rem;
+}
+
+.checkbox-custom:checked + .checkbox-custom-label:after {
+  content: "";
+  padding: 2px;
+  position: absolute;
+  width: 1px;
+  height: 5px;
+  border: solid var(--btnYellowActive);
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 2px;
+  left: 5px;
 }
 
 .warning {
@@ -1088,10 +1123,6 @@ textarea {
   line-height: 6rem;
   margin-bottom: 6rem;
   color: var(--mainWhite);
-}
-
-.caution label {
-  padding-left: 2rem;
 }
 
 .caution span {
@@ -1731,6 +1762,98 @@ textarea {
     opacity: 1;
     background-color: var(--btnYellowActive);
   }
+}
+
+.cartBlockMain {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (66rem)[4];
+      grid-template-columns: repeat(4, 66rem);
+  grid-gap: 6rem;
+}
+
+.cartBlockMain h2 {
+  color: #000;
+}
+
+.articleBlockInCart {
+  width: 66rem;
+  height: 48rem;
+  background: url("../img/imgInCart.jpg");
+  color: var(--mainWhite);
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "gramm . delete" "descr descr descr" "total . summ";
+  -ms-grid-rows: 6rem 1fr 6rem;
+      grid-template-rows: 6rem 1fr 6rem;
+}
+
+.articleBlockInCart .plus,
+.articleBlockInCart .minus {
+  width: 6rem;
+  height: 6rem;
+  color: var(--btnYellowActive);
+  background-color: transparent;
+  border: none;
+}
+
+.articleBlockInCart input[type="number"] {
+  width: 6rem;
+  background-color: transparent;
+  -moz-appearance: textfield;
+  border: none;
+  text-align: center;
+}
+
+.inCartGramm {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: gramm;
+  height: 6rem;
+  -webkit-transform: translateX(2rem) translateY(2rem);
+          transform: translateX(2rem) translateY(2rem);
+}
+
+.deleteInCart {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: delete;
+  height: 6rem;
+  -webkit-transform: translateX(-2rem) translateY(2rem);
+          transform: translateX(-2rem) translateY(2rem);
+}
+
+.descrInCart {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: descr;
+  font-weight: normal;
+  font-size: 5rem;
+  line-height: 6.5rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.totalInCart {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: total;
+  -webkit-transform: translateX(2rem) translateY(-2rem);
+          transform: translateX(2rem) translateY(-2rem);
+}
+
+.summIncart {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: summ;
+  -webkit-transform: translateX(-2rem) translateY(-2rem);
+          transform: translateX(-2rem) translateY(-2rem);
 }
 
 .slick-slide {

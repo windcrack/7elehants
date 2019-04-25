@@ -80,6 +80,7 @@ h1,
 h2,
 h3 {
     font-family: var(--headerFontFamaly);
+    font-weight: normal;
 }
 
 p,
@@ -226,7 +227,8 @@ button {
     flex-direction: column;
     line-height: v(24);
     background: url('../img/bgInWhite.png');
-    .yellowBtn{
+
+    .yellowBtn {
         margin: 0;
     }
 }
@@ -599,7 +601,8 @@ footer {
     align-items: center;
     z-index: 2;
     animation: goLeftMenuBg 1s;
-    @media (max-width: 800px){
+
+    @media (max-width: 800px) {
         display: grid;
         grid-template-columns: v(200) 1fr v(50);
         grid-template-areas: "logo phone burger";
@@ -617,7 +620,8 @@ footer {
         align-items: center;
         margin: v(24) 0;
         color: var(--btnYellowActive);
-        @media (max-width: 800px){
+
+        @media (max-width: 800px) {
             display: none;
         }
 
@@ -653,21 +657,25 @@ footer {
     }
 }
 
-.inDesct{
-    @media (max-width: 800px){
+.inDesct {
+    @media (max-width: 800px) {
         display: none;
     }
 }
-.phoneInMob{
+
+.phoneInMob {
     display: none;
     color: var(--btnYellowActive);
-    @media (max-width: 800px){
+
+    @media (max-width: 800px) {
         display: flex;
     }
 }
-.inMob{
+
+.inMob {
     display: none;
-    @media (max-width:800px){
+
+    @media (max-width: 800px) {
         display: block;
         padding: v(24);
         grid-area: logo;
@@ -779,7 +787,7 @@ footer {
     margin-top: v(24);
 }
 
-.mainTitleNoSub{
+.mainTitleNoSub {
     transform: translateY(v(-48));
 }
 
@@ -848,23 +856,23 @@ textarea {
 
 }
 
-.radio {
+.radioBtn {
     position: absolute;
     z-index: -1;
     opacity: 0;
     margin: 10px 0 0 7px;
 }
 
-.radio+label {
+.radioBtn+label {
     position: relative;
     padding: 0 0 0 35px;
     cursor: pointer;
 }
 
-.radio+label:before {
+.radioBtn+label:before {
     content: '';
     position: absolute;
-    top: -3px;
+    top: v(-3);
     left: 0;
     width: v(22);
     height: v(22);
@@ -873,7 +881,7 @@ textarea {
     background-color: transparent;
 }
 
-.radio+label:after {
+.radioBtn+label:after {
     content: '';
     position: absolute;
     top: 1px;
@@ -887,13 +895,48 @@ textarea {
     transition: .2s;
 }
 
-.radio:checked+label:after {
+.radioBtn:checked+label:after {
     opacity: 1;
 }
 
-.radio:focus+label:before {
-    box-shadow: 0 0 0 3px rgba(255, 255, 0, .7);
+.checkbox-custom {
+    display: none;
 }
+
+.checkbox-custom-label {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    margin: v(5);
+    cursor: pointer;
+}
+
+.checkbox-custom+.checkbox-custom-label:before {
+    content: '';
+    background-color: transparent;
+    border-radius: 5px;
+    border: 2px solid var(--btnYellowActive);
+    display: inline-block;
+    vertical-align: middle;
+    width: v(10);
+    height: v(10);
+    padding: v(2);
+    margin-right: v(10);
+}
+
+.checkbox-custom:checked+.checkbox-custom-label:after {
+    content: "";
+    padding: 2px;
+    position: absolute;
+    width: 1px;
+    height: 5px;
+    border: solid var(--btnYellowActive);
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    top: 2px;
+    left: 5px;
+}
+
 
 .warning {
     border-top: solid 2px var(--btnYellowActive);
@@ -912,9 +955,9 @@ textarea {
     margin-bottom: v(24);
     color: var(--mainWhite);
 
-    label {
-        padding-left: v(8);
-    }
+    // label {
+    //     padding-left: v(8);
+    // }
 
     span {
         color: var(--btnYellowActive);
@@ -1068,7 +1111,8 @@ textarea {
     padding: 0 v(48);
     display: flex;
     align-items: center;
-    .changeTable{
+
+    .changeTable {
         transform: translateX(v(-5));
     }
 }
@@ -1356,7 +1400,7 @@ textarea {
 
 // Stock
 
-.stockBlockPage{
+.stockBlockPage {
     margin-top: v(28);
     display: flex;
     flex-direction: column;
@@ -1364,17 +1408,17 @@ textarea {
     margin: auto;
 }
 
-.stockLeftBlock{
+.stockLeftBlock {
     display: flex;
     flex-direction: row;
 }
 
-.stockRightBlock{
+.stockRightBlock {
     display: flex;
     flex-direction: row-reverse;
 }
 
-.stockBlockText{
+.stockBlockText {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1383,56 +1427,129 @@ textarea {
     margin: auto v(36) auto v(72);
 }
 
-.stockBlockTitle{
+.stockBlockTitle {
     text-align: left;
     margin-bottom: v(24);
 }
 
-.stockTextDescr{
+.stockTextDescr {
     margin-bottom: v(16);
 }
 
 // Key Frame
 
-@keyframes goLeftMenuBg{
-    0%{
+@keyframes goLeftMenuBg {
+    0% {
         margin-left: 100%;
         background-color: transparent;
         opacity: 0;
     }
 
-    100%{
+    100% {
         margin-left: 0%;
         background-color: var(--mainColor);
         opacity: 1;
     }
 }
-@keyframes goTopModalRezerv{
-    0%{
+
+@keyframes goTopModalRezerv {
+    0% {
         height: 0;
         opacity: 0;
         margin-right: v(-312);
     }
-    100%{
+
+    100% {
         height: 100%;
         opacity: 1;
         margin-right: 0;
     }
 }
+
 @keyframes goRigthMenu {
-    0%{
+    0% {
         height: 0;
         opacity: 0;
         background-color: transparent;
     }
-    100%{
+
+    100% {
         height: v(48);
         opacity: 1;
         background-color: var(--btnYellowActive);
     }
 }
 
+// Cart 
+
+.cartBlockMain{
+    display: grid;
+    grid-template-columns: repeat(4, v(264));
+    grid-gap: v(24);
+    h2{
+        color: #000;
+    }
+}
+
+.articleBlockInCart{
+    width: v(264);
+    height: v(192);
+    background: url('../img/imgInCart.jpg');
+    color: var(--mainWhite);
+    display: grid;
+    grid-template-areas: "gramm . delete" "descr descr descr" "total . summ";
+    grid-template-rows: v(24) 1fr v(24);
+    .plus,
+    .minus {
+        width: v(24);
+        height: v(24);
+        color: var(--btnYellowActive);
+        background-color: transparent;
+        border: none;
+
+    }
+    input[type="number"]{
+        width: v(24);
+        background-color: transparent;
+        -moz-appearance: textfield;
+        border: none;
+        text-align: center;
+    }
+}
+
+.inCartGramm{
+    grid-area: gramm;
+    height: v(24);
+    transform: translateX(v(8)) translateY(v(8))
+}
+
+.deleteInCart{
+    grid-area: delete;
+    height: v(24);
+    transform: translateX(v(-8)) translateY(v(8))
+}
+
+.descrInCart{
+    grid-area: descr;
+    font-weight: normal;
+    font-size: v(20);
+    line-height: v(26);
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.totalInCart{
+    grid-area: total;
+    transform: translateX(v(8)) translateY(v(-8))
+}
+
+.summIncart{
+    grid-area: summ;
+    transform: translateX(v(-8)) translateY(v(-8))
+}
 // slick
+
 .slick-slide {
     z-index: 1 !important;
 }

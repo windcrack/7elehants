@@ -23,56 +23,51 @@
     <nav class="menuMain other">
         <a href="index.html" class="logo">
             <img class="inDesct" src="img/logo.png" alt="Лого">
-            <img class="inMob" src="img/logoMob.png" alt="Лого" >
+            <img class="inMob" src="img/logoMob.png" alt="Лого">
         </a>
         <ul>
-            <li><a href="menu.html">Меню</a></li>
+            <li><a href="menu.html" class="activeMenuMain">Меню</a></li>
             <li><a href="#">Мероприятия</a></li>
-            <li><a href="stock.html" class="activeMenuMain">Акции</a></li>
+            <li><a href="stock.html">Акции</a></li>
             <li><a href="#">Контакты</a></li>
             <li><button class="greyBtn rezerv">Резерв стола</button></li>
             <li><i class="far fa-mobile"></i><a href="tel:+79529931234" class="phone">+7(952)993 1234</a></li>
         </ul>
     </nav>
+    <nav class="menuMainSub">
+        <div class="categorySub">
+            <button class="subArrow"><i class="far fa-caret-left"></i></button>
+            <span class="nameMenuSub">Европейская кухня</span>
+            <button class="subArrow"><i class="far fa-caret-right"></i></button>
+        </div>
+        <div class="listSub">
+            <ul>
+                <li><a href="#" class="activeMenuMainSbu">Паста</a></li>
+                <li><a href="#">Закуски</a></li>
+                <li><a href="#">Салаты</a></li>
+                <li><a href="#">Супы</a></li>
+                <li><a href="#">Горячее</a></li>
+                <li><a href="#">Гарниры</a></li>
+                <li><a href="#">Пицца</a></li>
+            </ul>
+            <div class="menuMainSubCart">
+                <i class="far fa-shopping-cart"></i><span>0000.0</span>руб
+            </div>
+        </div>
+    </nav>
     <main class="otherMainMenu">
-        <h1 class="mainTitleNoSub">Акции</h1>
-        <section class="stockBlockPage">
-            <div class="stockLeftBlock">
-                <div class="stockBlockText">
-                    <h2 class="stockBlockTitle">Дисконтная карта</h2>
-                    <p class="stockTextDescr">Сегодня «7 слонов» - это 4 зала: 2 верхних зала и 2 нижних зала, которые
-                        ждут Вас с нетерпением в
-                        гости. Мы всегда рады, когда Вы доверяете нам проведение своего торжества – Дня рождения,
-                        юбилея, встречи выпускников или свадьбы.</p>
-                    <p class="stockTextDescr">Чтобы не привело Вас в «7 слонов»: торжество, обычный обед, дружеские
-                        посиделки или деловая
-                        встреча, Вы всегда можете быть уверены в достойном приеме, качественном обслуживании и
-                        изысканной кухне.</p>
+        <h2 class="otherMainTitle">Ваша корзина</h2>
+        <section class="cartBlockMain">
+            <div class="articleBlockInCart">
+                <div class="inCartGramm">650г.</div>
+                <div class="deleteInCart"><span>Удалить</span><i class="far fa-trash-alt"></i></div>
+                <div class="descrInCart">Блины со шпинатом и сырным соусом сырным соусом</div>
+                <div class="totalInCart">
+                    <button class="plus"><i class="far fa-plus"></i></button>
+                    <input type="number" value="1">
+                    <button class="minus"><i class="far fa-minus"></i></button>
                 </div>
-                <div class="stockImg"><img src="img/slide1.png" alt="Акция"></div>
-            </div>
-            <div class="stockRightBlock">
-                <div class="stockBlockText">
-                    <h2 class="stockBlockTitle">Пицца 2+1</h2>
-                    <p class="stockTextDescr">Сегодня «7 слонов» - это 4 зала: 2 верхних зала и 2 нижних зала, которые
-                        ждут Вас с нетерпением в гости. Мы всегда рады, когда Вы доверяете нам проведение своего
-                        торжества – Дня рождения, юбилея, встречи выпускников или свадьбы.</p>
-                </div>
-                <div class="stockImg"><img src="img/slide1.png" alt="Акция"></div>
-            </div>
-            <div class="stockLeftBlock">
-                <div class="stockBlockText">
-                    <h2 class="stockBlockTitle">Дисконтная карта</h2>
-                    <p class="stockTextDescr">Сегодня «7 слонов» - это 4 зала: 2 верхних зала и 2 нижних зала, которые
-                        ждут Вас с нетерпением в
-                        гости. Мы всегда рады, когда Вы доверяете нам проведение своего торжества – Дня рождения,
-                        юбилея, встречи выпускников или свадьбы.</p>
-                    <p class="stockTextDescr">Чтобы не привело Вас в «7 слонов»: торжество, обычный обед, дружеские
-                        посиделки или деловая
-                        встреча, Вы всегда можете быть уверены в достойном приеме, качественном обслуживании и
-                        изысканной кухне.</p>
-                </div>
-                <div class="stockImg"><img src="img/slide1.png" alt="Акция"></div>
+                <div class="summIncart">Всего: 505р.</div>
             </div>
         </section>
     </main>
@@ -188,7 +183,6 @@
     <script src="slick/slick.min.js"></script>
     <script src="js/sliderOpt.js"></script>
     <script src="js/index.js"></script>
-
 </body>
 
 </html>

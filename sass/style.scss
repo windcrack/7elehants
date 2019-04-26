@@ -1224,7 +1224,6 @@ textarea {
 }
 
 .modalArticleM {
-    // display: flex;
     display: none;
     position: fixed;
     top: 10%;
@@ -1233,6 +1232,7 @@ textarea {
     color: var(--mainWhite);
     background-color: var(--mainColor);
     z-index: 200;
+    animation: modalGlide 1s;
 
     .yellowBtn {
         grid-area: button;
@@ -1241,6 +1241,36 @@ textarea {
         border-radius: 0;
         margin-top: v(25);
         margin-bottom: 0;
+    }
+}
+
+.glideModalClose{
+    animation: modalGliedeClose 1s;
+}
+
+@keyframes modalGlideClose{
+    100%{
+        left: 38%;
+        height: 100%;
+        opacity: 1;
+    }
+    0%{
+        right:0;
+        height: 0;
+        opacity: 0; 
+    }
+}
+
+@keyframes modalGlide{
+    0%{
+        left:0;
+        height: 0;
+        opacity: 0;
+    }
+    100%{
+        left: 38%;
+        height: 100%;
+        opacity: 1;
     }
 }
 

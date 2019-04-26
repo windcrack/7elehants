@@ -1423,6 +1423,8 @@ textarea {
   color: var(--mainWhite);
   background-color: var(--mainColor);
   z-index: 200;
+  -webkit-animation: modalGlide 1s;
+          animation: modalGlide 1s;
 }
 
 .modalArticleM .yellowBtn {
@@ -1432,6 +1434,63 @@ textarea {
   border-radius: 0;
   margin-top: 6.25rem;
   margin-bottom: 0;
+}
+
+.glideModalClose {
+  -webkit-animation: modalGliedeClose 1s;
+          animation: modalGliedeClose 1s;
+}
+
+@-webkit-keyframes modalGlideClose {
+  100% {
+    left: 38%;
+    height: 100%;
+    opacity: 1;
+  }
+  0% {
+    right: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes modalGlideClose {
+  100% {
+    left: 38%;
+    height: 100%;
+    opacity: 1;
+  }
+  0% {
+    right: 0;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes modalGlide {
+  0% {
+    left: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    left: 38%;
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes modalGlide {
+  0% {
+    left: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    left: 38%;
+    height: 100%;
+    opacity: 1;
+  }
 }
 
 .articleTitleM {

@@ -1436,6 +1436,151 @@ textarea {
     margin-bottom: v(16);
 }
 
+// Cart 
+
+.cartBlockMain {
+    display: grid;
+    grid-template-columns: repeat(4, v(264));
+    grid-gap: v(24);
+    max-width: v(1152);
+    margin: v(24) auto v(48);
+
+    h2 {
+        color: #000;
+    }
+}
+
+.articleBlockInCart {
+    width: v(264);
+    height: v(192);
+    background: url('../img/imgInCart.jpg');
+    color: var(--mainWhite);
+    display: grid;
+    grid-template-areas: "gramm . delete""descr descr descr""total . summ";
+    grid-template-rows: v(24) 1fr v(24);
+    &:hover{
+        .inCartGramm,
+        .deleteInCart{
+            visibility: visible;
+        }
+    }
+
+    .plus,
+    .minus {
+        width: v(24);
+        height: v(24);
+        color: var(--mainWhite);
+        background-color: transparent;
+        border: none;
+        font-size: v(16);
+        line-height: v(24);
+        text-transform: uppercase;
+        text-align: center;
+
+    }
+
+    input[type="number"] {
+        width: v(24);
+        background-color: transparent;
+        -moz-appearance: textfield;
+        border: none;
+        text-align: center;
+        font-weight: bold;
+        font-size: v(24);
+        line-height: v(40);
+    }
+}
+
+.inCartGramm {
+    grid-area: gramm;
+    height: v(24);
+    transform: translateX(v(8)) translateY(v(8));
+    visibility: hidden;
+}
+
+.deleteInCart {
+    grid-area: delete;
+    height: v(24);
+    transform: translateX(v(-8)) translateY(v(8));
+
+    i {
+        padding-left: v(5);
+    }
+    visibility: hidden;
+}
+
+.descrInCart {
+    grid-area: descr;
+    font-weight: normal;
+    font-size: v(20);
+    line-height: v(26);
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.totalInCart {
+    grid-area: total;
+    transform: translateX(v(8)) translateY(v(-16));
+}
+
+.summIncart {
+    grid-area: summ;
+    transform: translateX(v(-8)) translateY(v(-8));
+}
+
+.orderAmount {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    text-transform: uppercase;
+    font-size: v(12);
+    line-height: v(24);
+    font-weight: bold;
+    width: v(312);
+    margin-right: v(72);
+
+    label {
+        color: #000;
+    }
+
+    h2 {
+        margin-bottom: v(24);
+    }
+
+    .paymetsRadio {
+        display: flex;
+        align-items: center;
+    }
+
+    .yellowBtn {
+        width: v(312);
+        font-family: Tahoma;
+        font-size: v(16);
+        line-height: v(24);
+        margin-top: v(32);
+    }
+}
+
+.subTotal {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+}
+
+.orderDeviliry {
+    display: flex;
+    justify-content: space-between;
+    margin-top: v(23);
+    margin-bottom: v(31);
+}
+
+.totalSumm {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #000;
+}
+
 // Key Frame
 
 @keyframes goLeftMenuBg {
@@ -1480,74 +1625,6 @@ textarea {
     }
 }
 
-// Cart 
-
-.cartBlockMain{
-    display: grid;
-    grid-template-columns: repeat(4, v(264));
-    grid-gap: v(24);
-    h2{
-        color: #000;
-    }
-}
-
-.articleBlockInCart{
-    width: v(264);
-    height: v(192);
-    background: url('../img/imgInCart.jpg');
-    color: var(--mainWhite);
-    display: grid;
-    grid-template-areas: "gramm . delete" "descr descr descr" "total . summ";
-    grid-template-rows: v(24) 1fr v(24);
-    .plus,
-    .minus {
-        width: v(24);
-        height: v(24);
-        color: var(--btnYellowActive);
-        background-color: transparent;
-        border: none;
-
-    }
-    input[type="number"]{
-        width: v(24);
-        background-color: transparent;
-        -moz-appearance: textfield;
-        border: none;
-        text-align: center;
-    }
-}
-
-.inCartGramm{
-    grid-area: gramm;
-    height: v(24);
-    transform: translateX(v(8)) translateY(v(8))
-}
-
-.deleteInCart{
-    grid-area: delete;
-    height: v(24);
-    transform: translateX(v(-8)) translateY(v(8))
-}
-
-.descrInCart{
-    grid-area: descr;
-    font-weight: normal;
-    font-size: v(20);
-    line-height: v(26);
-    text-align: center;
-    display: flex;
-    align-items: center;
-}
-
-.totalInCart{
-    grid-area: total;
-    transform: translateX(v(8)) translateY(v(-8))
-}
-
-.summIncart{
-    grid-area: summ;
-    transform: translateX(v(-8)) translateY(v(-8))
-}
 // slick
 
 .slick-slide {

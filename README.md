@@ -1,7 +1,8 @@
 # 7elehants
 
 
-Done - index page
-Done - divilery page
-Dev - Stock page
-Dev - Menu page
+Done (adapt - none) - index page
+Done (adapt - none) - divilery page
+Done (adapt - none) - Stock page
+Done (adapt - none) - Cart page
+Dev  (adapt - none) - Menu page

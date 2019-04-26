@@ -1285,6 +1285,9 @@ textarea {
   border: none;
   -moz-appearance: textfield;
   color: var(--mainWhite);
+  font-weight: bold;
+  font-size: 6rem;
+  line-height: 10rem;
 }
 
 .borderDef {
@@ -1298,9 +1301,6 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .modalTable .changeTable {

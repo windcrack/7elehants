@@ -1096,6 +1096,9 @@ textarea {
         border: none;
         -moz-appearance: textfield;
         color: var(--mainWhite);
+        font-weight: bold;
+        font-size: v(24);
+        line-height: v(40);
     }
 
     margin-bottom: v(24);
@@ -1110,7 +1113,7 @@ textarea {
     line-height: v(18);
     padding: 0 v(48);
     display: flex;
-    align-items: center;
+    // align-items: center;
 
     .changeTable {
         transform: translateX(v(-5));

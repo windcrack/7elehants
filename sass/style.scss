@@ -1015,6 +1015,7 @@ textarea {
     font-size: v(36);
     line-height: v(48);
     text-align: center;
+    margin-bottom: v(16);
 }
 
 .modalBlockInput {
@@ -1059,17 +1060,20 @@ textarea {
     font-size: v(60);
     line-height: v(24);
     text-align: center;
+    margin-bottom: v(22);
 }
 
 .modalOkTitle {
     font-size: v(20);
     text-align: center;
+    margin-bottom: v(24);
 }
 
 .modalOkSub {
     font-size: v(16);
     line-height: v(24);
     text-align: center;
+    margin-bottom: v(40);
 }
 
 .modalBlockBtnNumb {
@@ -1077,6 +1081,10 @@ textarea {
     flex-direction: row;
     align-items: center;
     padding: v(10);
+
+    span{
+        margin-right: v(6);
+    }
 
     button {
         width: v(24);
@@ -1116,7 +1124,7 @@ textarea {
     // align-items: center;
 
     .changeTable {
-        transform: translateX(v(-5));
+        transform: translateX(v(-5)) translateY(v(4));
     }
 }
 
@@ -1505,6 +1513,7 @@ textarea {
     grid-area: delete;
     height: v(24);
     transform: translateX(v(-8)) translateY(v(8));
+    text-align: right;
 
     i {
         padding-left: v(5);

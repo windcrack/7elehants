@@ -726,13 +726,21 @@ footer a {
     display: grid;
     -ms-grid-columns: 50rem 1fr 12.5rem;
         grid-template-columns: 50rem 1fr 12.5rem;
-        grid-template-areas: "logo phone burger";
+    -ms-grid-rows: auto 100%;
+        grid-template-rows: auto 100%;
+        grid-template-areas: "logo phone burger" "menu menu menu";
   }
 }
 
 .menuMain .greyBtn {
   width: 36rem;
   height: 12rem;
+}
+
+@media (max-width: 800px) {
+  .menuMain .greyBtn {
+    width: 44rem;
+  }
 }
 
 .menuMain ul {
@@ -752,12 +760,37 @@ footer a {
 
 @media (max-width: 800px) {
   .menuMain ul {
+    grid-area: menu;
     display: none;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-right: 6rem;
   }
 }
 
 .menuMain ul li {
   margin-right: 12rem;
+}
+
+@media (max-width: 800px) {
+  .menuMain ul li {
+    -ms-flex-item-align: end;
+        align-self: end;
+    margin: 18rem 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
 }
 
 .menuMain ul li a {
@@ -770,6 +803,20 @@ footer a {
 
 .menuMain ul li a:hover {
   color: var(--activeColorHeader);
+}
+
+@media (max-width: 800px) {
+  .menuMain ul li:nth-child(5) {
+    -webkit-box-ordinal-group: -4;
+        -ms-flex-order: -5;
+            order: -5;
+  }
+}
+
+@media (max-width: 800px) {
+  .menuMain ul li:last-child {
+    display: none;
+  }
 }
 
 .menuMain ul li:last-child i {
@@ -800,6 +847,32 @@ footer a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .phoneInMob .phone {
+    margin: 0;
+  }
+  .phoneInMob a {
+    color: var(--btnYellowActive);
+  }
+}
+
+.burgerInTable {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .burgerInTable {
+    grid-area: burger;
+    display: block;
+    color: var(--mainWhite);
+    cursor: pointer;
+    margin-right: 6rem;
   }
 }
 
@@ -1437,60 +1510,13 @@ textarea {
 }
 
 .glideModalClose {
-  -webkit-animation: modalGliedeClose 1s;
-          animation: modalGliedeClose 1s;
+  -webkit-animation: modalGlideClose 600ms;
+          animation: modalGlideClose 600ms;
 }
 
-@-webkit-keyframes modalGlideClose {
-  100% {
-    left: 38%;
-    height: 100%;
-    opacity: 1;
-  }
-  0% {
-    right: 0;
-    height: 0;
-    opacity: 0;
-  }
-}
-
-@keyframes modalGlideClose {
-  100% {
-    left: 38%;
-    height: 100%;
-    opacity: 1;
-  }
-  0% {
-    right: 0;
-    height: 0;
-    opacity: 0;
-  }
-}
-
-@-webkit-keyframes modalGlide {
-  0% {
-    left: 0;
-    height: 0;
-    opacity: 0;
-  }
-  100% {
-    left: 38%;
-    height: 100%;
-    opacity: 1;
-  }
-}
-
-@keyframes modalGlide {
-  0% {
-    left: 0;
-    height: 0;
-    opacity: 0;
-  }
-  100% {
-    left: 38%;
-    height: 100%;
-    opacity: 1;
-  }
+.glideMenuClosedRezerv {
+  -webkit-animation: modalGlideRezerv 1s;
+          animation: modalGlideRezerv 1s;
 }
 
 .articleTitleM {
@@ -2014,6 +2040,86 @@ textarea {
     height: 12rem;
     opacity: 1;
     background-color: var(--btnYellowActive);
+  }
+}
+
+@-webkit-keyframes modalGlideRezerv {
+  0% {
+    height: 100%;
+    opacity: 1;
+    margin-right: 0;
+  }
+  100% {
+    margin-right: -312;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes modalGlideRezerv {
+  0% {
+    height: 100%;
+    opacity: 1;
+    margin-right: 0;
+  }
+  100% {
+    margin-right: -312;
+    height: 0;
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes modalGlideClose {
+  0% {
+    left: 38%;
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    height: 0;
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes modalGlideClose {
+  0% {
+    left: 38%;
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+    height: 0;
+    opacity: 0;
+    display: none;
+  }
+}
+
+@-webkit-keyframes modalGlide {
+  0% {
+    left: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    left: 38%;
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes modalGlide {
+  0% {
+    left: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    left: 38%;
+    height: 100%;
+    opacity: 1;
   }
 }
 

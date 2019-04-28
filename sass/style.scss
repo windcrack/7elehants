@@ -605,12 +605,16 @@ footer {
     @media (max-width: 800px) {
         display: grid;
         grid-template-columns: v(200) 1fr v(50);
-        grid-template-areas: "logo phone burger";
+        grid-template-rows: auto 100%;
+        grid-template-areas: "logo phone burger" "menu menu menu";
     }
 
     .greyBtn {
         width: v(144);
         height: v(48);
+        @media (max-width: 800px){
+            width: v(176);
+        }
     }
 
     ul {
@@ -622,11 +626,22 @@ footer {
         color: var(--btnYellowActive);
 
         @media (max-width: 800px) {
+            grid-area: menu;
             display: none;
+            flex-direction: column;
+            justify-content: flex-end;
+            margin-right: v(24);
         }
 
         li {
             margin-right: v(48);
+            @media (max-width: 800px){
+                align-self: end;
+                margin: v(72) 0;
+                width: 100%;
+                display: flex;
+                flex-direction: row-reverse;
+            }
 
             a {
                 color: var(--mainWhite);
@@ -639,8 +654,15 @@ footer {
                     color: var(--activeColorHeader);
                 }
             }
-
+            &:nth-child(5){
+                @media (max-width: 800px){
+                    order: -5;
+                }
+            }
             &:last-child {
+                @media (max-width: 800px){
+                    display: none;
+                }
                 i {
                     padding-right: v(8);
                 }
@@ -657,6 +679,8 @@ footer {
     }
 }
 
+// planshet param
+
 .inDesct {
     @media (max-width: 800px) {
         display: none;
@@ -669,7 +693,30 @@ footer {
 
     @media (max-width: 800px) {
         display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .phone {
+            margin: 0;
+        }
+
+        a {
+            color: var(--btnYellowActive);
+        }
     }
+}
+
+.burgerInTable {
+    display: none;
+
+    @media (max-width: 800px) {
+        grid-area: burger;
+        display: block;
+        color: var(--mainWhite);
+        cursor: pointer;
+        margin-right: v(24);
+    }
+
 }
 
 .inMob {
@@ -1082,7 +1129,7 @@ textarea {
     align-items: center;
     padding: v(10);
 
-    span{
+    span {
         margin-right: v(6);
     }
 
@@ -1244,34 +1291,12 @@ textarea {
     }
 }
 
-.glideModalClose{
-    animation: modalGliedeClose 1s;
+.glideModalClose {
+    animation: modalGlideClose 600ms;
 }
 
-@keyframes modalGlideClose{
-    100%{
-        left: 38%;
-        height: 100%;
-        opacity: 1;
-    }
-    0%{
-        right:0;
-        height: 0;
-        opacity: 0; 
-    }
-}
-
-@keyframes modalGlide{
-    0%{
-        left:0;
-        height: 0;
-        opacity: 0;
-    }
-    100%{
-        left: 38%;
-        height: 100%;
-        opacity: 1;
-    }
+.glideMenuClosedRezerv {
+    animation: modalGlideRezerv 1s;
 }
 
 .articleTitleM {
@@ -1499,9 +1524,11 @@ textarea {
     display: grid;
     grid-template-areas: "gramm . delete""descr descr descr""total . summ";
     grid-template-rows: v(24) 1fr v(24);
-    &:hover{
+
+    &:hover {
+
         .inCartGramm,
-        .deleteInCart{
+        .deleteInCart {
             visibility: visible;
         }
     }
@@ -1548,6 +1575,7 @@ textarea {
     i {
         padding-left: v(5);
     }
+
     visibility: hidden;
 }
 
@@ -1664,6 +1692,49 @@ textarea {
         height: v(48);
         opacity: 1;
         background-color: var(--btnYellowActive);
+    }
+}
+
+@keyframes modalGlideRezerv {
+    0% {
+        height: 100%;
+        opacity: 1;
+        margin-right: 0;
+    }
+
+    100% {
+        margin-right: (-312);
+        height: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes modalGlideClose {
+    0% {
+        left: 38%;
+        height: 100%;
+        opacity: 1;
+    }
+
+    100% {
+        top: 0;
+        height: 0;
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes modalGlide {
+    0% {
+        left: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        left: 38%;
+        height: 100%;
+        opacity: 1;
     }
 }
 

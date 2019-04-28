@@ -14,7 +14,7 @@ loadForAncor(menuHead);
 function doScrollAnimate($target) {
     console.log('Animate to ' + $target.id);
     $('body,html').animate({
-        scrollTop: $target.offsetTop + (-200) + "px"
+        scrollTop: $target.offsetTop - 200 + "px"
     }, 1500);
 }
 if (!loaded && false) {

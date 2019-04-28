@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const btnMenu = document.querySelector('.headerBurger'),
+        btnTable = document.querySelector('.burgerInTable'),
         header = document.querySelector('.headerTitle'),
         btnRezerv = document.querySelectorAll('.rezerv'),
         modal = document.querySelector('.modal'),
+        table = document.querySelector('.table'),
         modalBody = document.querySelector('.modalBody'),
         articleBlock = document.querySelectorAll('.articleBlock'),
         modalArt = document.querySelector('.modalArticleM'),
@@ -33,14 +35,22 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
+    // modalArt.addEventListener('click', ()=>{
 
-    function modalCloseBg(modalBg, closeModal) {
+    // })
+    function modalCloseBg(modalBg, closeModal, closeGlideClose) {
         if (modalBg !== null) {
             modalBg.addEventListener('click', event => {
                 const e = document.querySelector(closeModal)
                 if (!e.contains(event.target)) {
-                    e.style.display = 'none'
-                    modalBg.style.display = 'none'
+
+                    e.classList.add(closeGlideClose)
+                    setTimeout(() => {
+                        e.style.display = 'none'
+                        modalBg.style.display = 'none'
+                        e.classList.remove(closeGlideClose)
+                    }, 400)
+
                     document.querySelector('body').style.overflowY = 'visible'
                 }
             })
@@ -84,18 +94,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
-
-    $('.switch-btn').click(function () {
-        $(this).toggleClass('switch-on')
-    })
+    const switcher = $('.switch-btn')
+    function swichCheck(swichBtn, thisToSwich){
+        swichBtn.click(function () {
+            $(this).toggleClass(thisToSwich)
+        })
+    }
+    
     // if (item.querySelector('.detailed')!==null)
     scrollerAcrossArrow(arrows)
-    openBlock(btnMenu, mainMenu)
+    swichCheck(switcher, 'switch-on')
+    openBlock(btnTable, table)
     openBlockMassive(btnRezerv, modalBody, modal)
     openBlockMassive(articleBlock, modalArt, modalClose)
     closeBlock(header, mainMenu)
     closeBlock(btnClose, modal)
-    modalCloseBg(modalClose, '.modalArticleM')
-    modalCloseBg(modal, '.modalBody')
-    scrollMouse(blockVisibleMenu, mainMenu)
+    closeBlock(btnTable, table)
+    modalCloseBg(modalClose, '.modalArticleM', 'glideModalClose')
+    modalCloseBg(modal, '.modalBody', 'glideMenuClosedRezerv')
+    if(document.documentElement.clientWidth > 800){
+        scrollMouse(blockVisibleMenu, mainMenu)
+        openBlock(btnMenu, mainMenu)
+    }
+    
 })

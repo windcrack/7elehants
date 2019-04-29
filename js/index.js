@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnRezerv = document.querySelectorAll('.rezerv'),
         modal = document.querySelector('.modal'),
         table = document.querySelector('.table'),
+        changeBlock = document.querySelector('.phone'),
         modalBody = document.querySelector('.modalBody'),
         articleBlock = document.querySelectorAll('.articleBlock'),
         modalArt = document.querySelector('.modalArticleM'),
@@ -19,8 +20,22 @@ document.addEventListener('DOMContentLoaded', () => {
         if (button !== null) {
             button.addEventListener('click', () => {
                 block.style.display = 'flex'
+                menuInTable()
             })
         }
+    }
+    let open = false
+    function menuInTable(){
+        if(open === false){
+            open = true
+            console.log(open)
+            document.querySelector('.burgerInTable').innerHTML = '<i class="far fa-times"></i>'
+        }else{
+            open = false;
+            document.querySelector('.burgerInTable').innerHTML = '<i class="far fa-align-right"></i>'
+            table.style.display = 'none'
+        }
+
     }
 
     function closeBlock(target, block) {
@@ -35,9 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
-    // modalArt.addEventListener('click', ()=>{
 
-    // })
     function modalCloseBg(modalBg, closeModal, closeGlideClose) {
         if (modalBg !== null) {
             modalBg.addEventListener('click', event => {
@@ -95,12 +108,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
     const switcher = $('.switch-btn')
-    function swichCheck(swichBtn, thisToSwich){
+
+    function swichCheck(swichBtn, thisToSwich) {
         swichBtn.click(function () {
             $(this).toggleClass(thisToSwich)
         })
     }
-    
+
+    // function theSocial(vk, inst) {
+    //     vk = `<a href="#"><i class="fab fa-vk"></i></a>`
+    //     inst = `<a href="#"><i class="fab fa-instagram"></i></a>`
+    //     if (document.documentElement.clientWidth <= 800) {
+    //         changeBlock.appendChild(vk)
+    //         changeBlock.appendChild(inst)
+    //     }
+    // }
+    // theSocial()
     // if (item.querySelector('.detailed')!==null)
     scrollerAcrossArrow(arrows)
     swichCheck(switcher, 'switch-on')
@@ -109,12 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
     openBlockMassive(articleBlock, modalArt, modalClose)
     closeBlock(header, mainMenu)
     closeBlock(btnClose, modal)
-    closeBlock(btnTable, table)
+    // closeBlock(btnTable, table)
     modalCloseBg(modalClose, '.modalArticleM', 'glideModalClose')
     modalCloseBg(modal, '.modalBody', 'glideMenuClosedRezerv')
-    if(document.documentElement.clientWidth > 800){
+    if (document.documentElement.clientWidth > 800) {
         scrollMouse(blockVisibleMenu, mainMenu)
         openBlock(btnMenu, mainMenu)
     }
-    
+
 })

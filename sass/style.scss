@@ -23,16 +23,28 @@ body {
     html {
         font-size: 5px;
     }
+
+    // :root {
+    //     font-size: 5px;
+    // }
 }
 
 @media screen and (max-width: 1176px) {
     html {
         font-size: 4px;
     }
+
+    // :root{
+    //     font-size: 4px;
+    // }
 }
 
 @media screen and (max-width: 883px) {
     html {
+        font-size: 3px;
+    }
+
+    :root {
         font-size: 3px;
     }
 }
@@ -122,6 +134,10 @@ header {
     cursor: pointer;
     margin-top: v(24);
     margin-right: v(72);
+
+    @media (max-width: 800px) {
+        display: none;
+    }
 }
 
 .headerTitle {
@@ -149,7 +165,6 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    // margin: 0 auto;
 
 }
 
@@ -228,21 +243,31 @@ button {
     line-height: v(24);
     background: url('../img/bgInWhite.png');
 
-    .yellowBtn {
-        margin: 0;
-    }
 }
 
 .left {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media (max-width: 800px) {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+    }
 }
 
 .right {
     display: flex;
     flex-direction: row-reverse;
     justify-content: space-between;
+
+    @media (max-width: 800px) {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+
+    }
 }
 
 .ctaBlock1TextLeft {
@@ -251,8 +276,22 @@ button {
     column-width: v(504);
     padding-top: v(68);
 
-    button {
+    @media (max-width: 800px) {
+        column-count: 1;
+        column-width: v(504);
+        margin: v(72) v(48) v(40);
+        padding-top: 0;
+        height: auto;
+    }
+
+    .yellowBtn {
+        margin: 0;
         width: v(168);
+
+        @media (max-width: 800px) {
+            width: 192px;
+            height: 40px;
+        }
     }
 }
 
@@ -261,6 +300,10 @@ button {
     align-self: flex-start;
     width: 50%;
     height: 100%;
+
+    @media (max-width: 800px) {
+        width: 100%;
+    }
 
     img {
         min-width: 100%;
@@ -273,6 +316,18 @@ button {
     margin: auto v(72) auto v(32);
     column-count: 1;
     column-width: v(504);
+
+    @media (max-width: 800px) {
+        margin: v(80) v(48) v(40);
+    }
+
+    .yellowBtn {
+        @media (max-width: 800px) {
+            width: 168px;
+            height: 40px;
+            margin-top: v(40);
+        }
+    }
 }
 
 .textTitle {
@@ -300,6 +355,11 @@ button {
     .greyBtn {
         margin: 0 auto v(144);
         width: v(216);
+
+        @media (max-width: 800px) {
+            width: 216px;
+            height: 40px;
+        }
     }
 }
 
@@ -327,6 +387,10 @@ button {
     .greyBtn {
         margin-bottom: v(190);
         width: v(144);
+
+        @media (max-width: 800px) {
+            margin: 0;
+        }
     }
 
     background: #fff;
@@ -337,12 +401,24 @@ button {
     padding-bottom: v(96);
     display: flex;
     background: url('../img/bgInWhite.png');
+
+    @media (max-width: 800px) {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+        grid-template-areas: "text""img";
+    }
+
 }
 
 .stockBlockImg {
 
     width: 100%;
     height: v(592);
+
+    @media (max-width: 800px) {
+        grid-area: img;
+    }
 
     img {
         margin-top: v(92);
@@ -354,6 +430,10 @@ button {
     font-size: v(44);
     line-height: v(48);
     margin-top: v(136);
+
+    @media (max-width: 800px) {
+        grid-area: text;
+    }
 }
 
 .stockSub {
@@ -500,18 +580,59 @@ footer {
 
 .subNav {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     margin: v(24) v(72);
+    @media (max-width: 800px){
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "info sub2" "sub1 sub1";
+    }
 }
 
 .blockAddress {
     display: flex;
     flex-direction: row;
+    margin-right: auto;
+    @media (max-width: 800px){
+        grid-area: info;
+    }
 }
 
 .blockInfo {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 800px){
+        
+        &:nth-child(1){
+            grid-area: sub2;
+            justify-content: flex-end;
+            // ul{
+            //     margin-left: auto;
+            //     margin-right: 0; 
+            // }
+            .subNavStock{
+                align-self: flex-start;
+                li{
+                    margin-left: auto;
+                    margin-right: 0;
+                }
+                 
+            }
+        }
+        &:nth-child(2){
+            grid-area: sub1;
+            .subNavStock{
+                display: flex;
+                margin: auto;
+                // align-content: space-between;
+                // margin-right: v(48);
+                li{
+                    margin-right: v(48);
+                }
+            }
+        }
+    }
 }
 
 .subNavInfo,
@@ -524,6 +645,15 @@ footer {
 
     li {
         padding: v(12) 0;
+    }
+}
+
+.subNavStock {
+    &:nth-child(1) {
+        @media (max-width: 800px) {
+            // display: flex;
+            justify-content: flex-end;
+        }
     }
 }
 
@@ -550,6 +680,7 @@ footer {
     }
 }
 
+
 .desc {
     display: flex;
     justify-content: space-between;
@@ -566,10 +697,6 @@ footer {
         }
 
         .descText {
-
-            &:nth-child(1) {}
-
-
 
             &:nth-child(2) {
                 margin-bottom: v(24);
@@ -606,13 +733,14 @@ footer {
         display: grid;
         grid-template-columns: v(200) 1fr v(50);
         grid-template-rows: auto 100%;
-        grid-template-areas: "logo phone burger" "menu menu menu";
+        grid-template-areas: "logo phone burger""menu menu menu";
     }
 
     .greyBtn {
         width: v(144);
         height: v(48);
-        @media (max-width: 800px){
+
+        @media (max-width: 800px) {
             width: v(176);
         }
     }
@@ -635,7 +763,8 @@ footer {
 
         li {
             margin-right: v(48);
-            @media (max-width: 800px){
+
+            @media (max-width: 800px) {
                 align-self: end;
                 margin: v(72) 0;
                 width: 100%;
@@ -654,15 +783,18 @@ footer {
                     color: var(--activeColorHeader);
                 }
             }
-            &:nth-child(5){
-                @media (max-width: 800px){
+
+            &:nth-child(5) {
+                @media (max-width: 800px) {
                     order: -5;
                 }
             }
+
             &:last-child {
-                @media (max-width: 800px){
+                @media (max-width: 800px) {
                     display: none;
                 }
+
                 i {
                     padding-right: v(8);
                 }
@@ -1002,9 +1134,6 @@ textarea {
     margin-bottom: v(24);
     color: var(--mainWhite);
 
-    // label {
-    //     padding-left: v(8);
-    // }
 
     span {
         color: var(--btnYellowActive);
@@ -1746,6 +1875,10 @@ textarea {
 
 .slick-dots {
     bottom: v(80) !important;
+
+    @media (max-width: 800px) {
+        // bottom: v(50) !important;
+    }
 
     li {
         button {

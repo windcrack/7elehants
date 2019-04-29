@@ -36,6 +36,9 @@ body {
   html {
     font-size: 3px;
   }
+  :root {
+    font-size: 3px;
+  }
 }
 
 :root {
@@ -125,6 +128,12 @@ header {
   cursor: pointer;
   margin-top: 6rem;
   margin-right: 18rem;
+}
+
+@media (max-width: 800px) {
+  .headerBurger {
+    display: none;
+  }
 }
 
 .headerTitle {
@@ -254,10 +263,6 @@ button {
   background: url("../img/bgInWhite.png");
 }
 
-.ctaBlock1 .yellowBtn {
-  margin: 0;
-}
-
 .left {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -269,6 +274,17 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .left {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
 }
 
 .right {
@@ -284,6 +300,17 @@ button {
           justify-content: space-between;
 }
 
+@media (max-width: 800px) {
+  .right {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+}
+
 .ctaBlock1TextLeft {
   margin: auto 8rem auto 18rem;
   -webkit-column-count: 1;
@@ -293,8 +320,28 @@ button {
   padding-top: 17rem;
 }
 
-.ctaBlock1TextLeft button {
+@media (max-width: 800px) {
+  .ctaBlock1TextLeft {
+    -webkit-column-count: 1;
+            column-count: 1;
+    -webkit-column-width: 126rem;
+            column-width: 126rem;
+    margin: 18rem 12rem 10rem;
+    padding-top: 0;
+    height: auto;
+  }
+}
+
+.ctaBlock1TextLeft .yellowBtn {
+  margin: 0;
   width: 42rem;
+}
+
+@media (max-width: 800px) {
+  .ctaBlock1TextLeft .yellowBtn {
+    width: 192px;
+    height: 40px;
+  }
 }
 
 .ctaBlock1ImgLeft,
@@ -303,6 +350,13 @@ button {
       align-self: flex-start;
   width: 50%;
   height: 100%;
+}
+
+@media (max-width: 800px) {
+  .ctaBlock1ImgLeft,
+  .ctaBlock1ImgRight {
+    width: 100%;
+  }
 }
 
 .ctaBlock1ImgLeft img,
@@ -317,6 +371,20 @@ button {
           column-count: 1;
   -webkit-column-width: 126rem;
           column-width: 126rem;
+}
+
+@media (max-width: 800px) {
+  .ctaBlock1TextRight {
+    margin: 20rem 12rem 10rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .ctaBlock1TextRight .yellowBtn {
+    width: 168px;
+    height: 40px;
+    margin-top: 10rem;
+  }
 }
 
 .textTitle {
@@ -352,6 +420,13 @@ button {
   width: 54rem;
 }
 
+@media (max-width: 800px) {
+  .romantick .greyBtn {
+    width: 216px;
+    height: 40px;
+  }
+}
+
 .romantickTitle {
   font-size: 11rem;
   line-height: 16rem;
@@ -380,6 +455,12 @@ button {
   width: 36rem;
 }
 
+@media (max-width: 800px) {
+  .stock .greyBtn {
+    margin: 0;
+  }
+}
+
 .stockBlock {
   padding-left: 36rem;
   padding-bottom: 24rem;
@@ -389,9 +470,27 @@ button {
   background: url("../img/bgInWhite.png");
 }
 
+@media (max-width: 800px) {
+  .stockBlock {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "text" "img";
+  }
+}
+
 .stockBlockImg {
   width: 100%;
   height: 148rem;
+}
+
+@media (max-width: 800px) {
+  .stockBlockImg {
+    grid-area: img;
+  }
 }
 
 .stockBlockImg img {
@@ -403,6 +502,12 @@ button {
   font-size: 11rem;
   line-height: 12rem;
   margin-top: 34rem;
+}
+
+@media (max-width: 800px) {
+  .stockTitle {
+    grid-area: text;
+  }
 }
 
 .stockSub {
@@ -597,10 +702,19 @@ footer a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 6rem 18rem;
+}
+
+@media (max-width: 800px) {
+  .subNav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "info sub2" "sub1 sub1";
+  }
 }
 
 .blockAddress {
@@ -611,6 +725,13 @@ footer a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  margin-right: auto;
+}
+
+@media (max-width: 800px) {
+  .blockAddress {
+    grid-area: info;
+  }
 }
 
 .blockInfo {
@@ -620,6 +741,35 @@ footer a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .blockInfo:nth-child(1) {
+    grid-area: sub2;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .blockInfo:nth-child(1) .subNavStock {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .blockInfo:nth-child(1) .subNavStock li {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .blockInfo:nth-child(2) {
+    grid-area: sub1;
+  }
+  .blockInfo:nth-child(2) .subNavStock {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+  }
+  .blockInfo:nth-child(2) .subNavStock li {
+    margin-right: 12rem;
+  }
 }
 
 .subNavInfo,
@@ -634,6 +784,14 @@ footer a {
 .subNavInfo li,
 .subNavStock li {
   padding: 3rem 0;
+}
+
+@media (max-width: 800px) {
+  .subNavStock:nth-child(1) {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 .subNavInfo span {

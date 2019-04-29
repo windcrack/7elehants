@@ -744,19 +744,13 @@ footer a {
 }
 
 @media (max-width: 800px) {
-  .blockInfo:nth-child(1) {
-    grid-area: sub2;
+  .blockInfo {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .blockInfo:nth-child(1) .subNavStock {
-    -ms-flex-item-align: start;
-        align-self: flex-start;
-  }
-  .blockInfo:nth-child(1) .subNavStock li {
-    margin-left: auto;
-    margin-right: 0;
+  .blockInfo:nth-child(1) {
+    grid-area: sub2;
   }
   .blockInfo:nth-child(2) {
     grid-area: sub1;
@@ -788,9 +782,8 @@ footer a {
 
 @media (max-width: 800px) {
   .subNavStock:nth-child(1) {
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    margin-right: 0;
+    text-align: right;
   }
 }
 
@@ -834,9 +827,25 @@ footer a {
   margin: 6rem 12rem 6rem 18rem;
 }
 
+@media (max-width: 800px) {
+  .desc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .desc a {
   color: var(--mainWhite);
   text-decoration: none;
+  opacity: 0.5;
 }
 
 .desc a p {
@@ -846,15 +855,8 @@ footer a {
 }
 
 .desc a .descText:nth-child(2) {
-  margin-bottom: 6rem;
-  opacity: 0.5;
-}
-
-.desc a:nth-child(1) {
-  opacity: 0.5;
-}
-
-.desc a:nth-child(2) {
+  margin: 6rem 0;
+  font-size: 4rem;
   opacity: 0.5;
 }
 

@@ -822,13 +822,18 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-
+        
         .phone {
             margin: 0;
         }
 
+        i{
+            margin-right: v(10);
+        }
+
         a {
             color: var(--btnYellowActive);
+            
         }
     }
 }
@@ -866,6 +871,10 @@ footer {
     position: fixed;
     min-width: 100%;
     animation: goRigthMenu 2s;
+    @media (max-width: 800px){
+        margin-top: v(120);
+        
+    }
 
     ul {
         display: flex;
@@ -873,6 +882,9 @@ footer {
         margin: v(12) 0;
         font-size: v(16);
         line-height: v(24);
+        @media (max-width:800px){
+            
+        }
 
         li {
             padding-right: v(48);
@@ -895,6 +907,21 @@ footer {
 .listSub {
     display: flex;
     justify-content: space-between;
+    @media (max-width: 1024px){
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        width: v(460);
+        padding-bottom: 20px;
+        margin-bottom: -20px;
+    }
+}
+
+.menuSubWrapper{
+    display: flex;
+    align-items: center;
+    @media (max-width: 1144px){
+        overflow: hidden;
+    }
 }
 
 .nameMenuSub {
@@ -1513,7 +1540,10 @@ textarea {
     grid-column-gap: v(24);
     grid-row-gap: v(24);
 
-    @media (max-width: 800) {
+    @media (max-width: 1144px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media (max-width: 800px){
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -1634,9 +1664,7 @@ textarea {
     grid-gap: v(24);
     max-width: v(1152);
     margin: v(24) auto v(48);
-    @media (max-width: 800px){
-        // grid-template-columns: repeat(4, v(264));
-    }
+
     h2 {
         color: #000;
     }
@@ -1645,12 +1673,13 @@ textarea {
 .articleBlockInCart {
     width: v(264);
     height: v(192);
-    background: url('../img/imgInCart.jpg');
+    background: url('../img/imgInCart.jpg') no-repeat center;
+    background-size: cover;
     color: var(--mainWhite);
     display: grid;
     grid-template-areas: "gramm . delete" "descr descr descr" "total . summ";
     grid-template-rows: v(24) 1fr v(24);
-
+    
     &:hover {
 
         .inCartGramm,
@@ -1723,6 +1752,9 @@ textarea {
 .summIncart {
     grid-area: summ;
     transform: translateX(v(-8)) translateY(v(-8));
+    @media (max-width: 800px){
+        transform: translateY(v(-30));
+    }
 }
 
 .orderAmount {
@@ -1735,6 +1767,9 @@ textarea {
     font-weight: bold;
     width: v(312);
     margin-right: v(72);
+    @media (max-width: 800px){
+        margin: 0 auto;
+    }
 
     label {
         color: #000;

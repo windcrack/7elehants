@@ -23,10 +23,16 @@
     <nav class="menuMain other">
         <a href="index.html" class="logo">
             <img class="inDesct" src="img/logo.png" alt="Лого">
-            <img class="inMob" src="img/logoMob.png" alt="Лого" >
+            <img class="inMob" src="img/logoMob.png" alt="Лого">
         </a>
-        <ul>
-            <li><a href="menu.html" class="activeMenuMain">Меню</a></li>
+        <div class="phoneInMob">
+            <i class="far fa-mobile"></i><a href="tel:+79529931234" class="phone">+7(952)993 1234</a>
+        </div>
+        <div class="burgerInTable">
+            <i class="far fa-align-right"></i>
+        </div>
+        <ul class="table">
+            <li><a href="menu.html">Меню</a></li>
             <li><a href="#">Мероприятия</a></li>
             <li><a href="stock.html">Акции</a></li>
             <li><a href="#">Контакты</a></li>
@@ -40,18 +46,20 @@
             <span class="nameMenuSub">Европейская кухня</span>
             <button class="subArrow"><i class="far fa-caret-right"></i></button>
         </div>
-        <div class="listSub" id="subMenu">
-            <ul>
-                <li><a href="#subGroup1" class="activeMenuMainSbu">Паста</a></li>
-                <li><a href="#subGroup2">Закуски</a></li>
-                <li><a href="#">Салаты</a></li>
-                <li><a href="#">Супы</a></li>
-                <li><a href="#">Горячее</a></li>
-                <li><a href="#">Гарниры</a></li>
-                <li><a href="#">Пицца</a></li>
-            </ul>
+        <div class="menuSubWrapper">
+            <div class="listSub dragscroll" id="subMenu">
+                <ul>
+                    <li><a href="#subGroup1" class="activeMenuMainSbu">Паста</a></li>
+                    <li><a href="#subGroup2">Закуски</a></li>
+                    <li><a href="#">Салаты</a></li>
+                    <li><a href="#">Супы</a></li>
+                    <li><a href="#">Горячее</a></li>
+                    <li><a href="#">Гарниры</a></li>
+                    <li><a href="#">Пицца</a></li>
+                </ul>
+            </div>
             <div class="menuMainSubCart">
-                <i class="far fa-shopping-cart"></i><a href="cart.html"><span>0000.0</span>руб</a>
+                <i class="far fa-shopping-cart"></i><span>0000.0</span>руб
             </div>
         </div>
     </nav>
@@ -210,6 +218,8 @@
                     <li><a href="#">Вакансии</a></li>
                     <li><a href="#">Информация</a></li>
                 </ul>
+            </div>
+            <div class="blockInfo">
                 <ul class="subNavStock">
                     <li><a href="#" class="activeMenu">Резерв стола</a></li>
                     <li><a href="#">Меню</a></li>
@@ -303,6 +313,7 @@
     <script src="slick/slick.min.js"></script>
     <script src="js/sliderOpt.js"></script>
     <script src="js/scrollActive.js"></script>
+    <script src="js/dragscroll.js"></script>
     <script src="js/index.js"></script>
 </body>
 

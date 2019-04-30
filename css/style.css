@@ -1017,6 +1017,9 @@ footer a {
   .phoneInMob .phone {
     margin: 0;
   }
+  .phoneInMob i {
+    margin-right: 2.5rem;
+  }
   .phoneInMob a {
     color: var(--btnYellowActive);
   }
@@ -1067,6 +1070,12 @@ footer a {
           animation: goRigthMenu 2s;
 }
 
+@media (max-width: 800px) {
+  .menuMainSub {
+    margin-top: 30rem;
+  }
+}
+
 .menuMainSub ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1096,6 +1105,31 @@ footer a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+  .listSub {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    width: 115rem;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+  }
+}
+
+.menuSubWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1144px) {
+  .menuSubWrapper {
+    overflow: hidden;
+  }
 }
 
 .nameMenuSub {
@@ -1783,7 +1817,14 @@ textarea {
   grid-row-gap: 6rem;
 }
 
-@media (max-width: 800) {
+@media (max-width: 1144px) {
+  .menuBlockArticle {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
   .menuBlockArticle {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -1956,7 +1997,8 @@ textarea {
 .articleBlockInCart {
   width: 66rem;
   height: 48rem;
-  background: url("../img/imgInCart.jpg");
+  background: url("../img/imgInCart.jpg") no-repeat center;
+  background-size: cover;
   color: var(--mainWhite);
   display: -ms-grid;
   display: grid;
@@ -2052,6 +2094,13 @@ textarea {
           transform: translateX(-2rem) translateY(-2rem);
 }
 
+@media (max-width: 800px) {
+  .summIncart {
+    -webkit-transform: translateY(-7.5rem);
+            transform: translateY(-7.5rem);
+  }
+}
+
 .orderAmount {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2067,6 +2116,12 @@ textarea {
   font-weight: bold;
   width: 78rem;
   margin-right: 18rem;
+}
+
+@media (max-width: 800px) {
+  .orderAmount {
+    margin: 0 auto;
+  }
 }
 
 .orderAmount label {

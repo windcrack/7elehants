@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .menu {
+            display: flex;
+            font: 24px/32px Bureausans, Arial, sans-serif;
+            list-style-type: none;
+        }
+
+        .menu-item {
+            margin-right: 15px;
+        }
+
+        .menu-item:last-child {
+            margin-right: 0;
+        }
+
+        .menuLimiter {
+            width: 350px;
+            padding: 0 10px;
+            overflow-x: scroll;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 20px;
+            margin-bottom: -20px;
+        }
+
+        .menuWrapper {
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menuWrapper">
+        <div class="menuLimiter dragscroll">
+            <menu class="menu">
+                <li class="menu-item">
+                    <a href="#">Новости</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Проекты</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Книги</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Книги</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Книги</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Книги</a>
+                </li>
+                <li class="menu-item">
+                    <a href="#">Книги</a>
+                </li>
+                <!-- ... -->
+            </menu>
+        </div>
+    </div>
+    <script src="js/dragscroll.js"></script>
+</body>
+
+</html>

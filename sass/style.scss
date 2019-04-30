@@ -896,7 +896,7 @@ footer {
                 }
             }
 
-            .activeMenuMainSbu {
+            .activeMenuMainSub {
                 color: var(--mainWhite);
             }
 
@@ -938,6 +938,9 @@ footer {
 .menuMainSubCart {
     margin: v(12) v(48) v(12) 0;
     color: var(--mainWhite);
+    @media (max-width: 800px){
+        margin: v(12) v(24) v(12) v(8);
+    }
 
     i {
         padding-right: v(8);
@@ -953,6 +956,9 @@ footer {
 
 .other {
     display: flex;
+    @media (max-width: 800px){
+        display: grid;
+    }
 }
 
 .logo {
@@ -1244,6 +1250,12 @@ textarea {
 
 }
 
+textarea {
+    @media (max-width: 800px) {
+        max-width: v(250);
+    }
+}
+
 .modalIfOk {
     margin: v(220) auto;
     display: flex;
@@ -1358,7 +1370,7 @@ textarea {
     background: var(--mainColor);
     /* цвет кнопки */
     border: solid 2px var(--btnYellowActive);
-    top: v(-2);
+    top: v(-2.8);
     /* положение кнопки по вертикали относительно основы */
     left: v(-2);
     /* положение кнопки по горизонтали относительно основы */
@@ -1559,6 +1571,7 @@ textarea {
     &:hover {
         border: 4px solid var(--btnYellowActive);
         background: linear-gradient(180deg, rgba(10, 20, 34, 0) 0%, rgba(10, 20, 34, 0.2) 56.25%, rgba(10, 20, 34, 0.8) 100%), url('../img/cartImg.jpg') center no-repeat;
+        background-size: cover;
         border-radius: v(8);
         box-sizing: border-box;
 
@@ -1569,10 +1582,16 @@ textarea {
         .articleDesc {
             padding: 0 v(20) v(16);
             margin-top: v(180);
+            @media (max-width: 800px){
+                // padding: 0 v();
+            }
         }
 
         .articleFooter {
             padding: 0 v(20) v(24);
+            @media (max-width: 800px){
+                padding: 0 v(18) v(22);
+            }
         }
     }
 }
@@ -1596,6 +1615,9 @@ textarea {
     column-width: v(216);
     font-weight: normal;
     font-family: var(--textFontFamaly);
+    @media (max-width: 800px){
+        padding: v(184) v(20) v(14)
+    }
 }
 
 .articleFooter {

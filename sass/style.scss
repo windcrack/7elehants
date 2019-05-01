@@ -409,6 +409,10 @@ button {
         grid-template-rows: auto;
         grid-template-areas: "text""img";
     }
+    @media (max-width: 600px){
+        padding-left: 0;
+        margin: 0 auto;
+    }
 
 }
 
@@ -874,7 +878,6 @@ footer {
     animation: goRigthMenu 2s;
     @media (max-width: 800px){
         margin-top: v(120);
-        
     }
 
     ul {
@@ -883,9 +886,6 @@ footer {
         margin: v(12) 0;
         font-size: v(16);
         line-height: v(24);
-        @media (max-width:800px){
-            
-        }
 
         li {
             padding-right: v(48);
@@ -908,7 +908,7 @@ footer {
 .listSub {
     display: flex;
     justify-content: space-between;
-    @media (max-width: 1024px){
+    @media (max-width: 1280px){
         overflow-x: scroll;
         -webkit-overflow-scrolling: touch;
         width: v(460);
@@ -920,7 +920,7 @@ footer {
 .menuSubWrapper{
     display: flex;
     align-items: center;
-    @media (max-width: 1144px){
+    @media (max-width: 1280px){
         overflow: hidden;
     }
 }
@@ -1552,7 +1552,10 @@ textarea {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: v(24);
     grid-row-gap: v(24);
-
+    @media (max-width: 1280px){
+        max-width: v(860);
+        grid-template-columns: repeat(3, 1fr);
+    }
     @media (max-width: 1144px) {
         grid-template-columns: repeat(3, 1fr);
     }

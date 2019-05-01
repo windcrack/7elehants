@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btnRezerv = document.querySelectorAll('.rezerv'),
         modal = document.querySelector('.modal'),
         table = document.querySelector('ul'),
-        changeBlock = document.querySelector('.phone'),
         modalBody = document.querySelector('.modalBody'),
         articleBlock = document.querySelectorAll('.articleBlock'),
         modalArt = document.querySelector('.modalArticleM'),
@@ -33,7 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }else{
             open = false;
             document.querySelector('.burgerInTable').innerHTML = '<i class="far fa-align-right"></i>'
-            if (!document.documentElement.clientWidth > 800){
+            if (document.documentElement.clientWidth > 800){
+                table.style.display = 'flex'
+            }else{
                 table.style.display = 'none'
             }
             
@@ -132,9 +133,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.documentElement.clientWidth > 800) {
         scrollMouse(blockVisibleMenu, mainMenu)
         openBlock(btnMenu, mainMenu)
-        document.querySelector('ul').classList.remove(table)
+        // document.querySelector('ul').classList.remove(table)
     }else{
-        document.querySelector('ul').classList.add(table)
+        // document.querySelector('ul').classList.add(table)
     }
 
 })

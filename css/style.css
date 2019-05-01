@@ -482,6 +482,13 @@ button {
   }
 }
 
+@media (max-width: 600px) {
+  .stockBlock {
+    padding-left: 0;
+    margin: 0 auto;
+  }
+}
+
 .stockBlockImg {
   width: 100%;
   height: 148rem;
@@ -1107,7 +1114,7 @@ footer a {
           justify-content: space-between;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .listSub {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
@@ -1126,7 +1133,7 @@ footer a {
           align-items: center;
 }
 
-@media (max-width: 1144px) {
+@media (max-width: 1280px) {
   .menuSubWrapper {
     overflow: hidden;
   }
@@ -1834,6 +1841,14 @@ textarea {
       grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 6rem;
   grid-row-gap: 6rem;
+}
+
+@media (max-width: 1280px) {
+  .menuBlockArticle {
+    max-width: 215rem;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 1144px) {

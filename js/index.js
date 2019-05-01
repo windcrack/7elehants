@@ -118,15 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    // function theSocial(vk, inst) {
-    //     vk = `<a href="#"><i class="fab fa-vk"></i></a>`
-    //     inst = `<a href="#"><i class="fab fa-instagram"></i></a>`
-    //     if (document.documentElement.clientWidth <= 800) {
-    //         changeBlock.appendChild(vk)
-    //         changeBlock.appendChild(inst)
-    //     }
-    // }
-    // theSocial()
     // if (item.querySelector('.detailed')!==null)
     scrollerAcrossArrow(arrows)
     swichCheck(switcher, 'switch-on')

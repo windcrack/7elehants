@@ -131,9 +131,5 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.documentElement.clientWidth > 800) {
         scrollMouse(blockVisibleMenu, mainMenu)
         openBlock(btnMenu, mainMenu)
-        // document.querySelector('ul').classList.remove(table)
-    }else{
-        // document.querySelector('ul').classList.add(table)
     }
-
 })

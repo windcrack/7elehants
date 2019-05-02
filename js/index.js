@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         header = document.querySelector('.headerTitle'),
         btnRezerv = document.querySelectorAll('.rezerv'),
         modal = document.querySelector('.modal'),
-        table = document.querySelector('ul'),
+        table = document.querySelector('.table'),
         modalBody = document.querySelector('.modalBody'),
         articleBlock = document.querySelectorAll('.articleBlock'),
         modalArt = document.querySelector('.modalArticleM'),
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         btnClose = document.querySelector('.modalBodyClose'),
         blockVisibleMenu = document.querySelector('#descritp'),
         mainMenu = document.querySelector('.menuMain');
-
+    let screenWidth = innerWidth;
 
     function openBlock(button, block) {
         if (button !== null) {
@@ -26,18 +26,17 @@ document.addEventListener('DOMContentLoaded', () => {
     let open = false
     function menuInTable(){
         if(open === false){
-            open = true
-            console.log(open)
+            open = true;
             document.querySelector('.burgerInTable').innerHTML = '<i class="far fa-times"></i>'
         }else{
             open = false;
             document.querySelector('.burgerInTable').innerHTML = '<i class="far fa-align-right"></i>'
-            if (document.documentElement.clientWidth > 800){
-                table.style.display = 'flex'
-            }else{
+            console.log(screenWidth)
+            if (screenWidth <= 800){
                 table.style.display = 'none'
+            }else{
+                table.style.display = 'flex'
             }
-            
         }
 
     }
@@ -127,7 +126,6 @@ document.addEventListener('DOMContentLoaded', () => {
     openBlockMassive(articleBlock, modalArt, modalClose)
     closeBlock(header, mainMenu)
     closeBlock(btnClose, modal)
-    closeBlock(btnTable, table)
     modalCloseBg(modalClose, '.modalArticleM', 'glideModalClose')
     modalCloseBg(modal, '.modalBody', 'glideMenuClosedRezerv')
     if (document.documentElement.clientWidth > 800) {

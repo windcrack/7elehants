@@ -116,19 +116,25 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function openSubMenu(button, block, close) {
-        button.addEventListener('click', () => {
-            block.style.display = 'flex'
-            close.style.display = 'none'
-            button.style.display = 'none'
-        })
+        if (button !== null) {
+            button.addEventListener('click', () => {
+                block.style.display = 'flex'
+                close.style.display = 'none'
+                button.style.display = 'none'
+            })
+        }
+
     }
 
     function closeSubMenu(button, block, close) {
-        button.addEventListener('click', () => {
-            block.style.display = 'flex'
-            close.style.display = 'flex'
-            button.style.display = 'none'
-        })
+        if (button !== null) {
+            button.addEventListener('click', () => {
+                block.style.display = 'flex'
+                close.style.display = 'flex'
+                button.style.display = 'none'
+            })
+        }
+
     }
 
     const switcher = $('.switch-btn')

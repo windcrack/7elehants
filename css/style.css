@@ -114,6 +114,8 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-animation: animationBg 8s infinite alternate;
+          animation: animationBg 8s infinite alternate;
 }
 
 header {
@@ -168,6 +170,38 @@ header {
   -webkit-column-width: 138rem;
           column-width: 138rem;
   text-align: center;
+}
+
+.titleImg,
+.descr {
+  -webkit-animation: slideUp 1s;
+          animation: slideUp 1s;
+}
+
+@-webkit-keyframes slideUp {
+  0% {
+    -webkit-transform: translate(0px, 50rem) rotate(0deg);
+            transform: translate(0px, 50rem) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    -webkit-transform: translate(0px, 50rem) rotate(0deg);
+            transform: translate(0px, 50rem) rotate(0deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
+    opacity: 1;
+  }
 }
 
 .headerButtonBlock {
@@ -2647,6 +2681,24 @@ textarea {
     left: 38%;
     height: 100%;
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes animationBg {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 120%;
+  }
+}
+
+@keyframes animationBg {
+  0% {
+    background-size: 100%;
+  }
+  100% {
+    background-size: 120%;
   }
 }
 

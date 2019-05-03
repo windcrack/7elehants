@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
         articleBlock = document.querySelectorAll('.articleBlock'),
         modalArt = document.querySelector('.modalArticleM'),
         modalClose = document.querySelector('.modalBg'),
+        dots = document.querySelector('.dotsInMob'),
+        list = document.querySelector('.listSub'),
+        category = document.querySelector('.categorySub'),
         arrows = $('[href="#descritp"]'),
         btnClose = document.querySelector('.modalBodyClose'),
         blockVisibleMenu = document.querySelector('#descritp'),
@@ -24,17 +27,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
     let open = false
-    function menuInTable(){
-        if(open === false){
+
+    function menuInTable() {
+        if (open === false) {
             open = true;
             document.querySelector('.burgerInTable').innerHTML = '<i class="far fa-times"></i>'
-        }else{
+        } else {
             open = false;
             document.querySelector('.burgerInTable').innerHTML = '<i class="far fa-align-right"></i>'
             console.log(screenWidth)
-            if (screenWidth <= 800){
+            if (screenWidth <= 800) {
                 table.style.display = 'none'
-            }else{
+            } else {
                 table.style.display = 'flex'
             }
         }
@@ -110,6 +114,23 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
     }
+
+    function openSubMenu(button, block, close) {
+        button.addEventListener('click', () => {
+            block.style.display = 'flex'
+            close.style.display = 'none'
+            button.style.display = 'none'
+        })
+    }
+
+    function closeSubMenu(button, block, close) {
+        button.addEventListener('click', () => {
+            block.style.display = 'flex'
+            close.style.display = 'flex'
+            button.style.display = 'none'
+        })
+    }
+
     const switcher = $('.switch-btn')
 
     function swichCheck(swichBtn, thisToSwich) {
@@ -118,14 +139,15 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
-    // if (item.querySelector('.detailed')!==null)
     scrollerAcrossArrow(arrows)
     swichCheck(switcher, 'switch-on')
     openBlock(btnTable, table)
+    openSubMenu(dots, category, list)
     openBlockMassive(btnRezerv, modalBody, modal)
     openBlockMassive(articleBlock, modalArt, modalClose)
     closeBlock(header, mainMenu)
     closeBlock(btnClose, modal)
+    closeSubMenu(category, dots, list)
     modalCloseBg(modalClose, '.modalArticleM', 'glideModalClose')
     modalCloseBg(modal, '.modalBody', 'glideMenuClosedRezerv')
     if (document.documentElement.clientWidth > 800) {

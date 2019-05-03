@@ -34,7 +34,7 @@ body {
         font-size: 4px;
     }
 
-    :root{
+    :root {
         font-size: 4px;
     }
 }
@@ -276,12 +276,15 @@ button {
     column-count: 1;
     column-width: 504px;
     padding-top: v(68);
-    @media (max-width: 1280px){
+
+    @media (max-width: 1280px) {
         padding: 0;
     }
-    @media (max-width: 1024px){
+
+    @media (max-width: 1024px) {
         margin: auto v(24) auto v(24);
     }
+
     @media (max-width: 800px) {
         column-count: 1;
         column-width: v(504);
@@ -350,7 +353,8 @@ button {
 
 .textDesc {
     margin-bottom: v(24);
-    @media (max-width: 1024px){
+
+    @media (max-width: 1024px) {
         margin-bottom: v(12);
     }
 }
@@ -903,6 +907,9 @@ footer {
         display: block;
         padding: v(24);
         grid-area: logo;
+        @media (max-width: 600px){
+            padding: v(24) v(12);
+        }
     }
 }
 
@@ -930,7 +937,9 @@ footer {
 
         li {
             padding-right: v(48);
-
+            @media (max-width: 600px){
+                // padding-right: v(24);
+            }
 
             a {
                 &:hover {
@@ -957,6 +966,10 @@ footer {
         padding-bottom: 20px;
         margin-bottom: -20px;
     }
+    @media (max-width: 600px){
+        margin-left: v(48);
+        width: v(390);
+    }
 }
 
 .menuSubWrapper {
@@ -973,10 +986,18 @@ footer {
     font-size: v(16);
     line-height: v(24);
     height: v(16);
+    @media (max-width: 600px){
+        height: auto;
+    }
 }
 
 .categorySub {
     margin: v(12) 0 v(12) v(48);
+    cursor: pointer;
+    @media (max-width: 600px){
+        display: none;
+        margin: v(16) 0 v(16) v(48);
+    }
 }
 
 .menuMainSubCart {
@@ -985,6 +1006,9 @@ footer {
 
     @media (max-width: 800px) {
         margin: v(12) v(24) v(12) v(8);
+    }
+    @media (max-width: 600px){
+        display: none;
     }
 
     i {
@@ -1009,9 +1033,23 @@ footer {
 
 .logo {
     padding-left: v(48);
+    @media (max-width: 600px){
+        padding-left: v(24);
+    }
 }
 
-
+.dotsInMob{
+    display: none;
+    @media (max-width: 600px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        color: var(--mainWhite);
+        padding-left: v(32);
+        margin-right: v(24);
+    }
+}
 
 // Deviliry
 
@@ -1028,6 +1066,9 @@ footer {
     background: url('../img/bgInWhite.png') center, var(--mainWhite);
     display: flex;
     flex-direction: column;
+    @media (max-width: 600px){
+        padding-top: v(184);
+    }
 }
 
 .otherMainTitle,
@@ -1610,7 +1651,8 @@ textarea {
     @media (max-width: 800px) {
         grid-template-columns: repeat(2, 1fr);
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         grid-template-columns: 1fr;
     }
 }
@@ -1622,10 +1664,12 @@ textarea {
     height: v(384);
     border-radius: v(8);
     cursor: pointer;
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         width: 360px;
         height: 240px;
     }
+
     &:hover {
         border: 4px solid var(--btnYellowActive);
         background: linear-gradient(180deg, rgba(10, 20, 34, 0) 0%, rgba(10, 20, 34, 0.2) 56.25%, rgba(10, 20, 34, 0.8) 100%), url('../img/cartImg.jpg') center no-repeat;
@@ -1679,7 +1723,8 @@ textarea {
     @media (max-width: 800px) {
         padding: v(184) v(20) v(14)
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         padding: v(72) v(24) v(16);
     }
 }
@@ -1704,9 +1749,10 @@ textarea {
     column-width: v(56);
 }
 
-.iconCartInMob{
+.iconCartInMob {
     display: none;
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         display: flex;
         background-color: var(--btnGrayStill);
         border-radius: 100%;
@@ -1719,11 +1765,13 @@ textarea {
         z-index: 100;
         justify-content: center;
         align-items: center;
-        i{
+
+        i {
             color: var(--btnYellowActive);
             transform: translateX(v(10));
         }
-        .number{
+
+        .number {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1787,9 +1835,15 @@ textarea {
     grid-gap: v(24);
     max-width: v(1152);
     margin: v(24) auto v(48);
-    @media (max-width: 1280px){
+
+    @media (max-width: 1280px) {
         grid-template-columns: repeat(3, v(264));
     }
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+
     h2 {
         color: #000;
     }
@@ -1804,6 +1858,12 @@ textarea {
     display: grid;
     grid-template-areas: "gramm . delete""descr descr descr""total . summ";
     grid-template-rows: v(24) 1fr v(24);
+
+    @media (max-width: 600px) {
+        width: 360px;
+        height: 240px;
+        border-radius: 8px;
+    }
 
     &:hover {
 
@@ -1866,6 +1926,7 @@ textarea {
     line-height: v(26);
     text-align: center;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -1880,6 +1941,10 @@ textarea {
 
     @media (max-width: 800px) {
         transform: translateY(v(-30));
+    }
+    @media (max-width: 600px){
+        transform: translateX(v(-8)) translateY(v(-8));
+        text-align: right;
     }
 }
 

@@ -166,6 +166,10 @@ header {
         text-align: center;
 
     }
+    @media (max-width: 600px){
+        padding: 0 v(24);
+        margin-bottom: v(96);
+    }
 }
 
 
@@ -174,33 +178,29 @@ header {
     animation: slideUp 3s;
 }
 
-@keyframes slideUp {
-    0% {
-
-        height: 0;
-        opacity: 0;
-    }
-
-    100% {
-
-        height: 100%;
-        opacity: 1;
-    }
-}
 
 .headerButtonBlock {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+    @media (max-width: 600px){
+        flex-direction: column;
+        margin: 0 auto;
+        .yellowBtn{
+            margin-bottom: v(24);
+        }
+    }
 }
 
 button {
     width: v(192);
     height: v(40);
     border-radius: v(4);
+    line-height: v(24);
+    letter-spacing: 0.08em;
     cursor: pointer;
-    font-family: var(--textFontFamaly);
+    font-family: var(--textFontFamaly) !important;
+    
 }
 
 .yellowBtn {
@@ -260,6 +260,9 @@ button {
     a {
         color: var(--mainWhite);
         font-size: v(32);
+    }
+    @media (max-width: 600px){
+        margin-bottom: 0;
     }
 
 }
@@ -322,7 +325,7 @@ button {
 
     .yellowBtn {
         margin: 0;
-        width: v(168);
+        
 
         @media (max-width: 800px) {
             // width: 192px;
@@ -571,6 +574,10 @@ button {
 
 .phone {
     margin-bottom: v(40);
+    @media (max-width: 1015px) {
+        white-space: nowrap;
+        transform: translateX(v(-70));
+    }
 }
 
 .mess {
@@ -871,6 +878,9 @@ footer {
             }
 
             &:last-child {
+                @media (max-width: 1020px){
+                    transform: translateX(v())
+                }
                 @media (max-width: 800px) {
                     display: none;
                 }
@@ -1035,7 +1045,7 @@ footer {
     color: var(--mainWhite);
     font-size: v(16);
     line-height: v(24);
-    height: v(16);
+    
     @media (max-width: 800px){
         width: v(161);
         height: auto;
@@ -1721,6 +1731,9 @@ textarea {
 
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
+        // // max-width: v(260);
+        // width: auto;
+        // padding: 0 v(12);
     }
 }
 
@@ -1733,12 +1746,13 @@ textarea {
     cursor: pointer;
 
     @media (max-width: 600px) {
-        width: 360px;
-        height: 240px;
+        width: v(360);
+        height: v(240);
         display: grid;
         grid-template-areas: ". . ear" "text text text" "footer footer footer";
         grid-template-columns: v(56) repeat(2, 1fr);
         grid-template-rows: v(24) 1fr v(32);
+        
     }
 
     &:hover {
@@ -1774,6 +1788,12 @@ textarea {
         }
     }
 }
+
+// .articleWrapper{
+//     @media (max-width: 600px){
+//         padding: 0 v(24);
+//     }
+// }
 
 .articleEye {
     margin: v(8) v(8) 0 0;
@@ -2186,6 +2206,20 @@ textarea {
 
     100% {
         background-size: 120%;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+
+        height: 100%;
+        opacity: 1;
     }
 }
 

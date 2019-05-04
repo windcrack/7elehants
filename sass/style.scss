@@ -21,11 +21,11 @@ body {
 
 @media screen and (max-width: 1323px) {
     html {
-        font-size: 5px;
+        font-size: 4px;
     }
 
     :root {
-        font-size: 5px;
+        font-size: 4px;
     }
 }
 
@@ -41,11 +41,11 @@ body {
 
 @media screen and (max-width: 883px) {
     html {
-        font-size: 3px;
+        font-size: 4px;
     }
 
     :root {
-        font-size: 3px;
+        font-size: 4px;
     }
 }
 
@@ -99,7 +99,6 @@ p,
 a,
 li,
 span,
-button,
 label,
 input {
     font-family: var(--textFontFamaly);
@@ -120,6 +119,9 @@ ul {
     display: flex;
     flex-direction: column;
     animation: animationBg 8s infinite alternate;
+    @media (max-width: 1280px){
+        animation: none;
+    }
 }
 
 
@@ -169,17 +171,19 @@ header {
 
 .titleImg,
 .descr {
-    animation: slideUp 1s;
+    animation: slideUp 3s;
 }
 
 @keyframes slideUp {
     0% {
-        transform: translate(0px, v(200)) rotate(0deg);
+
+        height: 0;
         opacity: 0;
     }
 
     100% {
-        transform: translate(0px, 0px) rotate(0deg);
+
+        height: 100%;
         opacity: 1;
     }
 }
@@ -196,6 +200,7 @@ button {
     height: v(40);
     border-radius: v(4);
     cursor: pointer;
+    font-family: var(--textFontFamaly);
 }
 
 .yellowBtn {
@@ -310,7 +315,7 @@ button {
     @media (max-width: 800px) {
         column-count: 1;
         column-width: v(504);
-        margin: v(72) v(48) v(40);
+        margin: v(72) v(48) v(40) v(40);
         padding-top: 0;
         height: auto;
     }
@@ -320,8 +325,8 @@ button {
         width: v(168);
 
         @media (max-width: 800px) {
-            width: 192px;
-            height: 40px;
+            // width: 192px;
+            // height: 40px;
         }
     }
 }
@@ -356,7 +361,7 @@ button {
         @media (max-width: 800px) {
             width: 168px;
             height: 40px;
-            margin-top: v(40);
+            margin-top: v(24);
         }
     }
 }
@@ -378,6 +383,9 @@ button {
 
     @media (max-width: 1024px) {
         margin-bottom: v(12);
+    }
+    @media (max-width: 800px){
+        margin-bottom: v(24);
     }
 }
 
@@ -484,6 +492,9 @@ button {
     width: v(360);
     height: v(96);
     margin-bottom: v(24);
+    @media (max-width: 600px){
+        width: v(260);
+    }
 }
 
 .contact {
@@ -809,6 +820,9 @@ footer {
             width: v(176);
         }
     }
+    @media (max-width: 600px){
+        grid-template-columns: 25% 1fr v(50);
+    }
 
     ul {
 
@@ -880,7 +894,7 @@ footer {
 // planshet param
 
 .inDesct {
-    @media (max-width: 800px) {
+    @media (max-width: 1280px) {
         display: none;
     }
 }
@@ -907,6 +921,9 @@ footer {
 
         }
     }
+    @media (max-width: 600px){
+        white-space: nowrap;
+    }
 }
 
 .burgerInTable {
@@ -925,14 +942,13 @@ footer {
 .inMob {
     display: none;
 
-    @media (max-width: 800px) {
+    @media (max-width: 1280px) {
         display: block;
-        padding: v(24);
-        grid-area: logo;
-
-        @media (max-width: 600px) {
-            padding: v(24) v(12);
-        }
+        padding: v(20);
+        grid-area: logo;  
+    }
+    @media (max-width: 600px) {
+        padding: v(24) v(12);
     }
 }
 
@@ -948,7 +964,10 @@ footer {
     animation: goRigthMenu 2s;
 
     @media (max-width: 800px) {
-        margin-top: v(120);
+        // margin-top: v(120);
+    }
+    @media (max-width: 600px){
+        margin-top: v(104);
     }
 
     ul {
@@ -960,6 +979,9 @@ footer {
 
         li {
             padding-right: v(48);
+            @media (max-width: 800px){
+                padding-right: v(24);
+            }
 
             @media (max-width: 600px) {
                 // padding-right: v(24);
@@ -990,10 +1012,13 @@ footer {
         padding-bottom: 20px;
         margin-bottom: -20px;
     }
-
+    @media (max-width: 800px){
+        margin-left: v(20);
+        width: v(400);
+    }
     @media (max-width: 600px) {
-        margin-left: v(48);
-        width: v(390);
+        margin-left: v(12);
+        width: v(300);
     }
 }
 
@@ -1011,7 +1036,10 @@ footer {
     font-size: v(16);
     line-height: v(24);
     height: v(16);
-
+    @media (max-width: 800px){
+        width: v(161);
+        height: auto;
+    }
     @media (max-width: 600px) {
         height: auto;
     }
@@ -1020,17 +1048,23 @@ footer {
 .categorySub {
     margin: v(12) 0 v(12) v(48);
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    @media (max-width: 800px){
+        margin-left: v(24);
+    }
 
     @media (max-width: 600px) {
         display: none;
-        margin: v(16) 0 v(16) v(48);
+        margin: v(16) 0 v(16) v(12);
     }
 }
 
 .menuMainSubCart {
     margin: v(12) v(48) v(12) 0;
     color: var(--mainWhite);
-
+    display: flex;
+    align-items: center;
     @media (max-width: 800px) {
         margin: v(12) v(24) v(12) v(8);
     }
@@ -1061,7 +1095,9 @@ footer {
 
 .logo {
     padding-left: v(48);
-
+    @media (max-width: 800px){
+        width: max-content;
+    }
     @media (max-width: 600px) {
         padding-left: v(24);
     }
@@ -1699,6 +1735,10 @@ textarea {
     @media (max-width: 600px) {
         width: 360px;
         height: 240px;
+        display: grid;
+        grid-template-areas: ". . ear" "text text text" "footer footer footer";
+        grid-template-columns: v(56) repeat(2, 1fr);
+        grid-template-rows: v(24) 1fr v(32);
     }
 
     &:hover {
@@ -1717,7 +1757,7 @@ textarea {
             margin-top: v(180);
 
             @media (max-width: 600px) {
-                margin-top: v(70);
+                margin-top: v(68);
             }
         }
 
@@ -1725,8 +1765,12 @@ textarea {
             padding: 0 v(20) v(24);
 
             @media (max-width: 800px) {
-                padding: 0 v(18) v(22);
+                padding: 0 v(20) v(22);
             }
+            @media (max-width: 600px){
+                padding: 0 v(26) v(20);
+            }
+            
         }
     }
 }
@@ -1738,6 +1782,9 @@ textarea {
     flex-direction: row-reverse;
     visibility: hidden;
     height: v(24);
+    @media (max-width: 600px){
+        grid-area: ear;
+    }
 }
 
 .articleDesc {
@@ -1757,6 +1804,7 @@ textarea {
 
     @media (max-width: 600px) {
         padding: v(72) v(24) v(16);
+        grid-area: text;
     }
 }
 
@@ -1773,6 +1821,9 @@ textarea {
         line-height: v(24);
         width: v(144);
         height: v(32);
+    }
+    @media (max-width: 600px){
+        grid-area: footer;
     }
 }
 
@@ -1799,7 +1850,7 @@ textarea {
 
         i {
             color: var(--btnYellowActive);
-            transform: translateX(v(10));
+            transform: translateX(v(6));
         }
 
         .number {
@@ -1869,6 +1920,10 @@ textarea {
 
     @media (max-width: 1280px) {
         grid-template-columns: repeat(3, v(264));
+    }
+
+    @media (max-width: 800px){
+        grid-template-columns: repeat(2, v(264));
     }
 
     @media (max-width: 600px) {
@@ -1971,7 +2026,8 @@ textarea {
     transform: translateX(v(-8)) translateY(v(-8));
 
     @media (max-width: 800px) {
-        transform: translateY(v(-30));
+        transform: translateY(v(-6));
+        text-align: end;
     }
 
     @media (max-width: 600px) {

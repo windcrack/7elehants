@@ -22,10 +22,10 @@ body {
 
 @media screen and (max-width: 1323px) {
   html {
-    font-size: 5px;
+    font-size: 4px;
   }
   :root {
-    font-size: 5px;
+    font-size: 4px;
   }
 }
 
@@ -40,10 +40,10 @@ body {
 
 @media screen and (max-width: 883px) {
   html {
-    font-size: 3px;
+    font-size: 4px;
   }
   :root {
-    font-size: 3px;
+    font-size: 4px;
   }
 }
 
@@ -89,7 +89,6 @@ p,
 a,
 li,
 span,
-button,
 label,
 input {
   font-family: var(--textFontFamaly);
@@ -116,6 +115,13 @@ ul {
           flex-direction: column;
   -webkit-animation: animationBg 8s infinite alternate;
           animation: animationBg 8s infinite alternate;
+}
+
+@media (max-width: 1280px) {
+  .header {
+    -webkit-animation: none;
+            animation: none;
+  }
 }
 
 header {
@@ -174,32 +180,28 @@ header {
 
 .titleImg,
 .descr {
-  -webkit-animation: slideUp 1s;
-          animation: slideUp 1s;
+  -webkit-animation: slideUp 3s;
+          animation: slideUp 3s;
 }
 
 @-webkit-keyframes slideUp {
   0% {
-    -webkit-transform: translate(0px, 50rem) rotate(0deg);
-            transform: translate(0px, 50rem) rotate(0deg);
+    height: 0;
     opacity: 0;
   }
   100% {
-    -webkit-transform: translate(0px, 0px) rotate(0deg);
-            transform: translate(0px, 0px) rotate(0deg);
+    height: 100%;
     opacity: 1;
   }
 }
 
 @keyframes slideUp {
   0% {
-    -webkit-transform: translate(0px, 50rem) rotate(0deg);
-            transform: translate(0px, 50rem) rotate(0deg);
+    height: 0;
     opacity: 0;
   }
   100% {
-    -webkit-transform: translate(0px, 0px) rotate(0deg);
-            transform: translate(0px, 0px) rotate(0deg);
+    height: 100%;
     opacity: 1;
   }
 }
@@ -222,6 +224,7 @@ button {
   height: 10rem;
   border-radius: 1rem;
   cursor: pointer;
+  font-family: var(--textFontFamaly);
 }
 
 .yellowBtn {
@@ -378,7 +381,7 @@ button {
             column-count: 1;
     -webkit-column-width: 126rem;
             column-width: 126rem;
-    margin: 18rem 12rem 10rem;
+    margin: 18rem 12rem 10rem 10rem;
     padding-top: 0;
     height: auto;
   }
@@ -387,13 +390,6 @@ button {
 .ctaBlock1TextLeft .yellowBtn {
   margin: 0;
   width: 42rem;
-}
-
-@media (max-width: 800px) {
-  .ctaBlock1TextLeft .yellowBtn {
-    width: 192px;
-    height: 40px;
-  }
 }
 
 .ctaBlock1ImgLeft,
@@ -435,7 +431,7 @@ button {
   .ctaBlock1TextRight .yellowBtn {
     width: 168px;
     height: 40px;
-    margin-top: 10rem;
+    margin-top: 6rem;
   }
 }
 
@@ -458,6 +454,12 @@ button {
 @media (max-width: 1024px) {
   .textDesc {
     margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .textDesc {
+    margin-bottom: 6rem;
   }
 }
 
@@ -583,6 +585,12 @@ button {
   width: 90rem;
   height: 24rem;
   margin-bottom: 6rem;
+}
+
+@media (max-width: 600px) {
+  .stockSub {
+    width: 65rem;
+  }
 }
 
 .contact {
@@ -1028,6 +1036,13 @@ footer a {
   }
 }
 
+@media (max-width: 600px) {
+  .menuMain {
+    -ms-grid-columns: 25% 1fr 12.5rem;
+        grid-template-columns: 25% 1fr 12.5rem;
+  }
+}
+
 .menuMain ul {
   list-style-type: none;
   display: -webkit-box;
@@ -1116,7 +1131,7 @@ footer a {
   color: var(--btnYellowActive);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1280px) {
   .inDesct {
     display: none;
   }
@@ -1150,6 +1165,12 @@ footer a {
   }
 }
 
+@media (max-width: 600px) {
+  .phoneInMob {
+    white-space: nowrap;
+  }
+}
+
 .burgerInTable {
   display: none;
 }
@@ -1168,15 +1189,15 @@ footer a {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1280px) {
   .inMob {
     display: block;
-    padding: 6rem;
+    padding: 5rem;
     grid-area: logo;
   }
 }
 
-@media (max-width: 800px) and (max-width: 600px) {
+@media (max-width: 600px) {
   .inMob {
     padding: 6rem 3rem;
   }
@@ -1201,9 +1222,9 @@ footer a {
           animation: goRigthMenu 2s;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .menuMainSub {
-    margin-top: 30rem;
+    margin-top: 26rem;
   }
 }
 
@@ -1219,6 +1240,12 @@ footer a {
 
 .menuMainSub ul li {
   padding-right: 12rem;
+}
+
+@media (max-width: 800px) {
+  .menuMainSub ul li {
+    padding-right: 6rem;
+  }
 }
 
 .menuMainSub ul li a:hover {
@@ -1248,10 +1275,17 @@ footer a {
   }
 }
 
+@media (max-width: 800px) {
+  .listSub {
+    margin-left: 5rem;
+    width: 100rem;
+  }
+}
+
 @media (max-width: 600px) {
   .listSub {
-    margin-left: 12rem;
-    width: 97.5rem;
+    margin-left: 3rem;
+    width: 75rem;
   }
 }
 
@@ -1277,6 +1311,13 @@ footer a {
   height: 4rem;
 }
 
+@media (max-width: 800px) {
+  .nameMenuSub {
+    width: 40.25rem;
+    height: auto;
+  }
+}
+
 @media (max-width: 600px) {
   .nameMenuSub {
     height: auto;
@@ -1286,18 +1327,36 @@ footer a {
 .categorySub {
   margin: 3rem 0 3rem 12rem;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 800px) {
+  .categorySub {
+    margin-left: 6rem;
+  }
 }
 
 @media (max-width: 600px) {
   .categorySub {
     display: none;
-    margin: 4rem 0 4rem 12rem;
+    margin: 4rem 0 4rem 3rem;
   }
 }
 
 .menuMainSubCart {
   margin: 3rem 12rem 3rem 0;
   color: var(--mainWhite);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 800px) {
@@ -1338,6 +1397,14 @@ footer a {
 
 .logo {
   padding-left: 12rem;
+}
+
+@media (max-width: 800px) {
+  .logo {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2071,6 +2138,13 @@ textarea {
   .articleBlock {
     width: 360px;
     height: 240px;
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: ". . ear" "text text text" "footer footer footer";
+    -ms-grid-columns: 14rem (1fr)[2];
+        grid-template-columns: 14rem repeat(2, 1fr);
+    -ms-grid-rows: 6rem 1fr 8rem;
+        grid-template-rows: 6rem 1fr 8rem;
   }
 }
 
@@ -2095,7 +2169,7 @@ textarea {
 
 @media (max-width: 600px) {
   .articleBlock:hover .articleDesc {
-    margin-top: 17.5rem;
+    margin-top: 17rem;
   }
 }
 
@@ -2105,7 +2179,13 @@ textarea {
 
 @media (max-width: 800px) {
   .articleBlock:hover .articleFooter {
-    padding: 0 4.5rem 5.5rem;
+    padding: 0 5rem 5.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .articleBlock:hover .articleFooter {
+    padding: 0 6.5rem 5rem;
   }
 }
 
@@ -2121,6 +2201,12 @@ textarea {
           flex-direction: row-reverse;
   visibility: hidden;
   height: 6rem;
+}
+
+@media (max-width: 600px) {
+  .articleEye {
+    grid-area: ear;
+  }
 }
 
 .articleDesc {
@@ -2149,6 +2235,7 @@ textarea {
 @media (max-width: 600px) {
   .articleDesc {
     padding: 18rem 6rem 4rem;
+    grid-area: text;
   }
 }
 
@@ -2172,6 +2259,12 @@ textarea {
   line-height: 6rem;
   width: 36rem;
   height: 8rem;
+}
+
+@media (max-width: 600px) {
+  .articleFooter {
+    grid-area: footer;
+  }
 }
 
 .articleGramm {
@@ -2206,8 +2299,8 @@ textarea {
   }
   .iconCartInMob i {
     color: var(--btnYellowActive);
-    -webkit-transform: translateX(2.5rem);
-            transform: translateX(2.5rem);
+    -webkit-transform: translateX(1.5rem);
+            transform: translateX(1.5rem);
   }
   .iconCartInMob .number {
     display: -webkit-box;
@@ -2307,6 +2400,13 @@ textarea {
   .cartBlockMain {
     -ms-grid-columns: (66rem)[3];
         grid-template-columns: repeat(3, 66rem);
+  }
+}
+
+@media (max-width: 800px) {
+  .cartBlockMain {
+    -ms-grid-columns: (66rem)[2];
+        grid-template-columns: repeat(2, 66rem);
   }
 }
 
@@ -2434,8 +2534,9 @@ textarea {
 
 @media (max-width: 800px) {
   .summIncart {
-    -webkit-transform: translateY(-7.5rem);
-            transform: translateY(-7.5rem);
+    -webkit-transform: translateY(-1.5rem);
+            transform: translateY(-1.5rem);
+    text-align: end;
   }
 }
 

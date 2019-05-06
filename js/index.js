@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         list = document.querySelector('.listSub'),
         category = document.querySelector('.categorySub'),
         arrows = $('[href="#descritp"]'),
+        contact = $('[href="#contact"]'),
         btnClose = document.querySelector('.modalBodyClose'),
         blockVisibleMenu = document.querySelector('#descritp'),
         mainMenu = document.querySelector('.menuMain');
@@ -146,6 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     scrollerAcrossArrow(arrows)
+    scrollerAcrossArrow(contact)
     swichCheck(switcher, 'switch-on')
     openBlock(btnTable, table)
     openSubMenu(dots, category, list)

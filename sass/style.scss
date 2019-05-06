@@ -118,8 +118,10 @@ ul {
     background-size: cover;
     display: flex;
     flex-direction: column;
+    height: 100vh;
     animation: animationBg 8s infinite alternate;
-    @media (max-width: 1280px){
+
+    @media (max-width: 1280px) {
         animation: none;
     }
 }
@@ -139,6 +141,7 @@ header {
     cursor: pointer;
     margin-top: v(24);
     margin-right: v(72);
+    color: var(--mainWhite);
 
     @media (max-width: 800px) {
         display: none;
@@ -159,14 +162,15 @@ header {
         color: var(--mainWhite);
         font-size: v(36);
         line-height: v(48);
-        margin: 0 auto v(32);
+        margin: 0 auto;
         font-family: var(--headerFontFamaly);
         column-count: 1;
         column-width: v(552);
         text-align: center;
 
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         padding: 0 v(24);
         margin-bottom: v(96);
     }
@@ -183,10 +187,17 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    @media (max-width: 600px){
+    padding-top: v(24);
+
+    .yellowBtn {
+        margin-bottom: 0;
+    }
+
+    @media (max-width: 600px) {
         flex-direction: column;
         margin: 0 auto;
-        .yellowBtn{
+
+        .yellowBtn {
             margin-bottom: v(24);
         }
     }
@@ -200,7 +211,7 @@ button {
     letter-spacing: 0.08em;
     cursor: pointer;
     font-family: var(--textFontFamaly) !important;
-    
+
 }
 
 .yellowBtn {
@@ -255,13 +266,18 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto v(32);
+    margin: 20% auto v(32);
+
+    @media (max-width: 1366px) {
+        margin: auto;
+    }
 
     a {
         color: var(--mainWhite);
         font-size: v(32);
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         margin-bottom: 0;
     }
 
@@ -302,10 +318,15 @@ button {
 }
 
 .ctaBlock1TextLeft {
-    margin: auto v(32) auto v(72);
+    margin: auto;
     column-count: 1;
     column-width: 504px;
-    padding-top: v(68);
+
+    @media (max-width: 1366px) {
+        margin: auto v(32) auto v(72);
+
+        padding-top: v(68);
+    }
 
     @media (max-width: 1280px) {
         padding: 0;
@@ -325,7 +346,7 @@ button {
 
     .yellowBtn {
         margin: 0;
-        
+
 
         @media (max-width: 800px) {
             // width: 192px;
@@ -351,10 +372,15 @@ button {
 }
 
 .ctaBlock1TextRight {
-
-    margin: auto v(72) auto v(32);
+    margin: auto;
     column-count: 1;
     column-width: v(504);
+
+    @media (max-width: 1366px) {
+        margin: auto v(72) auto v(32);
+
+    }
+
 
     @media (max-width: 800px) {
         margin: v(80) v(48) v(40);
@@ -387,7 +413,8 @@ button {
     @media (max-width: 1024px) {
         margin-bottom: v(12);
     }
-    @media (max-width: 800px){
+
+    @media (max-width: 800px) {
         margin-bottom: v(24);
     }
 }
@@ -397,7 +424,9 @@ button {
     background-size: cover;
     display: flex;
     flex-direction: column;
-
+    @media (min-width: 1367px){
+        height: 100vh;
+    }
     .greyBtn {
         margin: 0 auto v(144);
         width: v(216);
@@ -429,7 +458,7 @@ button {
 }
 
 .stock {
-
+    display: flex;
     .greyBtn {
         margin-bottom: v(190);
         width: v(144);
@@ -443,7 +472,8 @@ button {
 }
 
 .stockBlock {
-    padding-left: v(144);
+    // padding-left: v(144);
+    margin: auto;
     padding-bottom: v(96);
     display: flex;
     background: url('../img/bgInWhite.png');
@@ -495,7 +525,8 @@ button {
     width: v(360);
     height: v(96);
     margin-bottom: v(24);
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         width: v(260);
     }
 }
@@ -503,6 +534,8 @@ button {
 .contact {
     background: url('../img/quest.svg') center no-repeat;
     background-size: cover;
+    height: 100vh;
+    display: flex;
 }
 
 .contactMap {
@@ -517,6 +550,10 @@ button {
     display: flex;
     flex-direction: column;
     color: var(--mainWhite);
+    @media (min-width: 1367px){
+        margin: auto;
+        width: v(550);
+    }
 }
 
 .questTitle {
@@ -574,6 +611,7 @@ button {
 
 .phone {
     margin-bottom: v(40);
+
     @media (max-width: 1015px) {
         white-space: nowrap;
         transform: translateX(v(-70));
@@ -633,6 +671,9 @@ footer {
 
     a {
         color: var(--mainWhite);
+        &:hover{
+            color: var(--btnYellowActive);
+        }
     }
 }
 
@@ -827,7 +868,8 @@ footer {
             width: v(176);
         }
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         grid-template-columns: 25% 1fr v(50);
     }
 
@@ -878,9 +920,10 @@ footer {
             }
 
             &:last-child {
-                @media (max-width: 1020px){
-                    transform: translateX(v())
-                }
+
+                // @media (max-width: 1020px){
+                //     transform: translateX(v())
+                // }
                 @media (max-width: 800px) {
                     display: none;
                 }
@@ -931,7 +974,8 @@ footer {
 
         }
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         white-space: nowrap;
     }
 }
@@ -955,8 +999,9 @@ footer {
     @media (max-width: 1280px) {
         display: block;
         padding: v(20);
-        grid-area: logo;  
+        grid-area: logo;
     }
+
     @media (max-width: 600px) {
         padding: v(24) v(12);
     }
@@ -976,7 +1021,8 @@ footer {
     @media (max-width: 800px) {
         // margin-top: v(120);
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         margin-top: v(104);
     }
 
@@ -989,7 +1035,8 @@ footer {
 
         li {
             padding-right: v(48);
-            @media (max-width: 800px){
+
+            @media (max-width: 800px) {
                 padding-right: v(24);
             }
 
@@ -1022,10 +1069,12 @@ footer {
         padding-bottom: 20px;
         margin-bottom: -20px;
     }
-    @media (max-width: 800px){
+
+    @media (max-width: 800px) {
         margin-left: v(20);
         width: v(400);
     }
+
     @media (max-width: 600px) {
         margin-left: v(12);
         width: v(300);
@@ -1045,11 +1094,12 @@ footer {
     color: var(--mainWhite);
     font-size: v(16);
     line-height: v(24);
-    
-    @media (max-width: 800px){
+
+    @media (max-width: 800px) {
         width: v(161);
         height: auto;
     }
+
     @media (max-width: 600px) {
         height: auto;
     }
@@ -1060,7 +1110,8 @@ footer {
     cursor: pointer;
     display: flex;
     align-items: center;
-    @media (max-width: 800px){
+
+    @media (max-width: 800px) {
         margin-left: v(24);
     }
 
@@ -1075,6 +1126,9 @@ footer {
     color: var(--mainWhite);
     display: flex;
     align-items: center;
+    a{
+        color: var(--mainWhite);
+    }
     @media (max-width: 800px) {
         margin: v(12) v(24) v(12) v(8);
     }
@@ -1093,6 +1147,7 @@ footer {
     height: v(16);
     background-color: transparent;
     border: none;
+    color: var(--mainWhite);
 }
 
 .other {
@@ -1105,9 +1160,11 @@ footer {
 
 .logo {
     padding-left: v(48);
-    @media (max-width: 800px){
+
+    @media (max-width: 800px) {
         width: max-content;
     }
+
     @media (max-width: 600px) {
         padding-left: v(24);
     }
@@ -1175,6 +1232,7 @@ footer {
         font-size: v(16);
         line-height: v(24);
         margin-bottom: v(48);
+        color: var(--mainWhite);
     }
 
 }
@@ -1394,18 +1452,29 @@ textarea {
     input {
         font-size: v(12);
         line-height: v(18);
-        padding: v(8) v(16);
+        padding: v(8) v(4);
+        width: v(216);
         background-color: #fff;
         color: rgba(10, 20, 34, 0.25);
         border: 1px solid var(--btnYellowStill);
         border-radius: 4px;
         font-size: v(16);
         line-height: v(24);
+        @media (max-width: 1366px){
+            padding: v(8) v(16);
+        }
     }
 
     input[type="date"] {
-        padding: v(8) v(72);
+        padding: v(8) v(16);
         background: url('../img/calend.svg') no-repeat center right 10%, #fff;
+        @media (min-width: 1367px){
+            padding: v(8) v(4);
+        }
+    }
+
+    input[type="number"]{
+        padding: v(8) v(12);
     }
 
     .modalInfo {
@@ -1414,11 +1483,6 @@ textarea {
 
 }
 
-textarea {
-    @media (max-width: 800px) {
-        max-width: v(250);
-    }
-}
 
 .modalIfOk {
     margin: v(220) auto;
@@ -1469,6 +1533,7 @@ textarea {
         line-height: v(24);
         text-align: center;
         text-transform: uppercase;
+        color: var(--mainWhite);
     }
 
     input[type="number"] {
@@ -1563,19 +1628,25 @@ textarea {
     line-height: v(24);
     resize: none;
     margin: v(24) auto !important;
+    @media (min-width: 1367px){
+        margin: v(24) !important;
+    }
+    @media (max-width: 800px) {
+        max-width: v(250);
+    }
 }
 
 .modalRules {
     display: flex;
-    font-size: v(8);
+    font-size: v(12);
     line-height: v(12);
     color: var(--btnYellowStill);
     margin: v(24) auto;
 
     input[type="checkbox"] {
         color: var(--btnYellowStill);
-        margin-right: v(16);
-        margin-left: auto;
+        margin-right: v(8);
+        margin-left: v(16);
         background-color: transparent;
 
         @media (max-width: 1366px) {
@@ -1749,10 +1820,10 @@ textarea {
         width: v(360);
         height: v(240);
         display: grid;
-        grid-template-areas: ". . ear" "text text text" "footer footer footer";
+        grid-template-areas: ". . ear""text text text""footer footer footer";
         grid-template-columns: v(56) repeat(2, 1fr);
         grid-template-rows: v(24) 1fr v(32);
-        
+
     }
 
     &:hover {
@@ -1781,10 +1852,11 @@ textarea {
             @media (max-width: 800px) {
                 padding: 0 v(20) v(22);
             }
-            @media (max-width: 600px){
+
+            @media (max-width: 600px) {
                 padding: 0 v(26) v(20);
             }
-            
+
         }
     }
 }
@@ -1802,7 +1874,8 @@ textarea {
     flex-direction: row-reverse;
     visibility: hidden;
     height: v(24);
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         grid-area: ear;
     }
 }
@@ -1842,7 +1915,8 @@ textarea {
         width: v(144);
         height: v(32);
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         grid-area: footer;
     }
 }
@@ -1942,7 +2016,7 @@ textarea {
         grid-template-columns: repeat(3, v(264));
     }
 
-    @media (max-width: 800px){
+    @media (max-width: 800px) {
         grid-template-columns: repeat(2, v(264));
     }
 

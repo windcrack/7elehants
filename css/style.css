@@ -113,6 +113,7 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100vh;
   -webkit-animation: animationBg 8s infinite alternate;
           animation: animationBg 8s infinite alternate;
 }
@@ -142,6 +143,7 @@ header {
   cursor: pointer;
   margin-top: 6rem;
   margin-right: 18rem;
+  color: var(--mainWhite);
 }
 
 @media (max-width: 800px) {
@@ -169,7 +171,7 @@ header {
   color: var(--mainWhite);
   font-size: 9rem;
   line-height: 12rem;
-  margin: 0 auto 8rem;
+  margin: 0 auto;
   font-family: var(--headerFontFamaly);
   -webkit-column-count: 1;
           column-count: 1;
@@ -202,6 +204,11 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-top: 6rem;
+}
+
+.headerButtonBlock .yellowBtn {
+  margin-bottom: 0;
 }
 
 @media (max-width: 600px) {
@@ -285,7 +292,13 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto 8rem;
+  margin: 20% auto 8rem;
+}
+
+@media (max-width: 1366px) {
+  .headerArrows {
+    margin: auto;
+  }
 }
 
 .headerArrows a {
@@ -361,12 +374,18 @@ button {
 }
 
 .ctaBlock1TextLeft {
-  margin: auto 8rem auto 18rem;
+  margin: auto;
   -webkit-column-count: 1;
           column-count: 1;
   -webkit-column-width: 504px;
           column-width: 504px;
-  padding-top: 17rem;
+}
+
+@media (max-width: 1366px) {
+  .ctaBlock1TextLeft {
+    margin: auto 8rem auto 18rem;
+    padding-top: 17rem;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -419,11 +438,17 @@ button {
 }
 
 .ctaBlock1TextRight {
-  margin: auto 18rem auto 8rem;
+  margin: auto;
   -webkit-column-count: 1;
           column-count: 1;
   -webkit-column-width: 126rem;
           column-width: 126rem;
+}
+
+@media (max-width: 1366px) {
+  .ctaBlock1TextRight {
+    margin: auto 18rem auto 8rem;
+  }
 }
 
 @media (max-width: 800px) {
@@ -480,6 +505,12 @@ button {
           flex-direction: column;
 }
 
+@media (min-width: 1367px) {
+  .romantick {
+    height: 100vh;
+  }
+}
+
 .romantick .greyBtn {
   margin: 0 auto 36rem;
   width: 54rem;
@@ -512,6 +543,9 @@ button {
 }
 
 .stock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: #fff;
 }
 
@@ -527,7 +561,7 @@ button {
 }
 
 .stockBlock {
-  padding-left: 36rem;
+  margin: auto;
   padding-bottom: 24rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -601,6 +635,10 @@ button {
 .contact {
   background: url("../img/quest.svg") center no-repeat;
   background-size: cover;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .contactMap {
@@ -621,6 +659,13 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   color: var(--mainWhite);
+}
+
+@media (min-width: 1367px) {
+  .quest {
+    margin: auto;
+    width: 137.5rem;
+  }
 }
 
 .questTitle {
@@ -782,6 +827,10 @@ footer {
 
 footer a {
   color: var(--mainWhite);
+}
+
+footer a:hover {
+  color: var(--btnYellowActive);
 }
 
 .subNav {
@@ -1371,6 +1420,10 @@ footer a {
           align-items: center;
 }
 
+.menuMainSubCart a {
+  color: var(--mainWhite);
+}
+
 @media (max-width: 800px) {
   .menuMainSubCart {
     margin: 3rem 6rem 3rem 2rem;
@@ -1392,6 +1445,7 @@ footer a {
   height: 4rem;
   background-color: transparent;
   border: none;
+  color: var(--mainWhite);
 }
 
 .other {
@@ -1512,6 +1566,7 @@ footer a {
   font-size: 4rem;
   line-height: 6rem;
   margin-bottom: 12rem;
+  color: var(--mainWhite);
 }
 
 textarea {
@@ -1754,7 +1809,8 @@ textarea {
 .modalBlockInput input {
   font-size: 3rem;
   line-height: 4.5rem;
-  padding: 2rem 4rem;
+  padding: 2rem 1rem;
+  width: 54rem;
   background-color: #fff;
   color: rgba(10, 20, 34, 0.25);
   border: 1px solid var(--btnYellowStill);
@@ -1763,19 +1819,29 @@ textarea {
   line-height: 6rem;
 }
 
+@media (max-width: 1366px) {
+  .modalBlockInput input {
+    padding: 2rem 4rem;
+  }
+}
+
 .modalBlockInput input[type="date"] {
-  padding: 2rem 18rem;
+  padding: 2rem 4rem;
   background: url("../img/calend.svg") no-repeat center right 10%, #fff;
+}
+
+@media (min-width: 1367px) {
+  .modalBlockInput input[type="date"] {
+    padding: 2rem 1rem;
+  }
+}
+
+.modalBlockInput input[type="number"] {
+  padding: 2rem 3rem;
 }
 
 .modalBlockInput .modalInfo {
   margin: 6rem auto;
-}
-
-@media (max-width: 800px) {
-  textarea {
-    max-width: 62.5rem;
-  }
 }
 
 .modalIfOk {
@@ -1841,6 +1907,7 @@ textarea {
   line-height: 6rem;
   text-align: center;
   text-transform: uppercase;
+  color: var(--mainWhite);
 }
 
 .modalBlockBtnNumb input[type="number"] {
@@ -1937,11 +2004,23 @@ textarea {
   margin: 6rem auto !important;
 }
 
+@media (min-width: 1367px) {
+  textarea {
+    margin: 6rem !important;
+  }
+}
+
+@media (max-width: 800px) {
+  textarea {
+    max-width: 62.5rem;
+  }
+}
+
 .modalRules {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 2rem;
+  font-size: 3rem;
   line-height: 3rem;
   color: var(--btnYellowStill);
   margin: 6rem auto;
@@ -1949,8 +2028,8 @@ textarea {
 
 .modalRules input[type="checkbox"] {
   color: var(--btnYellowStill);
-  margin-right: 4rem;
-  margin-left: auto;
+  margin-right: 2rem;
+  margin-left: 4rem;
   background-color: transparent;
 }
 

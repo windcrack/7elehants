@@ -1513,6 +1513,18 @@ footer a:hover {
           flex-direction: column;
 }
 
+.otherMain .textDetails {
+  margin-bottom: 12rem;
+  padding-top: 2rem;
+  padding-left: 4rem;
+  min-width: 100%;
+  background-color: var(--mainWhite);
+  border-radius: 4px;
+  border: 1px solid var(--btnYellowStill);
+  color: rgba(10, 20, 34, 0.25);
+  resize: none;
+}
+
 .otherMainMenu {
   padding-top: 36rem;
   padding-bottom: 8rem;
@@ -1569,10 +1581,10 @@ footer a:hover {
   color: var(--mainWhite);
 }
 
-textarea {
-  margin-bottom: 12rem;
-  padding-top: 2rem;
-  padding-left: 4rem;
+.deviliryTitle {
+  font-weight: normal;
+  font-size: 9rem;
+  line-height: 12rem;
 }
 
 .deviTitle {
@@ -1744,6 +1756,29 @@ textarea {
   top: 0;
   left: 0;
   z-index: 4;
+}
+
+.modal textarea {
+  background-color: #fff;
+  color: rgba(10, 20, 34, 0.25);
+  border: 1px solid var(--btnYellowStill);
+  border-radius: 4px;
+  font-size: 4rem;
+  line-height: 6rem;
+  resize: none;
+  margin: 6rem auto !important;
+}
+
+@media (min-width: 1367px) {
+  .modal textarea {
+    margin: 6rem !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .modal textarea {
+    max-width: 62.5rem;
+  }
 }
 
 .modalBody {
@@ -1991,29 +2026,6 @@ textarea {
 .switch-on::after {
   left: 1rem;
   background: var(--btnYellowActive);
-}
-
-textarea {
-  background-color: #fff;
-  color: rgba(10, 20, 34, 0.25);
-  border: 1px solid var(--btnYellowStill);
-  border-radius: 4px;
-  font-size: 4rem;
-  line-height: 6rem;
-  resize: none;
-  margin: 6rem auto !important;
-}
-
-@media (min-width: 1367px) {
-  textarea {
-    margin: 6rem !important;
-  }
-}
-
-@media (max-width: 800px) {
-  textarea {
-    max-width: 62.5rem;
-  }
 }
 
 .modalRules {
@@ -2555,6 +2567,7 @@ textarea {
   width: 6rem;
   background-color: transparent;
   -moz-appearance: textfield;
+  color: var(--mainWhite);
   border: none;
   text-align: center;
   font-weight: bold;
@@ -2605,6 +2618,7 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 1rem;
 }
 
 .totalInCart {
@@ -2621,6 +2635,7 @@ textarea {
   grid-area: summ;
   -webkit-transform: translateX(-2rem) translateY(-2rem);
           transform: translateX(-2rem) translateY(-2rem);
+  text-align: right;
 }
 
 @media (max-width: 800px) {
@@ -2896,22 +2911,18 @@ textarea {
 
 @-webkit-keyframes slideUp {
   0% {
-    height: 0;
     opacity: 0;
   }
   100% {
-    height: 100%;
     opacity: 1;
   }
 }
 
 @keyframes slideUp {
   0% {
-    height: 0;
     opacity: 0;
   }
   100% {
-    height: 100%;
     opacity: 1;
   }
 }

@@ -424,9 +424,11 @@ button {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    @media (min-width: 1367px){
+
+    @media (min-width: 1367px) {
         height: 100vh;
     }
+
     .greyBtn {
         margin: 0 auto v(144);
         width: v(216);
@@ -459,6 +461,7 @@ button {
 
 .stock {
     display: flex;
+
     .greyBtn {
         margin-bottom: v(190);
         width: v(144);
@@ -550,7 +553,8 @@ button {
     display: flex;
     flex-direction: column;
     color: var(--mainWhite);
-    @media (min-width: 1367px){
+
+    @media (min-width: 1367px) {
         margin: auto;
         width: v(550);
     }
@@ -671,7 +675,8 @@ footer {
 
     a {
         color: var(--mainWhite);
-        &:hover{
+
+        &:hover {
             color: var(--btnYellowActive);
         }
     }
@@ -1126,9 +1131,11 @@ footer {
     color: var(--mainWhite);
     display: flex;
     align-items: center;
-    a{
+
+    a {
         color: var(--mainWhite);
     }
+
     @media (max-width: 800px) {
         margin: v(12) v(24) v(12) v(8);
     }
@@ -1191,6 +1198,20 @@ footer {
     background: url('../img/bgInWhite.png') center;
     display: flex;
     flex-direction: column;
+
+    .textDetails {
+        margin-bottom: v(48);
+        padding-top: v(8);
+        padding-left: v(16);
+        min-width: 100%;
+        // margin: 0;
+        background-color: var(--mainWhite);
+        border-radius: 4px;
+        border: 1px solid var(--btnYellowStill);
+        color: rgba(10, 20, 34, 0.25);
+        resize: none;
+
+    }
 }
 
 .otherMainMenu {
@@ -1237,11 +1258,13 @@ footer {
 
 }
 
-textarea {
-    margin-bottom: v(48);
-    padding-top: v(8);
-    padding-left: v(16);
+.deviliryTitle {
+    font-weight: normal;
+    font-size: v(36);
+    line-height: v(48);
 }
+
+
 
 .deviTitle {
     font-size: v(36);
@@ -1401,6 +1424,25 @@ textarea {
     top: 0;
     left: 0;
     z-index: 4;
+
+    textarea {
+        background-color: #fff;
+        color: rgba(10, 20, 34, 0.25);
+        border: 1px solid var(--btnYellowStill);
+        border-radius: 4px;
+        font-size: v(16);
+        line-height: v(24);
+        resize: none;
+        margin: v(24) auto !important;
+
+        @media (min-width: 1367px) {
+            margin: v(24) !important;
+        }
+
+        @media (max-width: 800px) {
+            max-width: v(250);
+        }
+    }
 }
 
 .modalBody {
@@ -1460,7 +1502,8 @@ textarea {
         border-radius: 4px;
         font-size: v(16);
         line-height: v(24);
-        @media (max-width: 1366px){
+
+        @media (max-width: 1366px) {
             padding: v(8) v(16);
         }
     }
@@ -1468,12 +1511,13 @@ textarea {
     input[type="date"] {
         padding: v(8) v(16);
         background: url('../img/calend.svg') no-repeat center right 10%, #fff;
-        @media (min-width: 1367px){
+
+        @media (min-width: 1367px) {
             padding: v(8) v(4);
         }
     }
 
-    input[type="number"]{
+    input[type="number"] {
         padding: v(8) v(12);
     }
 
@@ -1619,22 +1663,7 @@ textarea {
 }
 
 
-textarea {
-    background-color: #fff;
-    color: rgba(10, 20, 34, 0.25);
-    border: 1px solid var(--btnYellowStill);
-    border-radius: 4px;
-    font-size: v(16);
-    line-height: v(24);
-    resize: none;
-    margin: v(24) auto !important;
-    @media (min-width: 1367px){
-        margin: v(24) !important;
-    }
-    @media (max-width: 800px) {
-        max-width: v(250);
-    }
-}
+
 
 .modalRules {
     display: flex;
@@ -2071,6 +2100,7 @@ textarea {
         width: v(24);
         background-color: transparent;
         -moz-appearance: textfield;
+        color: var(--mainWhite);
         border: none;
         text-align: center;
         font-weight: bold;
@@ -2108,6 +2138,7 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 v(4);
 }
 
 .totalInCart {
@@ -2118,6 +2149,7 @@ textarea {
 .summIncart {
     grid-area: summ;
     transform: translateX(v(-8)) translateY(v(-8));
+    text-align: right;
 
     @media (max-width: 800px) {
         transform: translateY(v(-6));
@@ -2286,13 +2318,13 @@ textarea {
 @keyframes slideUp {
     0% {
 
-        height: 0;
+
         opacity: 0;
     }
 
     100% {
 
-        height: 100%;
+
         opacity: 1;
     }
 }

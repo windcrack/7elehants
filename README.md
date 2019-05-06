@@ -6,5 +6,5 @@
     <li><span style="color: red">Done</span> (adapt - none) - divilery page</li>
     <li><span style="color: red">Done</span> (adapt - none) - Stock page</li>
     <li><span style="color: red">Done</span> (adapt - yes) - Cart page</li>
-    <li>Dev  (adapt - none) - Menu page</li>
+    <li><span style="color: red">Done</span> (adapt - none) - Menu page</li>
 </ul>

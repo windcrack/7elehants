@@ -160,6 +160,9 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: auto;
+  -ms-flex-item-align: center;
+      align-self: center;
 }
 
 .headerTitle img {
@@ -525,6 +528,16 @@ button {
 
 .romantickBlock {
   margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .romantickTitle {
@@ -550,7 +563,7 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: #fff;
+  background: url("../img/bgInWhite.png") center, #fff;
 }
 
 .stock .greyBtn {
@@ -608,7 +621,7 @@ button {
 
 .stockBlockImg img {
   margin-top: auto;
-  margin-left: 3rem;
+  margin-left: 6rem;
   margin-bottom: auto;
 }
 
@@ -892,6 +905,11 @@ footer a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  text-align: right;
+}
+
+.blockInfo:nth-child(2) {
+  margin-right: 24rem;
 }
 
 @media (max-width: 800px) {
@@ -967,7 +985,6 @@ footer a:hover {
 .subNavStock {
   color: var(--mainWhite);
   list-style-type: none;
-  margin-right: 24rem;
   font-size: 4rem;
   line-height: 6rem;
 }
@@ -1015,6 +1032,10 @@ footer a:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 6rem 12rem 6rem 18rem;
+}
+
+.desc a:nth-child(2) {
+  margin-right: 6rem;
 }
 
 @media (max-width: 800px) {
@@ -1939,7 +1960,7 @@ footer a:hover {
       -ms-flex-align: center;
           align-items: center;
   padding: 2.5rem;
-  margin-bottom: 6rem;
+  margin-bottom: 2rem;
 }
 
 .modalBlockBtnNumb span {
@@ -2048,7 +2069,7 @@ footer a:hover {
   font-size: 3rem;
   line-height: 3rem;
   color: var(--btnYellowStill);
-  margin: 6rem auto;
+  margin: 2rem auto;
 }
 
 .modalRules input[type="checkbox"] {
@@ -2080,7 +2101,7 @@ footer a:hover {
   position: fixed;
   top: 0;
   left: 38%;
-  width: 78rem;
+  width: auto;
   color: var(--mainWhite);
   background-color: var(--mainColor);
   z-index: 200;
@@ -2091,15 +2112,34 @@ footer a:hover {
 
 .modalArticleM .yellowBtn {
   grid-area: button;
-  width: 78rem;
+  width: 100%;
   height: 12rem;
   border-radius: 0;
   margin-top: 6.25rem;
   margin-bottom: 0;
+  margin-right: 0;
 }
 
 .modalArticleBodyM {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modalArticleBodyM img {
+  min-width: 100%;
 }
 
 .glideModalClose {
@@ -2214,6 +2254,14 @@ footer a:hover {
       grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 6rem;
   grid-row-gap: 6rem;
+}
+
+@media (min-width: 1367px) {
+  .menuBlockArticle {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1280px) {
@@ -2519,6 +2567,14 @@ footer a:hover {
   grid-gap: 6rem;
   max-width: 288rem;
   margin: 6rem auto 12rem;
+}
+
+@media (min-width: 1367px) {
+  .cartBlockMain {
+    -ms-grid-columns: (1fr)[5];
+        grid-template-columns: repeat(5, 1fr);
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1280px) {

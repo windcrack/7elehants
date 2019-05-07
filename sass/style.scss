@@ -151,7 +151,8 @@ header {
 .headerTitle {
     display: flex;
     flex-direction: column;
-
+    margin: auto;
+    align-self: center;
     img {
         color: var(--mainWhite);
         margin: v(174) auto v(24);
@@ -442,6 +443,9 @@ button {
 
 .romantickBlock {
     margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .romantickTitle {
@@ -465,6 +469,7 @@ button {
 
 .stock {
     display: flex;
+    background: url('../img/bgInWhite.png') center, #fff;
 
     .greyBtn {
         margin-bottom: v(190);
@@ -475,7 +480,7 @@ button {
         }
     }
 
-    background: #fff;
+    // background: #fff;
 }
 
 .stockBlock {
@@ -509,7 +514,7 @@ button {
 
     img {
         margin-top: auto;
-        margin-left: v(12);
+        margin-left: v(24);
         margin-bottom: auto;
     }
 }
@@ -717,6 +722,11 @@ footer {
 .blockInfo {
     display: flex;
     justify-content: space-between;
+    text-align: right;
+
+    &:nth-child(2) {
+        margin-right: v(96);
+    }
 
     @media (max-width: 800px) {
         justify-content: flex-end;
@@ -771,7 +781,6 @@ footer {
 .subNavStock {
     color: var(--mainWhite);
     list-style-type: none;
-    margin-right: v(96);
     font-size: v(16);
     line-height: v(24);
 
@@ -783,6 +792,7 @@ footer {
 
 
 .subNavInfo {
+
     span {
         width: v(24);
         height: v(24);
@@ -810,6 +820,12 @@ footer {
     display: flex;
     justify-content: space-between;
     margin: v(24) v(48) v(24) v(72);
+
+    a {
+        &:nth-child(2){
+            margin-right: v(24);
+        }
+    }
 
     @media (max-width: 800px) {
         flex-direction: column;
@@ -1598,7 +1614,7 @@ footer {
         line-height: v(40);
     }
 
-    margin-bottom: v(24);
+    margin-bottom: v(8);
 }
 
 .borderDef {
@@ -1673,7 +1689,7 @@ footer {
     font-size: v(12);
     line-height: v(12);
     color: var(--btnYellowStill);
-    margin: v(24) auto;
+    margin: v(8) auto;
 
     input[type="checkbox"] {
         color: var(--btnYellowStill);
@@ -1705,7 +1721,7 @@ footer {
     position: fixed;
     top: 0;
     left: 38%;
-    width: v(312);
+    width: auto;
     color: var(--mainWhite);
     background-color: var(--mainColor);
     z-index: 200;
@@ -1714,16 +1730,26 @@ footer {
 
     .yellowBtn {
         grid-area: button;
-        width: v(312);
+        width: 100%;
         height: v(48);
         border-radius: 0;
         margin-top: v(25);
         margin-bottom: 0;
+        margin-right: 0;
     }
 }
 
 .modalArticleBodyM {
     height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto 0;
+    justify-content: center;
+
+    img {
+        min-width: 100%;
+    }
 }
 
 .glideModalClose {
@@ -1823,6 +1849,11 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     grid-column-gap: v(24);
     grid-row-gap: v(24);
+
+    @media (min-width: 1367px) {
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 100%;
+    }
 
     @media (max-width: 1280px) {
         max-width: v(860);
@@ -2038,13 +2069,14 @@ footer {
     margin-bottom: v(16);
 }
 
-.stockImg{
+.stockImg {
     width: 50%;
-    img{
+
+    img {
         min-width: 100%;
         min-height: 100%;
     }
-    
+
 }
 
 // Cart 
@@ -2055,6 +2087,11 @@ footer {
     grid-gap: v(24);
     max-width: v(1152);
     margin: v(24) auto v(48);
+
+    @media (min-width: 1367px) {
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 100%;
+    }
 
     @media (max-width: 1280px) {
         grid-template-columns: repeat(3, v(264));

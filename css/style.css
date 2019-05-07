@@ -523,6 +523,10 @@ button {
   }
 }
 
+.romantickBlock {
+  margin: auto;
+}
+
 .romantickTitle {
   font-size: 11rem;
   line-height: 16rem;
@@ -589,6 +593,9 @@ button {
 }
 
 .stockBlockImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   height: 148rem;
 }
@@ -600,8 +607,9 @@ button {
 }
 
 .stockBlockImg img {
-  margin-top: 23rem;
+  margin-top: auto;
   margin-left: 3rem;
+  margin-bottom: auto;
 }
 
 .stockTitle {
@@ -659,6 +667,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   color: var(--mainWhite);
+  margin: auto;
 }
 
 @media (min-width: 1367px) {
@@ -747,15 +756,13 @@ button {
   margin-bottom: 10rem;
 }
 
-.phone {
+.phoneForm {
   margin-bottom: 10rem;
 }
 
 @media (max-width: 1015px) {
-  .phone {
+  .phoneForm {
     white-space: nowrap;
-    -webkit-transform: translateX(-17.5rem);
-            transform: translateX(-17.5rem);
   }
 }
 
@@ -1421,6 +1428,12 @@ footer a:hover {
 }
 
 .menuMainSubCart a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: var(--mainWhite);
 }
 
@@ -2065,7 +2078,7 @@ footer a:hover {
 .modalArticleM {
   display: none;
   position: fixed;
-  top: 10%;
+  top: 0;
   left: 38%;
   width: 78rem;
   color: var(--mainWhite);
@@ -2073,6 +2086,7 @@ footer a:hover {
   z-index: 200;
   -webkit-animation: modalGlide 1s;
           animation: modalGlide 1s;
+  height: 100vh;
 }
 
 .modalArticleM .yellowBtn {
@@ -2082,6 +2096,10 @@ footer a:hover {
   border-radius: 0;
   margin-top: 6.25rem;
   margin-bottom: 0;
+}
+
+.modalArticleBodyM {
+  height: 100vh;
 }
 
 .glideModalClose {
@@ -2230,7 +2248,6 @@ footer a:hover {
 .articleBlock {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(10, 20, 34, 0)), color-stop(56.25%, rgba(10, 20, 34, 0.2)), to(rgba(10, 20, 34, 0.8))), url("../img/cartImg.jpg") center no-repeat;
   background: linear-gradient(180deg, rgba(10, 20, 34, 0) 0%, rgba(10, 20, 34, 0.2) 56.25%, rgba(10, 20, 34, 0.8) 100%), url("../img/cartImg.jpg") center no-repeat;
-  background-size: cover;
   width: 66rem;
   height: 96rem;
   border-radius: 2rem;
@@ -2255,7 +2272,6 @@ footer a:hover {
   border: 4px solid var(--btnYellowActive);
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(10, 20, 34, 0)), color-stop(56.25%, rgba(10, 20, 34, 0.2)), to(rgba(10, 20, 34, 0.8))), url("../img/cartImg.jpg") center no-repeat;
   background: linear-gradient(180deg, rgba(10, 20, 34, 0) 0%, rgba(10, 20, 34, 0.2) 56.25%, rgba(10, 20, 34, 0.8) 100%), url("../img/cartImg.jpg") center no-repeat;
-  background-size: cover;
   border-radius: 2rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2439,8 +2455,6 @@ footer a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 306rem;
-  margin: auto;
 }
 
 .stockLeftBlock {
@@ -2474,10 +2488,9 @@ footer a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-column-count: 1;
-          column-count: 1;
-  width: 126rem;
-  margin: auto 9rem auto 18rem;
+  width: 40%;
+  margin: auto;
+  padding: 0 6rem;
 }
 
 .stockBlockTitle {
@@ -2487,6 +2500,15 @@ footer a:hover {
 
 .stockTextDescr {
   margin-bottom: 4rem;
+}
+
+.stockImg {
+  width: 50%;
+}
+
+.stockImg img {
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .cartBlockMain {

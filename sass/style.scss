@@ -153,6 +153,7 @@ header {
     flex-direction: column;
     margin: auto;
     align-self: center;
+
     img {
         color: var(--mainWhite);
         margin: v(174) auto v(24);
@@ -282,6 +283,9 @@ button {
         margin-bottom: 0;
     }
 
+    @media (max-width: 320px) {
+        display: none;
+    }
 }
 
 .ctaBlock1 {
@@ -455,6 +459,10 @@ button {
     text-align: center;
     padding-top: v(176);
     padding-bottom: v(24);
+
+    @media (max-width: 600px) {
+        font-size: v(40);
+    }
 }
 
 .romantickSub {
@@ -516,6 +524,10 @@ button {
         margin-top: auto;
         margin-left: v(24);
         margin-bottom: auto;
+
+        @media (max-width: 600px) {
+            margin-left: auto;
+        }
     }
 }
 
@@ -548,6 +560,10 @@ button {
     background-size: cover;
     height: 100vh;
     display: flex;
+
+    @media (max-width: 320px) {
+        // border: var(--border);
+    }
 }
 
 .contactMap {
@@ -567,6 +583,12 @@ button {
     @media (min-width: 1367px) {
         margin: auto;
         width: v(550);
+    }
+
+    @media (max-width: 320px) {
+        // border: var(--border);
+        margin: 0;
+        min-width: 100%;
     }
 }
 
@@ -589,6 +611,10 @@ button {
     flex-direction: column;
     width: v(336);
     margin: auto;
+
+    @media (max-width: 600px) {
+        width: auto;
+    }
 
     input {
         background-color: transparent;
@@ -642,6 +668,10 @@ button {
     font-size: v(12);
     line-height: v(17);
     margin: v(24) auto v(88);
+
+    @media (max-width: 600px) {
+        width: auto;
+    }
 }
 
 .questCompleteOK {
@@ -726,6 +756,10 @@ footer {
 
     &:nth-child(2) {
         margin-right: v(96);
+
+        @media (max-width: 600px) {
+            margin-right: 0;
+        }
     }
 
     @media (max-width: 800px) {
@@ -765,7 +799,7 @@ footer {
                 }
 
                 li {
-                    margin-right: v(48);
+                    margin-right: 0;
                 }
             }
         }
@@ -822,7 +856,7 @@ footer {
     margin: v(24) v(48) v(24) v(72);
 
     a {
-        &:nth-child(2){
+        &:nth-child(2) {
             margin-right: v(24);
         }
     }
@@ -864,6 +898,9 @@ footer {
 
     }
 
+    @media (max-width: 600px) {
+        margin: v(24) auto;
+    }
 
 }
 
@@ -883,6 +920,10 @@ footer {
         grid-template-columns: v(200) 1fr v(50);
         grid-template-rows: auto 100%;
         grid-template-areas: "logo phone burger""menu menu menu";
+    }
+
+    @media (max-width: 320px) {
+        max-width: 100%;
     }
 
     .greyBtn {
@@ -913,6 +954,10 @@ footer {
             flex-direction: column;
             justify-content: flex-end;
             margin-right: v(24);
+        }
+
+        @media (max-width: 320px) {
+            overflow: hidden;
         }
 
         li {
@@ -1013,7 +1058,7 @@ footer {
         display: block;
         color: var(--mainWhite);
         cursor: pointer;
-        margin-right: v(24);
+        padding-right: v(24);
     }
 
 }
@@ -1103,6 +1148,9 @@ footer {
     @media (max-width: 600px) {
         margin-left: v(12);
         width: v(300);
+    }
+    @media (max-width: 320px){
+        width: v(250);
     }
 }
 
@@ -1196,6 +1244,10 @@ footer {
 
     @media (max-width: 600px) {
         padding-left: v(24);
+    }
+
+    @media (max-width: 320px) {
+        padding-left: v(4);
     }
 }
 
@@ -1737,6 +1789,11 @@ footer {
         margin-bottom: 0;
         margin-right: 0;
     }
+    @media (max-width: 600px){
+        left: 8%;
+        right: 8%;
+        animation: modalGlideMobile 1s;
+    }
 }
 
 .modalArticleBodyM {
@@ -1748,6 +1805,9 @@ footer {
     justify-content: center;
 
     img {
+        min-width: 100%;
+    }
+    @media (max-width: 600px){
         min-width: 100%;
     }
 }
@@ -1870,7 +1930,7 @@ footer {
 
     @media (max-width: 600px) {
         grid-template-columns: 1fr;
-        // // max-width: v(260);
+        max-width: 100%;
         // width: auto;
         // padding: 0 v(12);
     }
@@ -1882,6 +1942,7 @@ footer {
     height: v(384);
     border-radius: v(8);
     cursor: pointer;
+    box-sizing: border-box;
 
     @media (max-width: 600px) {
         width: v(360);
@@ -1890,7 +1951,10 @@ footer {
         grid-template-areas: ". . ear""text text text""footer footer footer";
         grid-template-columns: v(56) repeat(2, 1fr);
         grid-template-rows: v(24) 1fr v(32);
-
+        background-size: 100%;
+    }
+    @media (max-width: 320px){
+        width: v(312);
     }
 
     &:hover {
@@ -1898,6 +1962,11 @@ footer {
         background: linear-gradient(180deg, rgba(10, 20, 34, 0) 0%, rgba(10, 20, 34, 0.2) 56.25%, rgba(10, 20, 34, 0.8) 100%), url('../img/cartImg.jpg') center no-repeat;
         border-radius: v(8);
         box-sizing: border-box;
+
+        @media (max-width: 600px) {
+            background-size: 100%;
+        }
+
 
         .articleEye {
             visibility: visible
@@ -2058,6 +2127,10 @@ footer {
     width: 40%;
     margin: auto;
     padding: 0 v(24);
+
+    @media (max-width: 600px) {
+        width: auto;
+    }
 }
 
 .stockBlockTitle {
@@ -2352,6 +2425,19 @@ footer {
 
     100% {
         left: 38%;
+        height: 100%;
+        opacity: 1;
+    }
+}
+@keyframes modalGlideMobile{
+    0% {
+        left: 0;
+        height: 0;
+        opacity: 0;
+    }
+
+    100% {
+        left: 8%;
         height: 100%;
         opacity: 1;
     }

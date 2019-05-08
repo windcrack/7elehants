@@ -315,6 +315,12 @@ button {
   }
 }
 
+@media (max-width: 320px) {
+  .headerArrows {
+    display: none;
+  }
+}
+
 .ctaBlock1 {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -549,6 +555,12 @@ button {
   padding-bottom: 6rem;
 }
 
+@media (max-width: 600px) {
+  .romantickTitle {
+    font-size: 10rem;
+  }
+}
+
 .romantickSub {
   text-align: center;
   font-size: 4rem;
@@ -625,6 +637,12 @@ button {
   margin-bottom: auto;
 }
 
+@media (max-width: 600px) {
+  .stockBlockImg img {
+    margin-left: auto;
+  }
+}
+
 .stockTitle {
   font-size: 11rem;
   line-height: 12rem;
@@ -690,6 +708,13 @@ button {
   }
 }
 
+@media (max-width: 320px) {
+  .quest {
+    margin: 0;
+    min-width: 100%;
+  }
+}
+
 .questTitle {
   text-align: center;
   font-size: 12rem;
@@ -714,6 +739,12 @@ button {
           flex-direction: column;
   width: 84rem;
   margin: auto;
+}
+
+@media (max-width: 600px) {
+  .questForm {
+    width: auto;
+  }
 }
 
 .questForm input {
@@ -790,6 +821,13 @@ button {
   font-size: 3rem;
   line-height: 4.25rem;
   margin: 6rem auto 22rem;
+}
+
+@media (max-width: 600px) {
+  .questCompleteOK,
+  .questCompleteError {
+    width: auto;
+  }
 }
 
 .questCompleteOK {
@@ -912,6 +950,12 @@ footer a:hover {
   margin-right: 24rem;
 }
 
+@media (max-width: 600px) {
+  .blockInfo:nth-child(2) {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 800px) {
   .blockInfo {
     -webkit-box-pack: end;
@@ -968,7 +1012,7 @@ footer a:hover {
 
 @media (max-width: 800px) {
   .blockInfo:nth-child(2) .subNavStock li {
-    margin-right: 12rem;
+    margin-right: 0;
   }
 }
 
@@ -1083,6 +1127,12 @@ footer a:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .desc {
+    margin: 6rem auto;
+  }
+}
+
 .menuMain {
   background-color: var(--mainColor);
   position: fixed;
@@ -1112,6 +1162,12 @@ footer a:hover {
     -ms-grid-rows: auto 100%;
         grid-template-rows: auto 100%;
         grid-template-areas: "logo phone burger" "menu menu menu";
+  }
+}
+
+@media (max-width: 320px) {
+  .menuMain {
+    max-width: 100%;
   }
 }
 
@@ -1160,6 +1216,12 @@ footer a:hover {
         -ms-flex-pack: end;
             justify-content: flex-end;
     margin-right: 6rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .menuMain ul {
+    overflow: hidden;
   }
 }
 
@@ -1271,7 +1333,7 @@ footer a:hover {
     display: block;
     color: var(--mainWhite);
     cursor: pointer;
-    margin-right: 6rem;
+    padding-right: 6rem;
   }
 }
 
@@ -1376,6 +1438,12 @@ footer a:hover {
   .listSub {
     margin-left: 3rem;
     width: 75rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .listSub {
+    width: 62.5rem;
   }
 }
 
@@ -1510,6 +1578,12 @@ footer a:hover {
 @media (max-width: 600px) {
   .logo {
     padding-left: 6rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .logo {
+    padding-left: 1rem;
   }
 }
 
@@ -2120,6 +2194,15 @@ footer a:hover {
   margin-right: 0;
 }
 
+@media (max-width: 600px) {
+  .modalArticleM {
+    left: 8%;
+    right: 8%;
+    -webkit-animation: modalGlideMobile 1s;
+            animation: modalGlideMobile 1s;
+  }
+}
+
 .modalArticleBodyM {
   height: 100vh;
   display: -webkit-box;
@@ -2140,6 +2223,12 @@ footer a:hover {
 
 .modalArticleBodyM img {
   min-width: 100%;
+}
+
+@media (max-width: 600px) {
+  .modalArticleBodyM {
+    min-width: 100%;
+  }
 }
 
 .glideModalClose {
@@ -2290,6 +2379,7 @@ footer a:hover {
   .menuBlockArticle {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+    max-width: 100%;
   }
 }
 
@@ -2300,6 +2390,8 @@ footer a:hover {
   height: 96rem;
   border-radius: 2rem;
   cursor: pointer;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
@@ -2313,6 +2405,13 @@ footer a:hover {
         grid-template-columns: 14rem repeat(2, 1fr);
     -ms-grid-rows: 6rem 1fr 8rem;
         grid-template-rows: 6rem 1fr 8rem;
+    background-size: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .articleBlock {
+    width: 78rem;
   }
 }
 
@@ -2323,6 +2422,12 @@ footer a:hover {
   border-radius: 2rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+  .articleBlock:hover {
+    background-size: 100%;
+  }
 }
 
 .articleBlock:hover .articleEye {
@@ -2539,6 +2644,12 @@ footer a:hover {
   width: 40%;
   margin: auto;
   padding: 0 6rem;
+}
+
+@media (max-width: 600px) {
+  .stockBlockText {
+    width: auto;
+  }
 }
 
 .stockBlockTitle {
@@ -2964,6 +3075,32 @@ footer a:hover {
   }
   100% {
     left: 38%;
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes modalGlideMobile {
+  0% {
+    left: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    left: 8%;
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes modalGlideMobile {
+  0% {
+    left: 0;
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    left: 8%;
     height: 100%;
     opacity: 1;
   }

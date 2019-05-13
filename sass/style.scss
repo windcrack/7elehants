@@ -2202,17 +2202,17 @@ footer {
 .articleBlockInCart {
     width: v(264);
     height: v(192);
-    background: url('../img/imgInCart.jpg') no-repeat center;
-    background-size: cover;
     color: var(--mainWhite);
-    display: grid;
-    grid-template-areas: "gramm . delete""descr descr descr""total . summ";
-    grid-template-rows: v(24) 1fr v(24);
+    position: relative;
 
     @media (max-width: 600px) {
         width: 360px;
         height: 240px;
         border-radius: 8px;
+    }
+
+    img{
+        position: relative;
     }
 
     &:hover {
@@ -2250,6 +2250,33 @@ footer {
     }
 }
 
+.cartWrapper{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    
+}
+
+.cartWrapperInBlock{
+    // display: grid;
+    // grid-template-areas: "gramm . delete" "descr descr descr" "total . summ";
+    // grid-template-rows: v(24) 100% v(24);
+    display: flex;
+    flex-direction: column;
+}
+
+.artricleHeder{
+    display: flex;
+    justify-content: space-between;
+}
+
+.arcicleFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .inCartGramm {
     grid-area: gramm;
     height: v(24);
@@ -2279,17 +2306,18 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 v(4);
+    padding: v(24) v(4);
 }
 
 .totalInCart {
     grid-area: total;
-    transform: translateX(v(8)) translateY(v(-16));
+    transform: translateX(v(8));
+    
 }
 
 .summIncart {
     grid-area: summ;
-    transform: translateX(v(-8)) translateY(v(-8));
+    transform: translateX(v(-8));
     text-align: right;
 
     @media (max-width: 800px) {

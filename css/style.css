@@ -2737,14 +2737,8 @@ footer a:hover {
 .articleBlockInCart {
   width: 66rem;
   height: 48rem;
-  background: url("../img/imgInCart.jpg") no-repeat center;
-  background-size: cover;
   color: var(--mainWhite);
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "gramm . delete" "descr descr descr" "total . summ";
-  -ms-grid-rows: 6rem 1fr 6rem;
-      grid-template-rows: 6rem 1fr 6rem;
+  position: relative;
 }
 
 @media (max-width: 600px) {
@@ -2753,6 +2747,10 @@ footer a:hover {
     height: 240px;
     border-radius: 8px;
   }
+}
+
+.articleBlockInCart img {
+  position: relative;
 }
 
 .articleBlockInCart:hover .inCartGramm,
@@ -2785,9 +2783,45 @@ footer a:hover {
   line-height: 10rem;
 }
 
+.cartWrapper {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.cartWrapperInBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.artricleHeder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.arcicleFooter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .inCartGramm {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: gramm;
   height: 6rem;
   -webkit-transform: translateX(2rem) translateY(2rem);
@@ -2796,8 +2830,6 @@ footer a:hover {
 }
 
 .deleteInCart {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: delete;
   height: 6rem;
   -webkit-transform: translateX(-2rem) translateY(2rem);
@@ -2811,9 +2843,6 @@ footer a:hover {
 }
 
 .descrInCart {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: descr;
   font-weight: normal;
   font-size: 5rem;
@@ -2828,23 +2857,19 @@ footer a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0 1rem;
+  padding: 6rem 1rem;
 }
 
 .totalInCart {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: total;
-  -webkit-transform: translateX(2rem) translateY(-4rem);
-          transform: translateX(2rem) translateY(-4rem);
+  -webkit-transform: translateX(2rem);
+          transform: translateX(2rem);
 }
 
 .summIncart {
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
   grid-area: summ;
-  -webkit-transform: translateX(-2rem) translateY(-2rem);
-          transform: translateX(-2rem) translateY(-2rem);
+  -webkit-transform: translateX(-2rem);
+          transform: translateX(-2rem);
   text-align: right;
 }
 

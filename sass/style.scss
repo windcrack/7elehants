@@ -1087,6 +1087,7 @@ footer {
     position: fixed;
     min-width: 100%;
     animation: goRigthMenu 2s;
+    z-index: 3;
 
     @media (max-width: 800px) {
         // margin-top: v(120);
@@ -1149,7 +1150,8 @@ footer {
         margin-left: v(12);
         width: v(300);
     }
-    @media (max-width: 320px){
+
+    @media (max-width: 320px) {
         width: v(250);
     }
 }
@@ -1789,7 +1791,8 @@ footer {
         margin-bottom: 0;
         margin-right: 0;
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         left: 8%;
         right: 8%;
         animation: modalGlideMobile 1s;
@@ -1807,7 +1810,8 @@ footer {
     img {
         min-width: 100%;
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         min-width: 100%;
     }
 }
@@ -1937,12 +1941,19 @@ footer {
 }
 
 .articleBlock {
-    background: linear-gradient(180deg, rgba(10, 20, 34, 0) 0%, rgba(10, 20, 34, 0.2) 56.25%, rgba(10, 20, 34, 0.8) 100%), url('../img/cartImg.jpg') center no-repeat;
+    background: linear-gradient(180deg, rgba(10, 20, 34, 0) 0%, rgba(10, 20, 34, 0.2) 56.25%, rgba(10, 20, 34, 0.8) 100%);
     width: v(264);
     height: v(384);
     border-radius: v(8);
     cursor: pointer;
     box-sizing: border-box;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+    }
 
     @media (max-width: 600px) {
         width: v(360);
@@ -1953,20 +1964,22 @@ footer {
         grid-template-rows: v(24) 1fr v(32);
         background-size: 100%;
     }
-    @media (max-width: 320px){
+
+    @media (max-width: 320px) {
         width: v(312);
     }
 
     &:hover {
-        border: 4px solid var(--btnYellowActive);
-        background: linear-gradient(180deg, rgba(10, 20, 34, 0) 0%, rgba(10, 20, 34, 0.2) 56.25%, rgba(10, 20, 34, 0.8) 100%), url('../img/cartImg.jpg') center no-repeat;
-        border-radius: v(8);
+        background: linear-gradient(180deg, rgba(10, 20, 34, 0) 0%, rgba(10, 20, 34, 0.2) 56.25%, rgba(10, 20, 34, 0.8) 100%);
         box-sizing: border-box;
 
         @media (max-width: 600px) {
             background-size: 100%;
         }
 
+        .articleWrapper{
+            border: 4px solid var(--btnYellowActive);
+        }
 
         .articleEye {
             visibility: visible
@@ -1996,11 +2009,14 @@ footer {
     }
 }
 
-// .articleWrapper{
-//     @media (max-width: 600px){
-//         padding: 0 v(24);
-//     }
-// }
+.articleWrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    border-radius: v(8);
+    z-index: 1;
+}
 
 .articleEye {
     margin: v(8) v(8) 0 0;
@@ -2429,7 +2445,8 @@ footer {
         opacity: 1;
     }
 }
-@keyframes modalGlideMobile{
+
+@keyframes modalGlideMobile {
     0% {
         left: 0;
         height: 0;

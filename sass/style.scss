@@ -753,9 +753,11 @@ footer {
     display: flex;
     justify-content: space-between;
     text-align: right;
-
     &:nth-child(2) {
         margin-right: v(96);
+        @media (max-width: 800px){
+            margin-right: 0;
+        }
 
         @media (max-width: 600px) {
             margin-right: 0;
@@ -771,6 +773,7 @@ footer {
             .subNavStock {
                 @media (max-width: 800px) {
                     margin-right: 0;
+                    
                     text-align: right;
                 }
 
@@ -799,7 +802,11 @@ footer {
                 }
 
                 li {
+                    padding-right: v(24);
                     margin-right: 0;
+                    &:last-child{
+                        padding-right: 0;
+                    }
                 }
             }
         }
@@ -2126,15 +2133,23 @@ footer {
     // margin: auto;
 }
 
-.stockLeftBlock {
+.stockBlock {
     display: flex;
     flex-direction: row;
+    padding: 0 v(24);
+    @media (max-width: 800px){
+        flex-direction: column-reverse;
+    }
+    &:nth-child(even){
+        display: flex;
+        flex-direction: row-reverse;
+        @media (max-width: 800px){
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
 }
 
-.stockRightBlock {
-    display: flex;
-    flex-direction: row-reverse;
-}
 
 .stockBlockText {
     display: flex;
@@ -2142,10 +2157,13 @@ footer {
     justify-content: center;
     width: 40%;
     margin: auto;
-    padding: 0 v(24);
-
+    @media (max-width: 800px){
+        width: 90%;
+        padding: v(24) v(48);
+    }
     @media (max-width: 600px) {
         width: auto;
+        padding: v(24) 0;
     }
 }
 
@@ -2160,11 +2178,14 @@ footer {
 
 .stockImg {
     width: 50%;
-
+    @media (max-width: 800px){
+        width: 100%;
+    }
     img {
         min-width: 100%;
         min-height: 100%;
     }
+    
 
 }
 

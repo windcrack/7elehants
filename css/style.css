@@ -950,6 +950,12 @@ footer a:hover {
   margin-right: 24rem;
 }
 
+@media (max-width: 800px) {
+  .blockInfo:nth-child(2) {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 600px) {
   .blockInfo:nth-child(2) {
     margin-right: 0;
@@ -1012,7 +1018,11 @@ footer a:hover {
 
 @media (max-width: 800px) {
   .blockInfo:nth-child(2) .subNavStock li {
+    padding-right: 6rem;
     margin-right: 0;
+  }
+  .blockInfo:nth-child(2) .subNavStock li:last-child {
+    padding-right: 0;
   }
 }
 
@@ -2631,7 +2641,7 @@ footer a:hover {
           flex-direction: column;
 }
 
-.stockLeftBlock {
+.stockBlock {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2639,9 +2649,19 @@ footer a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding: 0 6rem;
 }
 
-.stockRightBlock {
+@media (max-width: 800px) {
+  .stockBlock {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.stockBlock:nth-child(even) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2649,6 +2669,18 @@ footer a:hover {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+@media (max-width: 800px) {
+  .stockBlock:nth-child(even) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .stockBlockText {
@@ -2664,12 +2696,19 @@ footer a:hover {
           justify-content: center;
   width: 40%;
   margin: auto;
-  padding: 0 6rem;
+}
+
+@media (max-width: 800px) {
+  .stockBlockText {
+    width: 90%;
+    padding: 6rem 12rem;
+  }
 }
 
 @media (max-width: 600px) {
   .stockBlockText {
     width: auto;
+    padding: 6rem 0;
   }
 }
 
@@ -2684,6 +2723,12 @@ footer a:hover {
 
 .stockImg {
   width: 50%;
+}
+
+@media (max-width: 800px) {
+  .stockImg {
+    width: 100%;
+  }
 }
 
 .stockImg img {

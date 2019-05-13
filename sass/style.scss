@@ -980,6 +980,9 @@ footer {
             @media (max-width: 600px){
                 margin: v(20) 0;
             }
+            @media (max-width: 320px){
+                margin: v(8) 0;
+            }
 
             a {
                 color: var(--mainWhite);
@@ -2134,7 +2137,7 @@ footer {
     flex-direction: column;
 }
 
-.stockBlock {
+.stockBlockS {
     display: flex;
     flex-direction: row;
     padding: 0 v(24);

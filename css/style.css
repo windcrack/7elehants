@@ -1261,6 +1261,12 @@ footer a:hover {
   }
 }
 
+@media (max-width: 320px) {
+  .menuMain ul li {
+    margin: 2rem 0;
+  }
+}
+
 .menuMain ul li a {
   color: var(--mainWhite);
 }
@@ -2647,7 +2653,7 @@ footer a:hover {
           flex-direction: column;
 }
 
-.stockBlock {
+.stockBlockS {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2659,7 +2665,7 @@ footer a:hover {
 }
 
 @media (max-width: 800px) {
-  .stockBlock {
+  .stockBlockS {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -2667,7 +2673,7 @@ footer a:hover {
   }
 }
 
-.stockBlock:nth-child(even) {
+.stockBlockS:nth-child(even) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2678,7 +2684,7 @@ footer a:hover {
 }
 
 @media (max-width: 800px) {
-  .stockBlock:nth-child(even) {
+  .stockBlockS:nth-child(even) {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

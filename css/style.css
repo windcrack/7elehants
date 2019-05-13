@@ -1255,6 +1255,12 @@ footer a:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .menuMain ul li {
+    margin: 5rem 0;
+  }
+}
+
 .menuMain ul li a {
   color: var(--mainWhite);
 }

@@ -4,8 +4,7 @@
   padding: 0;
 }
 
-iframe,
-img {
+iframe {
   max-width: 100%;
 }
 
@@ -133,6 +132,7 @@ header {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  position: relative;
 }
 
 .headerBurger {
@@ -160,14 +160,25 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: auto;
-  -ms-flex-item-align: center;
-      align-self: center;
+  height: 73.25rem;
 }
 
 .headerTitle img {
   color: var(--mainWhite);
-  margin: 43.5rem auto 6rem;
+  margin: auto 6rem;
+}
+
+@media (max-width: 600px) {
+  .headerTitle img {
+    margin: auto;
+  }
 }
 
 .headerTitle .descr {
@@ -188,6 +199,12 @@ header {
     padding: 0 6rem;
     margin-bottom: 24rem;
   }
+}
+
+.headerTitleBody {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .titleImg,
@@ -222,8 +239,17 @@ header {
             flex-direction: column;
     margin: 0 auto;
   }
+  .headerButtonBlock a {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
   .headerButtonBlock .yellowBtn {
     margin-bottom: 6rem;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: 0;
   }
 }
 
@@ -295,12 +321,13 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 20% auto 8rem;
+  margin: 0 auto 8rem;
+  position: relative;
 }
 
 @media (max-width: 1366px) {
   .headerArrows {
-    margin: auto;
+    margin: 0 auto 8rem;
   }
 }
 
@@ -595,7 +622,6 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: url("../img/bgInWhite.png");
 }
 
 @media (max-width: 800px) {
@@ -1225,7 +1251,7 @@ footer a:hover {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    margin-right: 6rem;
+    margin: 3rem 6rem 3rem 6rem;
   }
 }
 
@@ -1243,7 +1269,7 @@ footer a:hover {
   .menuMain ul li {
     -ms-flex-item-align: end;
         align-self: end;
-    margin: 18rem 0;
+    margin: 9.5rem 0;
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1327,6 +1353,8 @@ footer a:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-transform: translateX(-11%);
+            transform: translateX(-11%);
   }
   .phoneInMob .phone {
     margin: 0;
@@ -1656,6 +1684,12 @@ footer a:hover {
   resize: none;
 }
 
+@media (max-width: 600px) {
+  .otherMain .textDetails {
+    min-width: 90%;
+  }
+}
+
 .otherMainMenu {
   padding-top: 36rem;
   padding-bottom: 8rem;
@@ -1685,6 +1719,14 @@ footer a:hover {
   margin-top: 6rem;
 }
 
+@media (max-width: 600px) {
+  .otherMainTitle,
+  .mainTitleNoSub {
+    margin: 3rem auto;
+    text-align: center;
+  }
+}
+
 .mainTitleNoSub {
   -webkit-transform: translateY(-12rem);
           transform: translateY(-12rem);
@@ -1702,6 +1744,18 @@ footer a:hover {
           flex-direction: column;
 }
 
+@media (max-width: 600px) {
+  .deviMainBlock {
+    width: 90rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .deviMainBlock {
+    width: 76rem;
+  }
+}
+
 .deviMainBlock input[type="text"] {
   background-color: transparent;
   border: none;
@@ -1710,6 +1764,12 @@ footer a:hover {
   line-height: 6rem;
   margin-bottom: 12rem;
   color: var(--mainWhite);
+}
+
+@media (max-width: 600px) {
+  .deviMainBlock .yellowBtn {
+    margin: 0 auto 36rem;
+  }
 }
 
 .deviliryTitle {
@@ -1725,6 +1785,12 @@ footer a:hover {
   color: var(--mainWhite);
   text-align: left;
   margin-bottom: 11.5rem;
+}
+
+@media (max-width: 600px) {
+  .deviTitle {
+    text-align: center;
+  }
 }
 
 .checkListBlock {
@@ -1864,6 +1930,13 @@ footer a:hover {
   margin-bottom: 6rem;
 }
 
+@media (max-width: 600px) {
+  .warning {
+    padding-top: 2rem;
+    text-align: center;
+  }
+}
+
 .caution {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1898,11 +1971,15 @@ footer a:hover {
   line-height: 6rem;
   resize: none;
   margin: 6rem auto !important;
+  padding: 2rem 4rem;
+  width: 52rem;
+  height: 25rem;
 }
 
-@media (min-width: 1367px) {
+@media (max-width: 1366px) {
   .modal textarea {
-    margin: 6rem !important;
+    margin: 3rem auto !important;
+    height: 12.5rem;
   }
 }
 
@@ -1919,6 +1996,7 @@ footer a:hover {
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 78rem;
+  height: 100vh;
   color: #fff;
   background-color: var(--mainColor);
   position: fixed;
@@ -1931,6 +2009,12 @@ footer a:hover {
 
 .modalBody .yellowBtn {
   margin: 6rem auto 8rem;
+}
+
+@media (max-width: 1366px) {
+  .modalBody .yellowBtn {
+    margin: 4rem auto 3rem;
+  }
 }
 
 .modalBody a {
@@ -2010,6 +2094,12 @@ footer a:hover {
   margin: 6rem auto;
 }
 
+@media (max-width: 1366px) {
+  .modalBlockInput .modalInfo {
+    margin: 3rem auto;
+  }
+}
+
 .modalIfOk {
   margin: 55rem auto;
   display: -webkit-box;
@@ -2056,8 +2146,15 @@ footer a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2.5rem;
+  padding: 2.5rem 8rem;
   margin-bottom: 2rem;
+}
+
+@media (max-width: 1366px) {
+  .modalBlockBtnNumb {
+    padding: 0 8rem;
+    margin-bottom: 0;
+  }
 }
 
 .modalBlockBtnNumb span {
@@ -2095,7 +2192,7 @@ footer a:hover {
 .modalTable {
   font-size: 3rem;
   line-height: 4.5rem;
-  padding: 0 12rem;
+  padding: 0 9rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2139,7 +2236,7 @@ footer a:hover {
   background: var(--mainColor);
   /* цвет кнопки */
   border: solid 2px var(--btnYellowActive);
-  top: -0.7rem;
+  top: -0.6rem;
   /* положение кнопки по вертикали относительно основы */
   left: -0.5rem;
   /* положение кнопки по горизонтали относительно основы */
@@ -2167,6 +2264,7 @@ footer a:hover {
   line-height: 3rem;
   color: var(--btnYellowStill);
   margin: 2rem auto;
+  padding: 0 4rem;
 }
 
 .modalRules input[type="checkbox"] {
@@ -2198,7 +2296,8 @@ footer a:hover {
   position: fixed;
   top: 0;
   left: 38%;
-  width: auto;
+  right: 38%;
+  width: 78.75rem;
   color: var(--mainWhite);
   background-color: var(--mainColor);
   z-index: 200;
@@ -2215,6 +2314,14 @@ footer a:hover {
   margin-top: 6.25rem;
   margin-bottom: 0;
   margin-right: 0;
+}
+
+@media (max-width: 1366px) {
+  .modalArticleM .yellowBtn {
+    margin-top: 0;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
 }
 
 @media (max-width: 600px) {
@@ -2273,6 +2380,12 @@ footer a:hover {
   line-height: normal;
 }
 
+@media (max-width: 1366px) {
+  .articleTitleM {
+    padding: 3.75rem 6rem 3rem;
+  }
+}
+
 .articleOptBlockM {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2307,6 +2420,14 @@ footer a:hover {
       -ms-flex-align: center;
           align-items: center;
   padding: 6rem;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
+}
+
+@media (max-width: 1366px) {
+  .articleTotalM {
+    padding: 2rem 6rem;
+  }
 }
 
 .articleTotalM span {
@@ -2418,17 +2539,24 @@ footer a:hover {
   position: relative;
 }
 
-.articleBlock img {
-  width: 100%;
-  height: 100%;
+.articleBlock .articleImg {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  border: var(--border);
+  border-radius: 2rem;
+}
+
+@media (max-width: 600px) {
+  .articleBlock .articleImg {
+    width: 90rem !important;
+    height: 68rem;
+  }
 }
 
 @media (max-width: 600px) {
   .articleBlock {
     width: 90rem;
-    height: 60rem;
+    height: 68rem;
     display: -ms-grid;
     display: grid;
         grid-template-areas: ". . ear" "text text text" "footer footer footer";
@@ -2592,7 +2720,7 @@ footer a:hover {
 }
 
 @media (max-width: 600px) {
-  .iconCartInMob {
+  .iconCartInMob a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2612,12 +2740,12 @@ footer a:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  .iconCartInMob i {
+  .iconCartInMob a i {
     color: var(--btnYellowActive);
     -webkit-transform: translateX(1.5rem);
             transform: translateX(1.5rem);
   }
-  .iconCartInMob .number {
+  .iconCartInMob a .number {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2706,7 +2834,7 @@ footer a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 40%;
+  width: 50%;
   margin: auto;
 }
 
@@ -2800,14 +2928,20 @@ footer a:hover {
 
 @media (max-width: 600px) {
   .articleBlockInCart {
-    width: 360px;
-    height: 240px;
+    width: 90rem;
+    height: 60rem;
     border-radius: 8px;
   }
 }
 
 .articleBlockInCart img {
   position: relative;
+}
+
+@media (max-width: 600px) {
+  .articleBlockInCart img {
+    min-width: 100%;
+  }
 }
 
 .articleBlockInCart:hover .inCartGramm,
@@ -2847,6 +2981,13 @@ footer a:hover {
   left: 0;
 }
 
+@media (max-width: 600px) {
+  .cartWrapper {
+    width: 90rem;
+    height: 60rem;
+  }
+}
+
 .cartWrapperInBlock {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2855,6 +2996,9 @@ footer a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .artricleHeder {
@@ -2917,6 +3061,18 @@ footer a:hover {
   padding: 6rem 1rem;
 }
 
+@media (max-width: 600px) {
+  .descrInCart {
+    height: 36rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+
 .totalInCart {
   grid-area: total;
   -webkit-transform: translateX(2rem);
@@ -2940,8 +3096,8 @@ footer a:hover {
 
 @media (max-width: 600px) {
   .summIncart {
-    -webkit-transform: translateX(-2rem) translateY(-2rem);
-            transform: translateX(-2rem) translateY(-2rem);
+    -webkit-transform: translate(0);
+            transform: translate(0);
     text-align: right;
   }
 }

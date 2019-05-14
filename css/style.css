@@ -201,6 +201,10 @@ header {
   }
 }
 
+.img {
+  max-width: 100%;
+}
+
 .headerTitleBody {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -596,6 +600,12 @@ button {
   max-width: 130.25rem;
   margin: 0 auto 22.75rem;
   line-height: 6rem;
+}
+
+@media (max-width: 600px) {
+  .romantickSub {
+    padding: 0 6rem;
+  }
 }
 
 .stock {
@@ -1283,7 +1293,7 @@ footer a:hover {
 
 @media (max-width: 600px) {
   .menuMain ul li {
-    margin: 5rem 0;
+    margin: 14rem 0;
   }
 }
 
@@ -1427,7 +1437,7 @@ footer a:hover {
 
 @media (max-width: 600px) {
   .menuMainSub {
-    margin-top: 26rem;
+    margin-top: 24rem;
   }
 }
 
@@ -1552,8 +1562,12 @@ footer a:hover {
 @media (max-width: 600px) {
   .categorySub {
     display: none;
-    margin: 4rem 0 4rem 3rem;
+    margin: 4rem auto;
   }
+}
+
+.categorySub span:hover {
+  color: #000;
 }
 
 .menuMainSubCart {
@@ -1655,7 +1669,7 @@ footer a:hover {
             align-items: center;
     cursor: pointer;
     color: var(--mainWhite);
-    padding-left: 8rem;
+    padding-left: 3rem;
     margin-right: 6rem;
   }
 }
@@ -2325,6 +2339,12 @@ footer a:hover {
 }
 
 @media (max-width: 600px) {
+  .modalArticleM .yellowBtn {
+    margin-top: auto;
+  }
+}
+
+@media (max-width: 600px) {
   .modalArticleM {
     left: 8%;
     right: 8%;
@@ -2430,6 +2450,12 @@ footer a:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .articleTotalM {
+    margin: auto 0;
+  }
+}
+
 .articleTotalM span {
   margin-right: 4rem;
 }
@@ -2460,6 +2486,12 @@ footer a:hover {
   -webkit-column-width: 66rem;
           column-width: 66rem;
   padding: 0 6rem;
+}
+
+@media (max-width: 600px) {
+  .articleDescrM {
+    margin: auto;
+  }
 }
 
 .otherMainMenu {
@@ -2542,20 +2574,25 @@ footer a:hover {
 .articleBlock .articleImg {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border: var(--border);
   border-radius: 2rem;
 }
 
 @media (max-width: 600px) {
   .articleBlock .articleImg {
-    width: 90rem !important;
+    width: 86rem;
     height: 68rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .articleBlock .articleImg {
+    width: 78rem;
   }
 }
 
 @media (max-width: 600px) {
   .articleBlock {
-    width: 90rem;
+    width: 86rem;
     height: 68rem;
     display: -ms-grid;
     display: grid;
@@ -2720,7 +2757,7 @@ footer a:hover {
 }
 
 @media (max-width: 600px) {
-  .iconCartInMob a {
+  .iconCartInMob {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2732,7 +2769,7 @@ footer a:hover {
     right: 40%;
     width: 48px;
     height: 48px;
-    z-index: 100;
+    z-index: 90;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2740,12 +2777,12 @@ footer a:hover {
         -ms-flex-align: center;
             align-items: center;
   }
-  .iconCartInMob a i {
+  .iconCartInMob i {
     color: var(--btnYellowActive);
     -webkit-transform: translateX(1.5rem);
             transform: translateX(1.5rem);
   }
-  .iconCartInMob a .number {
+  .iconCartInMob .number {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2928,9 +2965,15 @@ footer a:hover {
 
 @media (max-width: 600px) {
   .articleBlockInCart {
-    width: 90rem;
+    width: 86rem;
     height: 60rem;
     border-radius: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .articleBlockInCart {
+    width: 77rem;
   }
 }
 
@@ -2983,8 +3026,14 @@ footer a:hover {
 
 @media (max-width: 600px) {
   .cartWrapper {
-    width: 90rem;
+    width: 86rem;
     height: 60rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .cartWrapper {
+    width: 77rem;
   }
 }
 
@@ -3070,6 +3119,12 @@ footer a:hover {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+  }
+}
+
+@media (max-width: 320px) {
+  .descrInCart {
+    height: 27rem;
   }
 }
 

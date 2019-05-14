@@ -184,9 +184,15 @@ header {
     }
 }
 
+.img {
+    max-width: 100%;
+}
+
 .headerTitleBody {
     align-self: center;
-
+    // img{
+    //     max-width: 100%;
+    // }
 }
 
 .titleImg,
@@ -490,6 +496,10 @@ button {
     max-width: v(521);
     margin: 0 auto v(91);
     line-height: v(24);
+
+    @media (max-width: 600px) {
+        padding: 0 v(24);
+    }
 }
 
 .stock {
@@ -999,7 +1009,7 @@ footer {
             }
 
             @media (max-width: 600px) {
-                margin: v(20) 0;
+                margin: v(56) 0;
             }
 
             @media (max-width: 320px) {
@@ -1130,7 +1140,7 @@ footer {
     }
 
     @media (max-width: 600px) {
-        margin-top: v(104);
+        margin-top: v(96);
     }
 
     ul {
@@ -1228,8 +1238,15 @@ footer {
 
     @media (max-width: 600px) {
         display: none;
-        margin: v(16) 0 v(16) v(12);
+        margin: v(16) auto;
     }
+
+    span {
+        &:hover {
+            color: #000;
+        }
+    }
+
 }
 
 .menuMainSubCart {
@@ -1298,7 +1315,7 @@ footer {
         align-items: center;
         cursor: pointer;
         color: var(--mainWhite);
-        padding-left: v(32);
+        padding-left: v(12);
         margin-right: v(24);
     }
 }
@@ -1882,6 +1899,11 @@ footer {
             margin-top: 0;
             align-self: flex-end;
         }
+
+        @media (max-width: 600px) {
+            margin-top: auto;
+
+        }
     }
 
 
@@ -1962,6 +1984,10 @@ footer {
         padding: v(8) v(24);
     }
 
+    @media (max-width: 600px) {
+        margin: auto 0;
+    }
+
     span {
         margin-right: v(16);
     }
@@ -1993,6 +2019,10 @@ footer {
     line-height: v(24);
     column-width: v(264);
     padding: 0 v(24);
+
+    @media (max-width: 600px) {
+        margin: auto;
+    }
 }
 
 // Menu
@@ -2052,19 +2082,21 @@ footer {
     position: relative;
 
     .articleImg {
-        // width: 100%;
-        // height: 100%;
         box-sizing: border-box;
-        border: var(--border);
         border-radius: v(8);
-        @media (max-width: 600px){
-            width: v(360) !important;
+
+        @media (max-width: 600px) {
+            width: v(344);
             height: v(272);
+        }
+
+        @media (max-width: 320px) {
+            width: v(312);
         }
     }
 
     @media (max-width: 600px) {
-        width: v(360);
+        width: v(344);
         height: v(272);
         display: grid;
         grid-template-areas: ". . ear""text text text""footer footer footer";
@@ -2187,41 +2219,39 @@ footer {
 .iconCartInMob {
     display: none;
 
-    a {
-        @media (max-width: 600px) {
+    @media (max-width: 600px) {
+        display: flex;
+        background-color: var(--btnGrayStill);
+        border-radius: 100%;
+        position: fixed;
+        bottom: v(20);
+        left: 40%;
+        right: 40%;
+        width: 48px;
+        height: 48px;
+        z-index: 90;
+        justify-content: center;
+        align-items: center;
+
+        i {
+            color: var(--btnYellowActive);
+            transform: translateX(v(6));
+        }
+
+        .number {
             display: flex;
-            background-color: var(--btnGrayStill);
-            border-radius: 100%;
-            position: fixed;
-            bottom: v(20);
-            left: 40%;
-            right: 40%;
-            width: 48px;
-            height: 48px;
-            z-index: 100;
-            justify-content: center;
             align-items: center;
-
-            i {
-                color: var(--btnYellowActive);
-                transform: translateX(v(6));
-            }
-
-            .number {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 16px;
-                height: 16px;
-                background-color: red;
-                align-self: flex-start;
-                border-radius: 100%;
-                font-weight: normal;
-                font-size: v(16);
-                line-height: v(24);
-                color: var(--mainWhite);
-                transform: translateX(v(4)) translateY(v(-3));
-            }
+            justify-content: center;
+            width: 16px;
+            height: 16px;
+            background-color: red;
+            align-self: flex-start;
+            border-radius: 100%;
+            font-weight: normal;
+            font-size: v(16);
+            line-height: v(24);
+            color: var(--mainWhite);
+            transform: translateX(v(4)) translateY(v(-3));
         }
     }
 
@@ -2336,9 +2366,13 @@ footer {
     position: relative;
 
     @media (max-width: 600px) {
-        width: v(360);
+        width: v(344);
         height: v(240);
         border-radius: 8px;
+    }
+
+    @media (max-width: 320px) {
+        width: v(308);
     }
 
     img {
@@ -2391,8 +2425,12 @@ footer {
     left: 0;
 
     @media (max-width: 600px) {
-        width: v(360);
+        width: v(344);
         height: v(240);
+    }
+
+    @media (max-width: 320px) {
+        width: v(308);
     }
 }
 
@@ -2452,6 +2490,10 @@ footer {
         display: flex;
         align-items: flex-end;
         // white-space: nowrap;
+    }
+
+    @media (max-width: 320px) {
+        height: v(108);
     }
 }
 

@@ -211,6 +211,17 @@ header {
       align-self: center;
 }
 
+.headerTitleBody img {
+  max-width: 100%;
+}
+
+@media (max-width: 320px) {
+  .headerTitleBody {
+    -webkit-transform: translate(0, 12rem);
+            transform: translate(0, 12rem);
+  }
+}
+
 .titleImg,
 .descr {
   -webkit-animation: slideUp 3s;
@@ -676,6 +687,7 @@ button {
 @media (max-width: 600px) {
   .stockBlockImg img {
     margin-left: auto;
+    margin-top: 12rem;
   }
 }
 
@@ -688,6 +700,12 @@ button {
 @media (max-width: 800px) {
   .stockTitle {
     grid-area: text;
+  }
+}
+
+@media (max-width: 600px) {
+  .stockTitle {
+    margin-top: 60%;
   }
 }
 
@@ -716,6 +734,12 @@ button {
   display: flex;
 }
 
+@media (max-width: 320px) {
+  .contact {
+    height: 100%;
+  }
+}
+
 .contactMap {
   width: 100%;
   height: 112.5rem;
@@ -723,6 +747,13 @@ button {
   background-color: #291A1A;
   -webkit-filter: invert(100%);
           filter: invert(100%);
+}
+
+@media (max-width: 600px) {
+  .contactMap {
+    margin-top: 6rem;
+    height: 100rem;
+  }
 }
 
 .quest {
@@ -763,6 +794,12 @@ button {
   font-size: 4rem;
   line-height: 6rem;
   padding-bottom: 15rem;
+}
+
+@media (max-width: 320px) {
+  .questSub {
+    padding-bottom: 0;
+  }
 }
 
 .questForm {
@@ -863,6 +900,16 @@ button {
   .questCompleteOK,
   .questCompleteError {
     width: auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .questCompleteOK,
+  .questCompleteError {
+    -webkit-box-ordinal-group: -4;
+        -ms-flex-order: -5;
+            order: -5;
+    margin: 3rem auto 3rem;
   }
 }
 
@@ -1299,7 +1346,7 @@ footer a:hover {
 
 @media (max-width: 320px) {
   .menuMain ul li {
-    margin: 2rem 0;
+    margin: 8rem 0;
   }
 }
 

@@ -190,9 +190,12 @@ header {
 
 .headerTitleBody {
     align-self: center;
-    // img{
-    //     max-width: 100%;
-    // }
+    img{
+        max-width: 100%;
+    }
+    @media (max-width: 320px){
+        transform: translate(0, 12rem);
+    }
 }
 
 .titleImg,
@@ -553,6 +556,7 @@ button {
 
         @media (max-width: 600px) {
             margin-left: auto;
+            margin-top: v(48);
         }
     }
 }
@@ -564,6 +568,9 @@ button {
 
     @media (max-width: 800px) {
         grid-area: text;
+    }
+    @media (max-width: 600px){
+        margin-top: 60%;
     }
 }
 
@@ -588,7 +595,7 @@ button {
     display: flex;
 
     @media (max-width: 320px) {
-        // border: var(--border);
+        height: 100%;
     }
 }
 
@@ -598,6 +605,10 @@ button {
     border: 0;
     background-color: #291A1A;
     filter: invert(100%);
+    @media (max-width: 600px){
+        margin-top: v(24);
+        height: v(400);
+    }
 }
 
 .quest {
@@ -630,6 +641,9 @@ button {
     font-size: v(16);
     line-height: v(24);
     padding-bottom: v(60);
+    @media (max-width: 320px){
+        padding-bottom: 0;
+    }
 }
 
 .questForm {
@@ -697,6 +711,10 @@ button {
 
     @media (max-width: 600px) {
         width: auto;
+    }
+    @media (max-width: 320px){
+        order: -5;
+        margin: v(12) auto v(12);
     }
 }
 
@@ -1013,7 +1031,7 @@ footer {
             }
 
             @media (max-width: 320px) {
-                margin: v(8) 0;
+                margin: v(32) 0;
             }
 
             a {
@@ -1036,9 +1054,7 @@ footer {
 
             &:last-child {
 
-                // @media (max-width: 1020px){
-                //     transform: translateX(v())
-                // }
+                
                 @media (max-width: 800px) {
                     display: none;
                 }

@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
     openBlock(btnTable, table)
     openSubMenu(dots, category, list)
     openBlockMassive(btnRezerv, modalBody, modal)
-    openBlockMassive(articleBlock, modalArt, modalClose)
+    // openBlockMassive(articleBlock, modalArt, modalClose)
     closeBlock(header, mainMenu)
     closeBlock(btnClose, modal)
     closeSubMenu(category, dots, list)

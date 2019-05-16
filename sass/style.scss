@@ -190,10 +190,12 @@ header {
 
 .headerTitleBody {
     align-self: center;
-    img{
+
+    img {
         max-width: 100%;
     }
-    @media (max-width: 320px){
+
+    @media (max-width: 320px) {
         transform: translate(0, 12rem);
     }
 }
@@ -569,7 +571,8 @@ button {
     @media (max-width: 800px) {
         grid-area: text;
     }
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         margin-top: 60%;
     }
 }
@@ -605,7 +608,8 @@ button {
     border: 0;
     background-color: #291A1A;
     filter: invert(100%);
-    @media (max-width: 600px){
+
+    @media (max-width: 600px) {
         margin-top: v(24);
         height: v(400);
     }
@@ -641,7 +645,8 @@ button {
     font-size: v(16);
     line-height: v(24);
     padding-bottom: v(60);
-    @media (max-width: 320px){
+
+    @media (max-width: 320px) {
         padding-bottom: 0;
     }
 }
@@ -712,7 +717,8 @@ button {
     @media (max-width: 600px) {
         width: auto;
     }
-    @media (max-width: 320px){
+
+    @media (max-width: 320px) {
         order: -5;
         margin: v(12) auto v(12);
     }
@@ -969,7 +975,7 @@ footer {
     z-index: 2;
     animation: goLeftMenuBg 1s;
 
-    @media (max-width: 800px) {
+    @media (max-width: 980px) {
         display: grid;
         grid-template-columns: v(200) 1fr v(50);
         grid-template-rows: auto 100%;
@@ -1002,7 +1008,7 @@ footer {
         margin: v(24) 0;
         color: var(--btnYellowActive);
 
-        @media (max-width: 800px) {
+        @media (max-width: 980px) {
             grid-area: menu;
             display: none;
             flex-direction: column;
@@ -1054,7 +1060,7 @@ footer {
 
             &:last-child {
 
-                
+
                 @media (max-width: 800px) {
                     display: none;
                 }
@@ -1079,7 +1085,13 @@ footer {
 
 .inDesct {
     @media (max-width: 1280px) {
-        display: none;
+        display: block;
+        padding: v(20);
+        grid-area: logo;
+    }
+
+    @media (max-width: 600px) {
+        padding: v(24) v(12);
     }
 }
 
@@ -1087,7 +1099,7 @@ footer {
     display: none;
     color: var(--btnYellowActive);
 
-    @media (max-width: 800px) {
+    @media (max-width: 980px) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1115,7 +1127,7 @@ footer {
 .burgerInTable {
     display: none;
 
-    @media (max-width: 800px) {
+    @media (max-width: 980px) {
         grid-area: burger;
         display: block;
         color: var(--mainWhite);
@@ -1125,19 +1137,6 @@ footer {
 
 }
 
-.inMob {
-    display: none;
-
-    @media (max-width: 1280px) {
-        display: block;
-        padding: v(20);
-        grid-area: logo;
-    }
-
-    @media (max-width: 600px) {
-        padding: v(24) v(12);
-    }
-}
 
 .menuMainSub {
     margin-top: v(96);
@@ -1151,8 +1150,8 @@ footer {
     animation: goRigthMenu 2s;
     z-index: 2;
 
-    @media (max-width: 800px) {
-        // margin-top: v(120);
+    @media (max-width: 980px) {
+        margin-top: v(88);
     }
 
     @media (max-width: 600px) {
@@ -1199,11 +1198,11 @@ footer {
         overflow-x: scroll;
         -webkit-overflow-scrolling: touch;
         width: v(460);
-        padding-bottom: 20px;
-        margin-bottom: -20px;
+        padding-bottom: v(20);
+        margin-bottom: v(-20);
     }
 
-    @media (max-width: 800px) {
+    @media (max-width: 830px) {
         margin-left: v(20);
         width: v(400);
     }
@@ -1248,8 +1247,8 @@ footer {
     display: flex;
     align-items: center;
 
-    @media (max-width: 800px) {
-        margin-left: v(24);
+    @media (max-width: 900px) {
+        margin-left: v(12);
     }
 
     @media (max-width: 600px) {
@@ -2100,7 +2099,8 @@ footer {
     .articleImg {
         box-sizing: border-box;
         border-radius: v(8);
-
+        width: 100%;
+        height: 100%;
         @media (max-width: 600px) {
             width: v(344);
             height: v(272);

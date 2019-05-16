@@ -1246,7 +1246,7 @@ footer a:hover {
           animation: goLeftMenuBg 1s;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 980px) {
   .menuMain {
     display: -ms-grid;
     display: grid;
@@ -1297,7 +1297,7 @@ footer a:hover {
   color: var(--btnYellowActive);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 980px) {
   .menuMain ul {
     grid-area: menu;
     display: none;
@@ -1390,7 +1390,15 @@ footer a:hover {
 
 @media (max-width: 1280px) {
   .inDesct {
-    display: none;
+    display: block;
+    padding: 5rem;
+    grid-area: logo;
+  }
+}
+
+@media (max-width: 600px) {
+  .inDesct {
+    padding: 6rem 3rem;
   }
 }
 
@@ -1399,7 +1407,7 @@ footer a:hover {
   color: var(--btnYellowActive);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 980px) {
   .phoneInMob {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1434,31 +1442,13 @@ footer a:hover {
   display: none;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 980px) {
   .burgerInTable {
     grid-area: burger;
     display: block;
     color: var(--mainWhite);
     cursor: pointer;
     padding-right: 6rem;
-  }
-}
-
-.inMob {
-  display: none;
-}
-
-@media (max-width: 1280px) {
-  .inMob {
-    display: block;
-    padding: 5rem;
-    grid-area: logo;
-  }
-}
-
-@media (max-width: 600px) {
-  .inMob {
-    padding: 6rem 3rem;
   }
 }
 
@@ -1480,6 +1470,12 @@ footer a:hover {
   -webkit-animation: goRigthMenu 2s;
           animation: goRigthMenu 2s;
   z-index: 2;
+}
+
+@media (max-width: 980px) {
+  .menuMainSub {
+    margin-top: 22rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -1530,12 +1526,12 @@ footer a:hover {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     width: 115rem;
-    padding-bottom: 20px;
-    margin-bottom: -20px;
+    padding-bottom: 5rem;
+    margin-bottom: -5rem;
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 830px) {
   .listSub {
     margin-left: 5rem;
     width: 100rem;
@@ -1600,9 +1596,9 @@ footer a:hover {
           align-items: center;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .categorySub {
-    margin-left: 6rem;
+    margin-left: 3rem;
   }
 }
 
@@ -2622,6 +2618,8 @@ footer a:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 2rem;
+  width: 100%;
+  height: 100%;
 }
 
 @media (max-width: 600px) {

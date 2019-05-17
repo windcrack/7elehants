@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contact = $('[href="#contact"]'),
         btnClose = document.querySelector('.modalBodyClose'),
         blockVisibleMenu = document.querySelector('#descritp'),
+        socialInner = document.querySelectorAll('.table > li')[5],
         mainMenu = document.querySelector('.menuMain');
     let screenWidth = innerWidth;
 
@@ -145,6 +146,13 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    function innerSocial(block) {
+        if (document.documentElement.clientWidth <= 980) {
+            block.innerHTML = `<i class="fab fa-instagram"></i>
+                               <i class="fab fa-vk"></i>`
+        }
+    }
+    innerSocial(socialInner)
     scrollerAcrossArrow(arrows)
     scrollerAcrossArrow(contact)
     swichCheck(switcher, 'switch-on')
@@ -157,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     closeSubMenu(category, dots, list)
     modalCloseBg(modalClose, '.modalArticleM', 'glideModalClose')
     modalCloseBg(modal, '.modalBody', 'glideMenuClosedRezerv')
-    if (document.documentElement.clientWidth > 800) {
+    if (document.documentElement.clientWidth >= 980) {
         scrollMouse(blockVisibleMenu, mainMenu)
         openBlock(btnMenu, mainMenu)
     }

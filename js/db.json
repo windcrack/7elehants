@@ -1,0 +1,28 @@
+{
+    "towar": [
+        {
+            "id": "1",
+            "img": "../img/articleImg.jpg",
+            "title": "Заголовок 1",
+            "gramm": "160gr",
+            "price": "100p",
+            "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sint at tempora sed aliquam fugit sunt. Temporibus iste provident fugit, est, tempore mollitia dicta incidunt ut quidem, labore doloremque. Tempore?"
+        },
+        {
+            "id": "2",
+            "img": "../img/articleImg.jpg",
+            "title": "Заголовок 2",
+            "gramm": "180gr",
+            "price": "150p",
+            "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sint at tempora sed aliquam fugit sunt. Temporibus iste provident fugit, est, tempore mollitia dicta incidunt ut quidem, labore doloremque. Tempore?"
+        },
+        {
+            "id": "3",
+            "img": "../img/articleImg.jpg",
+            "title": "Заголовок 3",
+            "gramm": "200gr",
+            "price": "200p",
+            "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sint at tempora sed aliquam fugit sunt. Temporibus iste provident fugit, est, tempore mollitia dicta incidunt ut quidem, labore doloremque. Tempore?"
+        }
+    ]
+}

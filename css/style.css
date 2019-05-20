@@ -3200,16 +3200,16 @@ footer a:hover {
 
 @media (max-width: 800px) {
   .summIncart {
-    -webkit-transform: translateY(-1.5rem);
-            transform: translateY(-1.5rem);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     text-align: end;
   }
 }
 
 @media (max-width: 600px) {
   .summIncart {
-    -webkit-transform: translate(0);
-            transform: translate(0);
+    -webkit-transform: translate(-2rem, 0);
+            transform: translate(-2rem, 0);
     text-align: right;
   }
 }

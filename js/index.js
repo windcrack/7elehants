@@ -168,5 +168,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.documentElement.clientWidth >= 980) {
         scrollMouse(blockVisibleMenu, mainMenu)
         openBlock(btnMenu, mainMenu)
+        closeBlock(header, mainMenu)
     }
 })

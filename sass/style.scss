@@ -2120,6 +2120,7 @@ footer {
         grid-template-columns: v(56) repeat(2, 1fr);
         grid-template-rows: v(24) 1fr v(32);
         background-size: 100%;
+        margin: auto;
     }
 
     @media (max-width: 320px) {

@@ -73,7 +73,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         e.classList.remove(closeGlideClose)
                     }, 400)
 
-                    document.querySelector('body').style.overflowY = 'visible'
+                    document.querySelector('body').style.overflowY = 'visible';
+                    closeModal.classList.remove('modalArticleBodyM')
                 }
             })
         }
@@ -157,13 +158,15 @@ document.addEventListener('DOMContentLoaded', () => {
     scrollerAcrossArrow(contact)
     swichCheck(switcher, 'switch-on')
     openBlock(btnTable, table)
-    openSubMenu(dots, category, list)
+    if(document.documentElement.clientWidth <= 1000){
+        openSubMenu(dots, category, list)
+    }
     openBlockMassive(btnRezerv, modalBody, modal)
     // openBlockMassive(articleBlock, modalArt, modalClose)
     closeBlock(header, mainMenu)
     closeBlock(btnClose, modal)
     closeSubMenu(category, dots, list)
-    modalCloseBg(modalClose, '.modalArticleM', 'glideModalClose')
+    // modalCloseBg(modalClose, '.modalArticleM', 'glideModalClose')
     modalCloseBg(modal, '.modalBody', 'glideMenuClosedRezerv')
     if (document.documentElement.clientWidth >= 980) {
         scrollMouse(blockVisibleMenu, mainMenu)

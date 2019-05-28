@@ -1,7 +1,9 @@
 "use strick"
 let loaded = false;
-const menuHead = $('#subMenu a');
-function loadForAncor(classSelect){
+const menuHead = $('#subMenu a'),
+    subMenu = $('.subMenu');
+
+function loadForAncor(classSelect) {
     classSelect.click(function (e) {
         let target = document.getElementById($(this).attr('href').split('#')[1]);
         console.log('STATIC Scroll target is valid and ajax already loaded. Calling doScrollAnimate()');
@@ -10,6 +12,7 @@ function loadForAncor(classSelect){
     });
 }
 loadForAncor(menuHead);
+loadForAncor(subMenu);
 
 function doScrollAnimate($target) {
     console.log('Animate to ' + $target.id);
@@ -35,3 +38,15 @@ if (!loaded && false) {
         }, 50);
     }
 }
+
+let i = 0;
+down.addEventLister('click', () =>{
+    divs[i].style.display = "none";
+    i = (i < (divs.length - 1)) ? i + 1 : 0;
+    divs[i].style.display = "block";
+})
+up.addEventLister('click', () =>{
+    divs[i].style.display = "none";
+    i = (i > 0) ? i - 1 : divs.length - 1;
+    divs[i].style.display = "block";
+})

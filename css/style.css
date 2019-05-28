@@ -2648,6 +2648,7 @@ footer a:hover {
     -ms-grid-rows: 6rem 1fr 8rem;
         grid-template-rows: 6rem 1fr 8rem;
     background-size: 100%;
+    margin: auto;
   }
 }
 

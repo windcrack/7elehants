@@ -12,47 +12,71 @@ const date = [
 ]
 console.log(date);
 
-function openBlockMassive(arr, openBlock, modalBg) {
-    if (arr !== null) {
-        arr.forEach(element => {
+function openBlockMassive(trigger, openBlock, modalBg) {
+    if (trigger !== null) {
+        trigger.forEach(element => {
             element.addEventListener('click', () => {
                 openBlock.style.display = 'flex'
                 modalBg.style.display = 'block'
                 document.querySelector('body').style.overflowY = 'hidden'
                 addContent();
+                openBlock.setAttribute('data-id', date[0][0])
             })
+        });
+
+    }
+}
+
+function addContent() {
+    const contentBlock = document.querySelector('.modalArticleM')
+    let content = document.createElement('div')
+    content.classList.add('modalArticleBodyM')
+    content.style.justifyContent = 'space-between'
+    content.innerHTML = `
+            <img src="${date[1][0]}" alt="Картинка товара">
+            <h2 class="articleTitleM">${date[2][0]}</h2>
+            <div class="articleOptBlockM">
+                <span>${date[4][0]}</span>
+                <span>${date[3][0]}</span>
+            </div>
+            <div class="articleTotalM">
+                <span>Количество:</span>
+                <button class="plus"><i class="far fa-plus"></i></button>
+                <input type="number" value="1">
+                <button class="minus"><i class="far fa-minus"></i></button>
+            </div>
+            <div class="articleDescrM">${date[5][0]}</div>
+            <button class="yellowBtn">В корзину</button>
+            `
+    console.log(contentBlock);
+    contentBlock.appendChild(content)
+}
+
+function modalCloseBg(modalBg, closeModal, closeGlideClose) {
+    if (modalBg !== null) {
+        modalBg.addEventListener('click', event => {
+            const e = document.querySelector(closeModal)
+            if (!e.contains(event.target)) {
+
+                e.classList.add(closeGlideClose)
+                setTimeout(() => {
+                    e.style.display = 'none'
+                    modalBg.style.display = 'none'
+                    e.classList.remove(closeGlideClose)
+                }, 400)
+
+                document.querySelector('body').style.overflowY = 'visible';
+                document.querySelector('.modalArticleBodyM').innerHTML = "";
+            }
         })
     }
 }
 
-// function addContent() {
-//     const contentBlock = document.querySelector('.modalArticleM')
-//     for (let i = 0; i < date[0].length; i++) {
-//         let content = document.createElement('div')
-//         content.classList.add('modalArticleBodyM')
-//         content.style.justifyContent = 'space-between'
-//         content.setAttribute('data-id', date[0][i])
-//         content.innerHTML = `
-//             <img src="${date[1][i]}" alt="Картинка товара">
-//             <h2 class="articleTitleM">${date[2][i]}</h2>
-//             <div class="articleOptBlockM">
-//                 <span>${date[4][i]}</span>
-//                 <span>${date[3][i]}</span>
-//             </div>
-//             <div class="articleTotalM">
-//                 <span>Количество:</span>
-//                 <button class="plus"><i class="far fa-plus"></i></button>
-//                 <input type="number" value="2">
-//                 <button class="minus"><i class="far fa-minus"></i></button>
-//             </div>
-//             <div class="articleDescrM">${date[5][i]}</div>
-//             <button class="yellowBtn">В корзину</button>
-//             ` 
-//         console.log(contentBlock);
-//         contentBlock.appendChild(content)
-//     }
-
-// }
-
+function clearBlock(item) {
+    item.addEventListener('click', () => {
+        document.querySelector('.modalArticleBodyM').innerHTML = "";
+    })
+}
 
 openBlockMassive(articleBlock, modalArt, modalClose)
+modalCloseBg(modalClose, '.modalArticleM', 'glideModalClose')

@@ -1200,6 +1200,11 @@ footer {
     }
 }
 
+.menuMainSub:nth-child(3){
+    display: none;
+}
+
+
 .listSub {
     display: flex;
     justify-content: space-between;
@@ -1299,7 +1304,8 @@ footer {
     }
 }
 
-.subArrow {
+.subArrowLeft,
+.subArrowRight {
     width: v(16);
     height: v(16);
     background-color: transparent;
@@ -2765,5 +2771,6 @@ footer {
 .slick-dotted {
     margin-bottom: 0 !important;
 }
+
 
 // -----------------------------------------

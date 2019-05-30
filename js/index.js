@@ -160,13 +160,14 @@ document.addEventListener('DOMContentLoaded', () => {
     openBlock(btnTable, table)
     if(document.documentElement.clientWidth <= 1000){
         openSubMenu(dots, category, list)
+        closeSubMenu(category, dots, list)
     }
     openBlockMassive(btnRezerv, modalBody, modal)
     // openBlockMassive(articleBlock, modalArt, modalClose)
+    // modalCloseBg(modalClose, '.modalArticleM', 'glideModalClose')
     closeBlock(header, mainMenu)
     closeBlock(btnClose, modal)
-    closeSubMenu(category, dots, list)
-    // modalCloseBg(modalClose, '.modalArticleM', 'glideModalClose')
+    
     modalCloseBg(modal, '.modalBody', 'glideMenuClosedRezerv')
     if (document.documentElement.clientWidth >= 980) {
         scrollMouse(blockVisibleMenu, mainMenu)

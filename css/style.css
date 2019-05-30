@@ -1529,6 +1529,10 @@ footer a:hover {
   color: var(--mainWhite);
 }
 
+.menuMainSub:nth-child(3) {
+  display: none;
+}
+
 .listSub {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1667,7 +1671,8 @@ footer a:hover {
   padding-right: 2rem;
 }
 
-.subArrow {
+.subArrowLeft,
+.subArrowRight {
   width: 4rem;
   height: 4rem;
   background-color: transparent;

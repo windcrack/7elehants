@@ -10,7 +10,6 @@ function loadForAncor(classSelect) {
         loaded = true;
     });
 }
-loadForAncor(menuHead);
 loadForAncor(subMenu);
 
 function doScrollAnimate($target) {
@@ -148,7 +147,7 @@ function clickLeft(){
                 <li><a href="#">Гарниры</a></li>
                 <li><a href="#">Пицца</a></li>
                 `;
-                $('html,body').animate({scrollTop:$('#mainGroup2').offset().top-200 +"px"},{duration:1E3});
+                $('html,body').animate({scrollTop:$('#mainGroup1').offset().top-200 +"px"},{duration:1E3});
                 break;
         }
     })

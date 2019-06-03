@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', () =>{
+window.addEventListener('DOMContentLoaded', () => {
 const loadContent = async (url, callBack) => {
     await fetch(url)
         .then(response => response.json())
@@ -6,9 +6,10 @@ const loadContent = async (url, callBack) => {
     callBack();
 }
 
-
+$('.articleBlock').click(function(){
+    fetchModalInfo()
+})
 function createElem(arr) {
-    
     const contentBlock = document.querySelector('.modalArticleM')
     arr.forEach(function(item) {
         let content = document.createElement('div')
@@ -34,15 +35,45 @@ function createElem(arr) {
         console.log(contentBlock);
         contentBlock.appendChild(content)
     })
+}
 
+function fetchModalInfo(){
+    $.ajax({
+        type:'GET',
+        url:'js/db.json',
+        dataType:'json',
+        success: function(data){
+            console.log("Success data",data)
+            showModal(data)
+        },
+        error:function(err){
+            console.log("Found err", err);
+        }
+    })
 }
 
 
+function showModal(data){
+    console.log('modal show')
+    $('.modalArticleM').css('display','flex')
+    $('.modalBg').css('display','flex')
+
+    ///тестовая выборка из даты полученной
+    $('.articleTitleM').text(data[0].title)
+    $('.articleDescrM').text(data[0].descr)
+    
+}
+function closeModal(){
+    console.log('modal closed')
+    $('.modalBg').display = "none"
+    $('.modalArticleM').display = "none"
+}
 
 loadContent('js/db.json', () => {
-    const articleBlock = document.querySelectorAll('.articleBlock'),
-    modalArt = document.querySelector('.modalArticleM'),
-    modalClose = document.querySelector('.modalBg');
+    const articleBlock = $('.articleBlock'),
+    modalArt = $('.modalArticleM'),
+    modalClose = $('.modalBg');
+    
     function openBlockMassive(trigger, openBlock, modalBg) {
         if (trigger !== null) {
             trigger.forEach(element => {
@@ -50,9 +81,9 @@ loadContent('js/db.json', () => {
                     openBlock.style.display = 'flex'
                     modalBg.style.display = 'block'
                     document.querySelector('body').style.overflowY = 'hidden'
+                    //fetchModalInfo()
                 })
             });
-
         }
     }
     openBlockMassive(articleBlock, modalArt, modalClose)
@@ -83,6 +114,7 @@ loadContent('js/db.json', () => {
             document.querySelector('.modalArticleBodyM').remove();
         })
     }
+
     })
     
 })

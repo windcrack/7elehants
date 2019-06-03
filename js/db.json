@@ -1,5 +1,5 @@
-{
-    "towar": [
+
+    [
         {
             "id": "1",
             "img": "../img/articleImg.jpg",
@@ -25,4 +25,3 @@
             "descr": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sint at tempora sed aliquam fugit sunt. Temporibus iste provident fugit, est, tempore mollitia dicta incidunt ut quidem, labore doloremque. Tempore?"
         }
     ]
-}
